@@ -11,6 +11,14 @@ const Header = () => {
           siteMetadata {
             title
             description
+            menuLinks {
+              name
+              link
+              subMenu {
+                link
+                name
+              }
+            }
           }
         }
       }
@@ -29,27 +37,26 @@ const Header = () => {
       </div>
       <nav className={headerStyles.navContainer}>
         <ul className={headerStyles.navList}>
-          <li>
-            <Link to="/" activeClassName={headerStyles.activeMenuItem}>
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link to="/blog/" activeClassName={headerStyles.activeMenuItem}>
-              Blog
-            </Link>
-          </li>
-          <li>
-            <Link to="/contact/" activeClassName={headerStyles.activeMenuItem}>
-              Contact
-            </Link>
-          </li>
-          <li>
-            <Link to="/about/" activeClassName={headerStyles.activeMenuItem}>
-              About
-            </Link>
-          </li>
-        </ul>
+              {data.site.siteMetadata.menuLinks.map(link => (
+                <li key={link.name} >
+                  <Link to={link.link} activeClassName={headerStyles.activeMenuItem} >
+                    {link.name}
+                  </Link>
+                  
+                  {/* {link.subMenu && link.subMenu.length > 0 ? (
+                    <ul>
+                      {link.subMenu.map((subLink) => (
+                       <li key={subLink.name}>
+                          <Link to={subLink.link} activeClassName={headerStyles.activeMenuItem} >
+                            {subLink.name}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  ) : null}                   */}
+                </li>
+              ))}
+        </ul>        
       </nav>
     </header>
   )

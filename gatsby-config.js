@@ -1,8 +1,35 @@
+const cv = require('./data/cv-data');
+
 module.exports = {
   siteMetadata: {
     title: "Thierry Touin",
     description: "Site personel",
+    "menuLinks": [
+      {
+        "name": "Home",
+        "link": "/"
+      },
+      {
+        "name": "Blog",
+        "link": "/blog/"
+      },
+      {
+        "name": "Contact",
+        "link": "/contact/"
+      },
+      {
+        "name": "About",
+        "link": "/about/",
+        "subMenu": [
+          {
+            "name": `Experiences`,
+            "link": `/about/experiences`
+          }
+        ]        
+      }
+    ],    
     author: "TTO",
+    ...cv
   },
   plugins: [
     "gatsby-plugin-react-helmet",
