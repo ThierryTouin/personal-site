@@ -3,17 +3,16 @@ import Layout from "../../components/layout"
 import Employments from "../../components/cv/Employments"
 import MenuCv from "../../components/cv/MenuCv"
 
-
-const Experiences = () => {
+const Educations = () => {
   return (
     <Layout>
-    <MenuCv/>    
+    <MenuCv/>   
     <div>
-    Experiences
-    <Employments/>
+    Educations
+    
     </div>
     </Layout>
   )
 }
 
-export default Experiences
+export default Educations

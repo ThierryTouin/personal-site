@@ -24,6 +24,10 @@ module.exports = {
           {
             "name": `Experiences`,
             "link": `/about/experiences`
+          },
+          {
+            "name": `Educations`,
+            "link": `/about/educations`
           }
         ]        
       }
