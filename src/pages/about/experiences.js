@@ -1,17 +1,18 @@
 import React from "react"
 import Layout from "../../components/layout"
 import Employments from "../../components/cv/Employments"
-import MenuCv from "../../components/cv/MenuCv"
+import LayoutCv from "../../components/cv/layoutCv"
 
 
 const Experiences = () => {
   return (
     <Layout>
-    <MenuCv/>    
+    <LayoutCv>    
     <div>
     Experiences
     <Employments/>
     </div>
+    </LayoutCv>
     </Layout>
   )
 }

@@ -2,8 +2,8 @@ import React, {Component} from 'react';
 
 import {StaticQuery, graphql} from 'gatsby';
 
-import {Card}from "@material-ui/core";
-import * as employmentsStyle from "./Employments.module.scss"
+//import {Card}from "@material-ui/core";
+//import * as employmentsStyle from "./Employments.module.scss"
 
 const query = graphql`
 query EmploymentsQuery {

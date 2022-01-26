@@ -12,13 +12,13 @@ module.exports = {
       {
         "name": "Blog",
         "link": "/blog/"
-      },
+      },/*
       {
         "name": "Contact",
         "link": "/contact/"
-      },
+      },*/
       {
-        "name": "About",
+        "name": "About-Me",
         "link": "/about/",
         "subMenu": [
           {

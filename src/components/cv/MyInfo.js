@@ -1,17 +1,18 @@
 import React, {Component} from 'react';
 
-import {StaticQuery, withPrefix, graphql} from 'gatsby';
+import {StaticQuery, graphql} from 'gatsby';
 
-import {Grid, Card, CardMedia, CardContent }from "@material-ui/core";
+import {Grid, Card, CardContent }from "@material-ui/core";
 
-import posed from 'react-pose';
+//import posed from 'react-pose';
 
+/*
 const styles = {
     icon: {
         width: '100%',
     }
 };
-
+*/
 
 
 const query = graphql`
