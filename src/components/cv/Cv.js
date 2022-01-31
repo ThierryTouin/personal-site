@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {CssBaseline, withStyles} from '@material-ui/core';
+//import {CssBaseline, withStyles} from '@material-ui/core';
 import MyInfo from "./MyInfo";
 import Employments from "./Employments";
 //import NameCard from "./NameCard";
