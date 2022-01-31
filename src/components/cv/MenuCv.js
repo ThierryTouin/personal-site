@@ -5,16 +5,16 @@ import * as menucvStyles from "./menucv.module.scss"
 const MenuCV = () => {
 
   return (
-      <nav className={menucvStyles.wrapper} >
+      <nav className={menucvStyles.verticalmenu} >
         <ul >
             <li>
                 <Link to={`/about/`}>Info</Link>
             </li>
             <li>
-                <Link to={`/about/experiences/`}>experiences</Link>
+                <Link to={`/about/experiences/`}>Experiences</Link>
             </li>
             <li>
-                <Link to={`/about/educations/`}>educations</Link>
+                <Link to={`/about/educations/`}>Educations</Link>
             </li>
         </ul>        
       </nav>
