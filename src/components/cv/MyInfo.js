@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 import {StaticQuery, graphql} from 'gatsby';
 
-import {Grid, Card, CardContent }from "@material-ui/core";
+//import {Grid, Card, CardContent }from "@material-ui/core";
 
 //import posed from 'react-pose';
 
