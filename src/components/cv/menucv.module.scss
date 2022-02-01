@@ -1,33 +1,28 @@
-#verticalmenu {​
-  
-  //width: 25px;
-
-ul {
+.verticalmenu ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  //width: 25px;
-  background-color: #f1f1f1;
+  width: 200px;
+  background-color: rgba(37, 27, 27, 0.1);
   position: fixed;
-  height: 100%;
+  height: 200px;
   overflow: auto;
 }
 
-li a {
+.verticalmenu li a {
   display: block;
-  color: #000;
+  color: #464646;
   padding: 8px 16px;
   text-decoration: none;
 }
 
-li a.active {
+.verticalmenu li a.active {
   background-color: #04AA6D;
   color: white;
 }
 
-li a:hover:not(.active) {
+.verticalmenu li a:hover:not(.active) {
   background-color: #555;
   color: white;
 }
 
-}

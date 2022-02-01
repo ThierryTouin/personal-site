@@ -6,15 +6,11 @@ import * as layoutcvStyles from "./layoutcv.module.scss"
 const LayoutCv = props => {
   return (
     <div className={layoutcvStyles.wrapper} >
-      <div className={layoutcvStyles.header} >
-        <div className={layoutcvStyles.inner} ><MenuCv /></div>
+      <div className={layoutcvStyles.left} >
+        <MenuCv />
       </div>
-      <div className={layoutcvStyles.content} >
-        <div className={layoutcvStyles.inner} >
-          <div  >
-          {props.children}
-          </div>
-        </div>
+      <div className={layoutcvStyles.right} >
+        {props.children}
       </div>
     </div>
 

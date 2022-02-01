@@ -9,7 +9,6 @@ const Experiences = () => {
     <Layout>
     <LayoutCv>    
     <div>
-    Experiences
     <Employments/>
     </div>
     </LayoutCv>

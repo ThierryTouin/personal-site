@@ -39,11 +39,10 @@ query EmploymentsQuery {
 
           <div className="${employmentsStyle.resume-item}">
             <div className="resume-content">
-              <h3 className="mb-0">{data.projet} </h3>
+              <h2 className="mb-0">{data.projet} </h2>
               <div className="subheading mb-3">{data.position}  </div>
               <p>
               {data.summary} 
-            
               </p>
               <p>
                Environnement Technique : {data.keywords}
@@ -64,7 +63,7 @@ query EmploymentsQuery {
         return (
             
           <div className="w-100">
-            <h2 className="mb-5">Experience Professionnelle</h2>
+            <h1 className="mb-5">Experience Professionnelle</h1>
               {data.site.siteMetadata.cv.employment.history.map(this.generateEmployment)}
           </div>
             
