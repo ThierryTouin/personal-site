@@ -7,6 +7,9 @@
   position: fixed;
   height: 200px;
   overflow: auto;
+  cursor: pointer;
+  border-radius: 8px;
+  text-transform: uppercase;
 }
 
 .verticalmenu li a {
@@ -14,6 +17,8 @@
   color: #464646;
   padding: 8px 16px;
   text-decoration: none;
+  border-radius: 8px;
+  transition: 0.5s all;
 }
 
 .verticalmenu li a.active {
@@ -24,5 +29,13 @@
 .verticalmenu li a:hover:not(.active) {
   background-color: #555;
   color: white;
+  transition: 0.5s all;
 }
 
+@media only screen and (max-width: 768px) {
+  .verticalmenu ul {
+    position: relative;
+  }
+
+
+}
