@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import {StaticQuery, graphql} from 'gatsby';
 
 //import {Card}from "@material-ui/core";
-//import * as employmentsStyle from "./Employments.module.scss"
+import * as employmentsStyle from "./employments.module.scss";
 
 const query = graphql`
 query EmploymentsQuery {
@@ -34,23 +34,39 @@ query EmploymentsQuery {
 
   class Employments extends Component {
 
+    displayKeyword = (data) => {
+      return (
+        <div className={employmentsStyle.keyword}>{data} , </div>
+      )
+    };
+
     generateEmployment = (data) => {
         return (
 
-          <div className="${employmentsStyle.resume-item}">
+          <div className={employmentsStyle.item}>
             <div className="resume-content">
               <h2 className="mb-0">{data.projet} </h2>
               <div className="subheading mb-3">{data.position}  </div>
               <p>
+              {data.employer} 
+              </p>
+              <p>
+              {data.societe} 
+              </p>
+              <p>
               {data.summary} 
               </p>
               <p>
-               Environnement Technique : {data.keywords}
+              {data.highlights} 
+              </p>
+              
+              <p>
+               Environnement Technique : {data.keywords.map(this.displayKeyword)}
               </p>
               
 
             </div>
-            <div className="resume-date text-md-right">
+            <div className={employmentsStyle.date}>
               <span className="text-primary">{data.start} - {data.end}</span>
             </div>
           </div>
@@ -62,9 +78,8 @@ query EmploymentsQuery {
         const {data} = this.props;
         return (
             
-          <div className="w-100">
-            <h1 className="mb-5">Experience Professionnelle</h1>
-              {data.site.siteMetadata.cv.employment.history.map(this.generateEmployment)}
+          <div className={employmentsStyle.employments}>
+            {data.site.siteMetadata.cv.employment.history.map(this.generateEmployment)}
           </div>
             
         );

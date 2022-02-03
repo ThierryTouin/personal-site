@@ -1,0 +1,20 @@
+$gray-600: #868e96 !default;
+
+$black: #000 !default;
+
+.employments {
+  //background-color: red;
+  color: $black;
+  padding-top: 0.1rem !important;
+  padding-bottom: 1rem !important;
+  max-width: 75rem;
+  .item {
+    .keyword {
+      color: red;
+    }
+    .date {
+      color: $gray-600;
+      min-width: none;
+    }
+  }  
+}
