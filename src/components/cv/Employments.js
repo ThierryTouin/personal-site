@@ -34,9 +34,18 @@ query EmploymentsQuery {
 
   class Employments extends Component {
 
+    displayHighlights = (data) => {
+      return (
+        <li className={employmentsStyle.highlights}>
+          <div dangerouslySetInnerHTML={{ __html: data }}></div>
+        </li>
+      )
+    };
+
+
     displayKeyword = (data) => {
       return (
-        <div className={employmentsStyle.keyword}>{data} , </div>
+        <span className={employmentsStyle.keyword}>{data}</span>
       )
     };
 
@@ -45,29 +54,28 @@ query EmploymentsQuery {
 
           <div className={employmentsStyle.item}>
             <div className="resume-content">
-              <h2 className="mb-0">{data.projet} </h2>
+              <div>
+                <h2 className="mb-0">{data.projet} </h2>
+                <div className={employmentsStyle.date}>
+                  <span className="text-primary">{data.start} - {data.end}</span>
+                </div>
+              </div>
               <div className="subheading mb-3">{data.position}  </div>
               <p>
-              {data.employer} 
+              {data.societe} - {data.employer} 
               </p>
               <p>
-              {data.societe} 
+              <div dangerouslySetInnerHTML={{ __html: data.summary }}></div>
               </p>
-              <p>
-              {data.summary} 
-              </p>
-              <p>
-              {data.highlights} 
-              </p>
+              <ul>
+                {data.highlights.map(this.displayHighlights)} 
+              </ul>
               
               <p>
                Environnement Technique : {data.keywords.map(this.displayKeyword)}
               </p>
               
 
-            </div>
-            <div className={employmentsStyle.date}>
-              <span className="text-primary">{data.start} - {data.end}</span>
             </div>
           </div>
             

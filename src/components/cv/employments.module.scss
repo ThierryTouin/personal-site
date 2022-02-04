@@ -10,7 +10,15 @@ $black: #000 !default;
   max-width: 75rem;
   .item {
     .keyword {
-      color: red;
+      color: #189a9e;
+      border-radius: 5px;
+      background: #f1f1f1;
+      padding: 5px;
+      margin-right: 10px;
+      margin-bottom: 10px;;
+    }
+    .highlights {
+      color: #189a9e;
     }
     .date {
       color: $gray-600;
