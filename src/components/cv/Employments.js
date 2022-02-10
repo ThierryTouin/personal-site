@@ -53,30 +53,31 @@ query EmploymentsQuery {
         return (
 
           <div className={employmentsStyle.item}>
-            <div className="resume-content">
-              <div>
-                <h2 className="mb-0">{data.projet} </h2>
+
+            <div className={employmentsStyle.wrapper}>
+              <div className={employmentsStyle.box1}>
+                <h2>{data.projet} </h2>
+                <div className={employmentsStyle.position}>{data.position} - {data.societe} - {data.employer}</div>
+              </div>
+              <div className={employmentsStyle.box2}>
                 <div className={employmentsStyle.date}>
                   <span className="text-primary">{data.start} - {data.end}</span>
                 </div>
               </div>
-              <div className="subheading mb-3">{data.position}  </div>
-              <p>
-              {data.societe} - {data.employer} 
-              </p>
-              <p>
-              <div dangerouslySetInnerHTML={{ __html: data.summary }}></div>
-              </p>
-              <ul>
-                {data.highlights.map(this.displayHighlights)} 
-              </ul>
+              <div className={employmentsStyle.box3}>
+                <p>
+                  <div dangerouslySetInnerHTML={{ __html: data.summary }}></div>
+                </p>
+                <ul>
+                  {data.highlights.map(this.displayHighlights)} 
+                </ul>
               
-              <p>
-               Environnement Technique : {data.keywords.map(this.displayKeyword)}
-              </p>
-              
-
+                <div className={employmentsStyle.keywords}>
+                  {data.keywords.map(this.displayKeyword)}
+                </div>
+              </div>
             </div>
+
           </div>
             
         )

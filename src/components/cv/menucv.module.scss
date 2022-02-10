@@ -1,9 +1,12 @@
+@import './../../styles/style.scss';
+
+
 .verticalmenu ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   width: 200px;
-  background-color: rgba(37, 27, 27, 0.1);
+  background-color: $color4;
   position: fixed;
   height: 200px;
   overflow: auto;
@@ -14,7 +17,7 @@
 
 .verticalmenu li a {
   display: block;
-  color: #464646;
+  color: $color2;
   padding: 8px 16px;
   text-decoration: none;
   border-radius: 8px;
@@ -22,13 +25,13 @@
 }
 
 .verticalmenu li a.active {
-  background-color: #04AA6D;
-  color: white;
+  background-color: $color5;
+  color: $color4;
 }
 
 .verticalmenu li a:hover:not(.active) {
-  background-color: #555;
-  color: white;
+  background-color: $color5;
+  color: $color4;
   transition: 0.5s all;
 }
 

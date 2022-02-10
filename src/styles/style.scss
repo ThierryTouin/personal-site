@@ -1,6 +1,17 @@
-$primaryColor: #464646;
-$secondaryColor: #f44f18;
-$mainWhite: #fff;
+$color1:#809BF3;
+$color2:#20285E;
+$color3:#545C84;
+$color4:#E9E5F4;
+$color5:#95CCF4;
+$color6:#6D739A;
+
+
+
+$primaryColor: $color3;
+$secondaryColor: $color4;
+$mainWhite: $color5;
+
+
 
 * {
   box-sizing: border-box;
