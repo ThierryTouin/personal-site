@@ -31,6 +31,26 @@ query EmploymentsQuery {
   }
 }`;
 
+const monthNames = ["Janvier", "Févier", "Mars", "Avril", "Mai", "Juin",
+  "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Decembre"
+];
+
+function displayDateFormated(data) {
+
+  if (data==null) {
+    return "A nos jours"
+  }
+
+  const date = new Date(data);
+
+  var month = monthNames[date.getMonth()];
+  var year = date.getFullYear();
+
+  return month + " " + year;
+  //return data;
+};
+
+
 
   class Employments extends Component {
 
@@ -45,9 +65,11 @@ query EmploymentsQuery {
 
     displayKeyword = (data) => {
       return (
-        <span className={employmentsStyle.keyword}>{data}</span>
+        <li className={employmentsStyle.keyword}>{data}</li>
       )
     };
+
+
 
     generateEmployment = (data) => {
         return (
@@ -61,7 +83,7 @@ query EmploymentsQuery {
               </div>
               <div className={employmentsStyle.box2}>
                 <div className={employmentsStyle.date}>
-                  <span className="text-primary">{data.start} - {data.end}</span>
+                  <span className="text-primary">{displayDateFormated(data.start)} - {displayDateFormated(data.end)}</span>
                 </div>
               </div>
               <div className={employmentsStyle.box3}>
@@ -72,9 +94,9 @@ query EmploymentsQuery {
                   {data.highlights.map(this.displayHighlights)} 
                 </ul>
               
-                <div className={employmentsStyle.keywords}>
+                <ul className={employmentsStyle.keywords}>
                   {data.keywords.map(this.displayKeyword)}
-                </div>
+                </ul>
               </div>
             </div>
 

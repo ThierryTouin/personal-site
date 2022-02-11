@@ -3,7 +3,7 @@
 
 .wrapper {
   display: grid;
-  grid-template-columns: 1fr 200px;  
+  grid-template-columns: 1fr 300px;  
 }
 
 .box1 {
@@ -14,6 +14,7 @@
 .box2 {
   grid-column-start: 2;
   grid-column-end: 3;
+  text-align: right;
   //background-color: lightpink;
 }  
 .box3 {
@@ -38,30 +39,40 @@
     h2 {
       margin-top: 70px;
       color: $color6;
-      font-weight: 900;
-      text-align: center;
+      font-weight: 1000;
+      font-style: italic;
+      font-size: xx-large;
+      text-align: left;
     }
 
-    .keywords {
-      //white-space: nowrap;
+    .position {
+      font-style: italic;
     }
 
-    .keyword {
-      color: $color2;
-      border-style: ridge;
-      border-width: 1px;
-      border-radius: 10px;
-      background: $color4;
-      padding-left: 5px;
-      padding-right: 5px;
-      margin-right: 10px;
-      margin-bottom: 10px;
-
-      span {
+    ul.keywords {
+        margin-top: .5em;
+    }
+    
+    ul.keywords li {
+        display: inline-block;
         white-space: nowrap;
-      }
-      
+        color: $color2;
+        border-style: ridge;
+        border-width: 1px;
+        border-radius: 10px;
+        background: $color4;
+        padding-left: 5px;
+        padding-right: 5px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+  
     }
+    
+    ul.keywords li:hover {
+        background: #dfeaf0;
+    }
+
+
     .highlights {
       color: $color2;
     }
