@@ -1,18 +1,18 @@
 import React from "react"
 import Layout from "../../components/layout"
-import Educations from "../../components/cv/Educations"
+import Skills from "../../components/cv/Skills"
 import LayoutCv from "../../components/cv/layoutCv"
 
-const MonEducations = () => {
+const MySkills = () => {
   return (
     <Layout>
     <LayoutCv>   
     <div>
-    <Educations/>
+    <Skills/>
     </div>
     </LayoutCv>
     </Layout>
   )
 }
 
-export default MonEducations
+export default MySkills

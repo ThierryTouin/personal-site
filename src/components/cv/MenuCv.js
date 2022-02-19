@@ -14,7 +14,13 @@ const MenuCV = () => {
                 <Link to={`/about/experiences/`}>Experiences</Link>
             </li>
             <li>
-                <Link to={`/about/educations/`}>Educations</Link>
+                <Link to={`/about/educations/`}>Formations</Link>
+            </li>
+            <li>
+                <Link to={`/about/knowledges/`}>Knowledges</Link>
+            </li>
+            <li>
+                <Link to={`/about/skills/`}>Skills</Link>
             </li>
         </ul>        
       </nav>
