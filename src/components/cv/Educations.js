@@ -29,9 +29,14 @@ query EducationsQuery {
       return (
 
         <div className={educationsStyle.item}>
-          <h2>{data.start}</h2>
-          <div>{data.institution}</div>
-
+          <div className={educationsStyle.wrapper}>
+              <div className={educationsStyle.box1}>
+                <div className={educationsStyle.date}>{data.start}</div>
+              </div>
+              <div className={educationsStyle.box2}>
+                <div className={educationsStyle.institution}> - {data.institution}</div>
+              </div>
+          </div>
         </div>  
         )
       }

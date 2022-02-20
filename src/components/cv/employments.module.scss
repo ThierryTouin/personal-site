@@ -37,12 +37,17 @@
     width: 80%;
 
     h2 {
-      margin-top: 70px;
+      margin-top: 10px;
       color: $color6;
       font-weight: 1000;
       font-style: italic;
       font-size: xx-large;
       text-align: left;
+      text-transform: lowercase;
+    }
+
+    h2:first-letter {
+      text-transform: uppercase;
     }
 
     .position {
@@ -77,7 +82,7 @@
       color: $color2;
     }
     .date {
-      padding-top: 80px;
+      padding-top: 20px;
       color: $color6;
       min-width: none;
     }

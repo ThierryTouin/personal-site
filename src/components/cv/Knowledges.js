@@ -24,12 +24,18 @@ query KnowledgesQuery {
 
   class Knowledges extends Component {
 
+    generateSkill = (data) => {
+      return (
+        <li className={knowledgesStyle.skill}>{data}</li>
+      )
+    };
+
     generateKnowledges  = (data) => {
       return (
 
         <div className={knowledgesStyle.item}>
           <h2>{data.name}</h2>
-          <div>{data.skills}</div>
+          <ul>{data.skills.map(this.generateSkill)}</ul>
         </div>  
         )
       }

@@ -26,7 +26,7 @@ query SkillsQuery {
 
     generateSkill = (data) => {
       return (
-        <li className={skillsStyle.skill}>{data}</li>
+        <li className={skillsStyle.keyword}>{data}</li>
       )
     };
 
@@ -35,7 +35,9 @@ query SkillsQuery {
 
         <div className={skillsStyle.item}>
           <h2>{data.name}</h2>      
-          <ul>{data.skills.map(this.generateSkill)}</ul>
+          <ul className={skillsStyle.keywords}>
+            {data.skills.map(this.generateSkill)}
+          </ul>
         </div>  
         )
       }
