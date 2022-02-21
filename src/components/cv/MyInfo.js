@@ -2,18 +2,7 @@ import React, {Component} from 'react';
 
 import {StaticQuery, graphql} from 'gatsby';
 
-import {Grid, Card, CardContent }from "@material-ui/core";
-
-//import posed from 'react-pose';
-
-/*
-const styles = {
-    icon: {
-        width: '100%',
-    }
-};
-*/
-
+import * as myInfoStyle from "./myinfo.module.scss";
 
 const query = graphql`
 query MyInfoQuery {
@@ -21,13 +10,10 @@ query MyInfoQuery {
       siteMetadata {
         author
         cv {
-          contact {
-            email
-          }
-          social {
-            network
-            url
-          }
+            info {
+                label
+                summary
+            }
         }
       }
     }
@@ -35,25 +21,14 @@ query MyInfoQuery {
 
 class MyInfo extends Component {
 
-    generateSocial = (data) => {
-        return (
-            <div>{data.network} : {data.url}</div>
-        )
-    };
 
     render() {
         const {data} = this.props;
         return (
-            <Card>
-                <CardContent>
-                    <Grid container spacing={0}>
-                        {data.site.siteMetadata.cv.contact.email}
-                    </Grid>
-                </CardContent>
-                <div className={'row'}>
-                    {data.site.siteMetadata.cv.social.map(this.generateSocial)}
-                </div>
-            </Card>
+            <div className={myInfoStyle.myinfo}>
+                <h2>{data.site.siteMetadata.cv.info.label}</h2>
+                <div className={myInfoStyle.summary} dangerouslySetInnerHTML={{ __html: data.site.siteMetadata.cv.info.summary }}></div>
+            </div>
         );
     }
 }

@@ -8,15 +8,11 @@ module.exports = {
       {
         "name": "Home",
         "link": "/"
-      },
+      }/*,
       {
         "name": "Blog",
         "link": "/blog/"
-      },/*
-      {
-        "name": "Contact",
-        "link": "/contact/"
-      },*/
+      }*/,
       {
         "name": "About-Me",
         "link": "/about/",
@@ -30,6 +26,10 @@ module.exports = {
             "link": `/about/educations`
           }
         ]        
+      },
+      {
+        "name": "Contact",
+        "link": "/contact/"
       }
     ],    
     author: "TTO",
