@@ -34,11 +34,34 @@ module.exports = {
     ],
     "employment": {
     "history":[
-     {
+      {
+         "employer":"Cardif",
+         "projet":"Migration Liferay 6.2 vers 7.2",
+         "societe":"INETUM",
+         "period":"09/2020 à ce jour",
+         "start":"2020-09",
+         "position":"Architecte Technique ",
+         "summary":"Au sein du service Distribution Transverse du département Socles Digitaux de BNP Paribas Cardif, la mission consiste à la migration de 30 sites écrit en Liferay 6.2 vers le nouveau socle Liferay DXP 7.2. <ul><li>espace-indemnisation.cardif.fr</li><li>www.cardif.fr</li><li>espace-assurance.cardif.fr</li><li>...</li></ul>Plus en détails, ce cadrage consiste à",
+         "highlights":[
+            "Affiner le chiffrage de la migration au fur et mesure du projet",
+            "Encadrer techniquement les équipes",
+            "Anticiper la migration des sites suivants"
+         ],
+         "keywords":[
+            "Devops",
+            "Liferay 6.2",
+            "Liferay DXP 7.2",
+            "Ansible",
+            "Ansible Tower",
+            "Projet en Agile",
+            "SonarQube 7.9.2-community"
+         ]
+      },
+      {
         "employer":"Cardif",
         "projet":"Cadrage de migration Liferay 7.2",
         "societe":"GFI",
-        "period":"12/2019 à ce jour",
+        "period":"12/2019 à 07/2020",
         "start":"2019-12",
         "position":"Architecte Technique ",
         "summary":"Au sein du service Distribution Transverse du département Socles Digitaux de BNP Paribas Cardif, la mission consiste à cadrer et chiffrer la migration de 30 sites écrit en Liferay 6.2 vers le nouveau socle Liferay DXP 7.2. Plus en détails, ce cadrage consiste à",
@@ -63,7 +86,7 @@ module.exports = {
         "employer":"Cardif",
         "projet":"Mise en place d’un socle Liferay 7.2",
         "societe":"GFI",
-        "period":"09/2019 à ce jour",
+        "period":"09/2019 à 03/2020",
         "start":"2019-09",
         "position":"Architecte Technique ",
         "summary":"Au sein du service Distribution Transverse du département Socles Digitaux de BNP Paribas Cardif, la mission a pour objectif ",
@@ -977,7 +1000,17 @@ module.exports = {
        "level":"degree",
        "degree":"BSCS",
        "history":[        
-        {
+         {
+            "start":"2021",
+            "end":"2021",
+            "institution":"ReactJS, maitriser le framework (Orsys)"
+         },
+         {
+            "start":"2021",
+            "end":"2021",
+            "institution":"Formation prise de parole efficace (CSP Docendi)"
+         },
+         {
            "start":"2019",
            "end":"2019",
            "institution":"Introduction à Kubernetes (Udemy)"

@@ -12,6 +12,7 @@ const Layout = props => {
         <Header />
         <div className={layoutStyles.mainContent}>{props.children}</div>
       </div>
+      <button id="scroll-btn" className="sidebar-btns" title="Scroll to top"></button>
       <Footer />
     </div>
   )
