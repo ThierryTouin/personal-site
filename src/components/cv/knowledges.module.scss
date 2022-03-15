@@ -36,6 +36,7 @@
 
     width: 80%;
 
+    /*
     h2 {
       margin-top: 70px;
       color: $color6;
@@ -44,6 +45,17 @@
       font-size: xx-large;
       text-align: left;
     }
+    */
+    
+    h2 {
+      margin-top: 5px;
+      color: $color6;
+      font-weight: 1000;
+      font-style: italic;
+      font-size: large;
+      text-align: left;
+      text-transform: lowercase;
+    }    
 
     .position {
       font-style: italic;

@@ -1,6 +1,10 @@
+@import './../styles/style.scss';
+
 .content {
   max-width: 750px; 
   margin: 0 auto;
+
+  color: $color2;
 
     h1 {
       font-size: 35px;
@@ -16,7 +20,7 @@
     margin-bottom: 20px;
   }
   .featured {
-   max-height: 330px;
+    max-height: 330px;
     margin-bottom: 25px;
   }
   
