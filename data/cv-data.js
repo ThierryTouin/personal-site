@@ -30,8 +30,14 @@ module.exports = {
           "network":"GitHub",
           "user":"thierrytouin",
           "url":"https://github.com/thierrytouin"
-       }
-    ],
+       },
+       {
+         "label":"",
+         "network":"Linkedin",
+         "user":"thierrytouin",
+         "url":"https://www.linkedin.com/in/thierry-touin-12481b3a/"
+      }
+   ],
     "employment": {
     "history":[
       {
@@ -63,6 +69,7 @@ module.exports = {
         "societe":"GFI",
         "period":"12/2019 à 07/2020",
         "start":"2019-12",
+        "end":"2020-07",
         "position":"Architecte Technique ",
         "summary":"Au sein du service Distribution Transverse du département Socles Digitaux de BNP Paribas Cardif, la mission consiste à cadrer et chiffrer la migration de 30 sites écrit en Liferay 6.2 vers le nouveau socle Liferay DXP 7.2. Plus en détails, ce cadrage consiste à",
         "highlights":[
@@ -88,6 +95,7 @@ module.exports = {
         "societe":"GFI",
         "period":"09/2019 à 03/2020",
         "start":"2019-09",
+        "end":"2020-03",
         "position":"Architecte Technique ",
         "summary":"Au sein du service Distribution Transverse du département Socles Digitaux de BNP Paribas Cardif, la mission a pour objectif ",
         "highlights":[

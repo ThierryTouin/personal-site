@@ -25,7 +25,7 @@ class Contact extends Component {
 
     generateSocial = (data) => {
         return (
-            <div><h1>{data.network}</h1> : {data.url}</div>
+            <div><h2>{data.network}</h2><a target="_blank" href={data.url}>{data.url}</a></div>
         )
     };
 
@@ -34,7 +34,7 @@ class Contact extends Component {
         return (
             <div className={contactStyle.contact}>
                 <div className={contactStyle.text}>
-                  <h1>Mail</h1> : {data.site.siteMetadata.cv.contact.email}
+                  <h2>Mail</h2>{data.site.siteMetadata.cv.contact.email}
                 </div>
                 <div className={contactStyle.text}>
                   {data.site.siteMetadata.cv.social.map(this.generateSocial)}
