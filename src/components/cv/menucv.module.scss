@@ -38,12 +38,13 @@
 @media only screen and (max-width: 768px) {
   .verticalmenu ul {
     position: relative;
-    width: 80%;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-flow: wrap;
   }
 
   .verticalmenu li a {
-    display: flex;
-    flex-flow: wrap;
     justify-content: center;
   }
 

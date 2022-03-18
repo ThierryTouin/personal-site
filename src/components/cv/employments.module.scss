@@ -88,3 +88,38 @@
     }
   }  
 }
+
+@media only screen and (max-width: 768px) {
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 300px;  
+  }
+  
+  .box1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    //background-color: lightblue;
+  }
+  .box2 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    text-align: right;
+    //background-color: lightpink;
+  }  
+  .box3 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    //background-color: yellow;
+  }  
+
+  .item {
+
+    width: 100%;
+
+    h2 {
+      font-size: large;
+    }
+  }  
+
+}
