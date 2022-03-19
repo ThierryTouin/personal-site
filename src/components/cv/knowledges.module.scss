@@ -1,51 +1,16 @@
 @import './../../styles/style.scss';
 
 
-.wrapper {
-  display: grid;
-  grid-template-columns: 1fr 300px;  
-}
-
-.box1 {
-  grid-column-start: 1;
-  grid-column-end: 2;
-  //background-color: lightblue;
-}
-.box2 {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  text-align: right;
-  //background-color: lightpink;
-}  
-.box3 {
-  grid-column-start: 1;
-  grid-column-end: 3;
-  //background-color: yellow;
-}  
 
 
-.employments {
+.knowledges {
 
 
   color: $color2;
-  //padding-top: 0.1rem !important;
-  //padding-bottom: 1rem !important;
-  //max-width: 75rem;
 
   .item {
 
     width: 80%;
-
-    /*
-    h2 {
-      margin-top: 70px;
-      color: $color6;
-      font-weight: 1000;
-      font-style: italic;
-      font-size: xx-large;
-      text-align: left;
-    }
-    */
     
     h2 {
       margin-top: 5px;
@@ -57,41 +22,26 @@
       text-transform: lowercase;
     }    
 
-    .position {
-      font-style: italic;
-    }
 
-    ul.keywords {
-        margin-top: .5em;
-    }
-    
-    ul.keywords li {
-        display: inline-block;
-        white-space: nowrap;
-        color: $color2;
-        border-style: ridge;
-        border-width: 1px;
-        border-radius: 10px;
-        background: $color4;
-        padding-left: 5px;
-        padding-right: 5px;
-        margin-right: 10px;
-        margin-bottom: 10px;
-  
-    }
     
     ul.keywords li:hover {
         background: #dfeaf0;
     }
 
 
-    .highlights {
-      color: $color2;
-    }
-    .date {
-      padding-top: 80px;
-      color: $color6;
-      min-width: none;
-    }
+
   }  
+}
+
+@media only screen and (max-width: 768px) {
+
+  .knowledges {
+
+    .item {
+
+      width: 100%;
+
+    }  
+  }  
+
 }

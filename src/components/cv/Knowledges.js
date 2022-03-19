@@ -44,7 +44,7 @@ query KnowledgesQuery {
         const {data} = this.props;
         return (
             
-          <div className={knowledgesStyle.educations}>
+          <div className={knowledgesStyle.knowledges}>
             {data.site.siteMetadata.cv.knowledges.sets.map(this.generateKnowledges)}
           </div>
             
