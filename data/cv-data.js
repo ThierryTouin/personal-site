@@ -744,7 +744,7 @@ module.exports = {
        },
        {
           "employer":"OFFICE DES BREVETS",
-          "projet":"NA",
+          "projet":"Office des brevets",
           "societe":"INFOTEL",
           "period":"Pendant 3 mois",
           "start":"2006-01",
