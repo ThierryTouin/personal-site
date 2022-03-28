@@ -12,8 +12,8 @@ const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL
 module.exports = {
   siteMetadata: {
     siteUrl: `https://thierrytouin.fr`,
-    title: "Thierry Touin",
-    description: "Site personel",
+    title: "tto's blog",
+    description: "Blog de Thierry Touin",
     "menuLinks": [
       {
         "name": "Home",

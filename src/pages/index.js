@@ -4,6 +4,7 @@ import Img from "gatsby-image"
 import { useStaticQuery, graphql, Link } from "gatsby"
 
 import Layout from "../components/layout"
+import Metadata from "../components/metadata"
 
 import * as blogStyles from "./blog.module.scss"
 
@@ -40,6 +41,7 @@ const Blog = () => {
   )
   return (
     <Layout>
+      <Metadata title="Blog" description="La partie blog" />  
       <ul className={blogStyles.posts}>
         {data.allMarkdownRemark.edges.map(edge => {
           return (

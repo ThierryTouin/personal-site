@@ -11,6 +11,7 @@ export const query = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       frontmatter {
         title
+        description
         date(formatString: "DD MMMM, YYYY")
         featured {
           childImageSharp {
@@ -29,7 +30,10 @@ export const query = graphql`
 const BlogPost = props => {
   return (
     <Layout>
-      <Metadata title={props.data.markdownRemark.frontmatter.title} />
+      <Metadata 
+        title={props.data.markdownRemark.frontmatter.title} 
+        description={props.data.markdownRemark.frontmatter.description} 
+      />
 
       <div className={postStyles.content}>
         <h1>{props.data.markdownRemark.frontmatter.title}</h1>

@@ -1,5 +1,6 @@
 ---
 title: "Mon site perso sans Wordpress !"
+description: "Un article sur la genèse de ce site." 
 date: "2022-03-22"
 ---
 

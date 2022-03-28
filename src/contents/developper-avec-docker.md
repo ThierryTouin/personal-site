@@ -1,5 +1,6 @@
 ---
 title: "Développer avec Docker !"
+description: "Un article sur un ensemble de script permettant de faciliter mon usage de docker." 
 date: "2022-02-21"
 featured: "../images/1582889227259.jpeg"
 ---
