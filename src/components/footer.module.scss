@@ -1,6 +1,8 @@
+@import '../styles/style.scss';
+
 .site-footer {
-    background-color: #000;
-    color: #515151;
+    background-color: $color6;
+    color: $color4;
   }
   .container {
     margin: 0 auto;
