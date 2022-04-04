@@ -33,6 +33,7 @@ const BlogPost = props => {
       <Metadata 
         title={props.data.markdownRemark.frontmatter.title} 
         description={props.data.markdownRemark.frontmatter.description} 
+        urlBlog={`/blog/${props.data.slug}`}
       />
 
       <div className={postStyles.content}>
