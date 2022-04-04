@@ -2,7 +2,7 @@ import React from "react"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-const Metadata = ({ title, description, urlBlog }) => {
+const Metadata = ({ title, description }) => {
   const data = useStaticQuery(
     graphql`
       query {
@@ -10,6 +10,7 @@ const Metadata = ({ title, description, urlBlog }) => {
           siteMetadata {
             title
             description
+            siteUrl
           }
         }
       }
@@ -17,7 +18,9 @@ const Metadata = ({ title, description, urlBlog }) => {
   )
   const metaTitle = title || data.site.siteMetadata.title
   const metaDescription = description || data.site.siteMetadata.description
-  const url = data.site.siteMetadata.siteUrl || urlBlog
+  //const canonicalUrl = data.site.siteMetadata.siteUrl || urlBlog
+  //const canonicalUrl = data.site.siteMetadata.siteURL + location.pathname
+  const canonicalUrl = typeof window !== 'undefined' ? window.location.href : '';
   return (
     <Helmet>
       <html lang="fr" />
@@ -27,7 +30,7 @@ const Metadata = ({ title, description, urlBlog }) => {
       <meta property="og:locale" content="fr_FR" />
       <meta property="og:site_name" content={data.site.siteMetadata.title} />
       <meta property="og:title" content={title}></meta>
-      <meta property="og:url" content={url}></meta>
+      <meta property="og:url" content={canonicalUrl}></meta>
       <meta property="og:description" content={description}></meta>
 
     </Helmet>
