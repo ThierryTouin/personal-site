@@ -51,6 +51,7 @@
   left: 0;
   right: 0;
   background: $color6;
+  opacity: 0.7;
   border-top: 1px solid $color6;
 }
 
@@ -71,8 +72,9 @@
   a {
     text-transform: uppercase;
     color: $color4;
-    font-size: 12px;
-    opacity: 0.7;
+    font-size: 14px;
+    opacity: 0.9;
+    font-weight: 600;
 
     &:hover {
       text-decoration: underline;
