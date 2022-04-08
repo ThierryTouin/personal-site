@@ -26,7 +26,7 @@ query SkillsQuery {
 
     generateSkill = (data) => {
       return (
-        <li className={skillsStyle.keyword}>{data}</li>
+        <li>{data}</li>
       )
     };
 

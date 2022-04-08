@@ -65,7 +65,7 @@ function displayDateFormated(data) {
 
     displayKeyword = (data) => {
       return (
-        <li className={employmentsStyle.keyword}>{data}</li>
+        <li>{data}</li>
       )
     };
 

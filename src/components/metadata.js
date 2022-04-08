@@ -25,13 +25,16 @@ const Metadata = ({ title, description }) => {
     <Helmet>
       <html lang="fr" />
       <title>{`${metaTitle} | ${data.site.siteMetadata.title}`}</title>
+
       <meta name="description" content={metaDescription} />
+
 
       <meta property="og:locale" content="fr_FR" />
       <meta property="og:site_name" content={data.site.siteMetadata.title} />
       <meta property="og:title" content={title}></meta>
       <meta property="og:url" content={canonicalUrl}></meta>
       <meta property="og:description" content={description}></meta>
+
 
     </Helmet>
   )

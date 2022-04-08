@@ -9,7 +9,7 @@ module.exports = {
     "info":{
        "label":"Architecte Technique",
        "image":"./thierrytouin.jpg",
-       "summary":"Doté d’une expérience de près de 20 ans, j’assure depuis 4 ans le rôle d’architecte technique sur plusieurs projets digitaux et d’API.<br>Analyse du besoin client, conception, mise en place de l’architecture, du socle applicatif, des environnements de développements, ... <br>J’ai exercé un large panel d’activités sur des projets très variés, en particulier en mode Agile.<br>Mon expérience riche sur des architectures et technologies diverses me permet de bien appréhender tous types de projets."
+       "summary":"Doté d’une expérience de plus de 20 ans, j’assure depuis 5 ans le rôle d’architecte technique sur plusieurs projets digitaux et d’API.<br>Analyse du besoin client, conception, mise en place de l’architecture, du socle applicatif, des environnements de développements, ... <br>J’ai exercé un large panel d’activités sur des projets très variés, en particulier en mode Agile.<br>Mon expérience riche sur des architectures et technologies diverses me permet de bien appréhender tous types de projets."
     },
     "contact":{
        "phone":"06 23 49 54 77",
