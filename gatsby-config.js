@@ -48,6 +48,12 @@ module.exports = {
   plugins: [
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
+    {
+      resolve: "gatsby-plugin-clicky",
+      options: {
+        siteId: '101361743'
+      }
+    },
     "gatsby-plugin-sass",
     {
       resolve: "gatsby-source-filesystem",
