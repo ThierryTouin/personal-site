@@ -35,6 +35,9 @@ const Metadata = ({ title, description }) => {
       <meta property="og:url" content={canonicalUrl}></meta>
       <meta property="og:description" content={description}></meta>
 
+      <meta property="og:image" content={data.site.siteMetadata.siteUrl + "/header-image2.avif"} />
+      <meta property="og:image:width" content="400" />
+      <meta property="og:image:width" content="50" />
 
     </Helmet>
   )
