@@ -11,6 +11,15 @@
       margin: 0 0 10px;
       text-align: center;
     }
+
+    a {
+      color: $color1;
+      font-weight: 800;
+      &:hover {
+        color: #222;
+      }
+    }
+
   }
   .meta {
     font-size: 13px;
