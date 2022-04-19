@@ -8,7 +8,7 @@ Je voulais vous présenter un benchmark que j'ai réalisé, il y a déjà deux a
 
 Le test met en évidence que lorqu'on écrit du code Java avec des logs, il faut bien commencer une ligne de log par `if (logger.isXXXXEnabled()) ` pour avoir de meilleures performances dans l'execution de ce code.
 
-Malheureusement, je vois souvent du code sans ce `if` essentiel :-( .
+Malheureusement, je vois souvent du code sans ce `if` essentiel :unamused: .
 
 Cela est particulièrement vrai lorsque le message à afficher est la concatenation de plusieurs chaines de caractères. 
 

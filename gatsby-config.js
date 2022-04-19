@@ -89,7 +89,8 @@ module.exports = {
               theme: 'monokai',
               lineNumbers: true
             }
-          },          
+          },
+          'gatsby-remark-emoji'           
         ],
       },
     },
