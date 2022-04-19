@@ -6,6 +6,10 @@ import Metadata from "../components/metadata"
 
 import * as postStyles from "./blogPost.module.scss"
 
+
+import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader";
+deckDeckGoHighlightElement();
+
 export const query = graphql`
   query($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {

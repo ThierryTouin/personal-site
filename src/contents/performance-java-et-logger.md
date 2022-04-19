@@ -14,12 +14,16 @@ Cela est particulièrement vrai lorsque le message à afficher est la concatenat
 
 Exemple :
 
-1. `if (logger.isDebugEnabled()) logger.debug("logger4" + Math.random());`
-
-2. `logger.debug("logger4" + Math.random());`
+```
+if (logger.isDebugEnabled()) logger.debug("logger4" + Math.random());
+logger.debug("logger4" + Math.random());
+```
 
 La ligne 1 est plus performante en mode info car elle commence par un `if`. 
-Sans ce `if` (ligne 2), la méthode `logger.debug` s'exécute (même en mode info) car la librairie de logging doit vérifier la méthode pour savoir dans quel mode, elle est configurée. Or pour exécuter cette méthode, la chaîne finale résultant de la concaténation `"logger4" + Math.random()` est créée. 
+
+Sans ce `if` (ligne 2), la méthode `logger.debug` s'exécute (même en mode info) car la librairie de logging doit vérifier la méthode pour savoir dans quel mode, elle est configurée. 
+
+Or pour exécuter cette méthode, la chaîne finale résultant de la concaténation `"logger4" + Math.random()` est créée. 
 
 > La concaténation prend plus de temps que d'executer un `if`.
 
