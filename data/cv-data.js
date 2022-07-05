@@ -42,27 +42,51 @@ module.exports = {
     "history":[
       {
          "employer":"Cardif",
-         "projet":"Migration Liferay 6.2 vers 7.2 ou 7.4",
+         "projet":"Migration Liferay 6.2 vers 7.4",
          "societe":"INETUM",
-         "period":"09/2020 à ce jour",
-         "start":"2020-09",
+         "period":"11/2021 à ce jour",
+         "start":"2021-11",
          "position":"Architecte Technique ",
-         "summary":"Au sein du service Distribution Transverse du département Socles Digitaux de BNP Paribas Cardif, la mission consiste à la migration de 30 sites écrit en Liferay 6.2 vers le nouveau socle Liferay DXP 7.2 ou 7.4. <ul><li>espace-indemnisation.cardif.fr</li><li>www.cardif.fr</li><li>espace-assurance.cardif.fr</li><li>Sites coporates : Roumanie, Perou, Colombie, Luxembourg, ...</li></ul>.Plus en détails, cette mission consiste à",
+         "summary":"Au sein du service Distribution Transverse du département Socles Digitaux de BNP Paribas Cardif, la mission consiste à la migration des 25 sites corporates écrit en Liferay 6.2 vers Liferay DXP 7.4. <ul><li>Roumanie</li><li>Perou</li><li>Colombie</li><li>Luxembourg</li><li>...</li></ul>Plus en détails, cette mission consiste à",
          "highlights":[
             "Affiner le chiffrage de la migration au fur et mesure du projet",
             "Encadrer techniquement les équipes",
-            "Anticiper les soucis de migration des sites",
+            "Anticiper les points techniques de migration des sites",
             "Gérer des problèmatiques d'infrastrucutres, dockerisation, clustering, sécurité, ..."
          ],
          "keywords":[
             "Devops",
             "Liferay 6.2",
-            "Liferay DXP 7.2 et 7.4",
+            "Liferay DXP 7.4",
+            "Docker",
+            "Kubernetes",
+            "Projet en Agile",
+            "SonarQube 7.9.2-community"
+         ]
+      },
+      {
+         "employer":"Cardif",
+         "projet":"Migration Liferay 6.2 vers 7.2",
+         "societe":"INETUM",
+         "period":"09/2020 à 11/2021",
+         "start":"2020-09",
+         "end":"2021-11",         
+         "position":"Architecte Technique ",
+         "summary":"Au sein du service Distribution Transverse du département Socles Digitaux de BNP Paribas Cardif, la mission consiste à la migration de 6 sites écrit en Liferay 6.2 vers le nouveau socle Liferay DXP 7.2. <ul><li>espace-indemnisation.cardif.fr</li><li>www.cardif.fr</li><li>FastAccess</li><li>espace-assurance.cardif.fr</li><li>Finagora</li><li>WebClient</li></ul>Plus en détails, cette mission consiste à",
+         "highlights":[
+            "Affiner le chiffrage de la migration au fur et mesure du projet",
+            "Encadrer techniquement les équipes",
+            "Anticiper les soucis de migration des sites",
+            "Gérer des problématiques d'infrastructures, sécurité, ..."
+         ],
+         "keywords":[
+            "Devops",
+            "Liferay 6.2",
+            "Liferay DXP 7.2",
             "Ansible",
             "Ansible Tower",
             "Projet en Agile",
-            "SonarQube 7.9.2-community",
-            "Docker"
+            "SonarQube 7.9.2-community"
          ]
       },
       {
