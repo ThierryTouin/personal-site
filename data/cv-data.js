@@ -42,25 +42,27 @@ module.exports = {
     "history":[
       {
          "employer":"Cardif",
-         "projet":"Migration Liferay 6.2 vers 7.2",
+         "projet":"Migration Liferay 6.2 vers 7.2 ou 7.4",
          "societe":"INETUM",
          "period":"09/2020 à ce jour",
          "start":"2020-09",
          "position":"Architecte Technique ",
-         "summary":"Au sein du service Distribution Transverse du département Socles Digitaux de BNP Paribas Cardif, la mission consiste à la migration de 30 sites écrit en Liferay 6.2 vers le nouveau socle Liferay DXP 7.2. <ul><li>espace-indemnisation.cardif.fr</li><li>www.cardif.fr</li><li>espace-assurance.cardif.fr</li><li>...</li></ul>Plus en détails, cette mission consiste à",
+         "summary":"Au sein du service Distribution Transverse du département Socles Digitaux de BNP Paribas Cardif, la mission consiste à la migration de 30 sites écrit en Liferay 6.2 vers le nouveau socle Liferay DXP 7.2 ou 7.4. <ul><li>espace-indemnisation.cardif.fr</li><li>www.cardif.fr</li><li>espace-assurance.cardif.fr</li><li>Sites coporates : Roumanie, Perou, Colombie, Luxembourg, ...</li></ul>.Plus en détails, cette mission consiste à",
          "highlights":[
             "Affiner le chiffrage de la migration au fur et mesure du projet",
             "Encadrer techniquement les équipes",
-            "Anticiper la migration des sites suivants"
+            "Anticiper les soucis de migration des sites",
+            "Gérer des problèmatiques d'infrastrucutres, dockerisation, clustering, sécurité, ..."
          ],
          "keywords":[
             "Devops",
             "Liferay 6.2",
-            "Liferay DXP 7.2",
+            "Liferay DXP 7.2 et 7.4",
             "Ansible",
             "Ansible Tower",
             "Projet en Agile",
-            "SonarQube 7.9.2-community"
+            "SonarQube 7.9.2-community",
+            "Docker"
          ]
       },
       {
