@@ -37,6 +37,7 @@
     "react-pose": "^4.0.10"
   },
   "devDependencies": {
+    "gatsby-plugin-netlify": "^5.0.0",
     "prettier": "^2.5.1"
   },
   "repository": {
