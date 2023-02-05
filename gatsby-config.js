@@ -83,14 +83,28 @@ module.exports = {
             },
           },
           {
+            resolve: `gatsby-remark-image-attributes`,
+            options: {
+              dataAttributes: true
+            }
+          },
+          'gatsby-remark-emoji',
+          {
+            resolve: 'gatsby-remark-graph',
+            options: {
+              // this is the language in your code-block that triggers mermaid parsing
+              language: 'mermaid', // default
+              theme: 'default' // could also be dark, forest, or neutral
+            }
+          },
+          {
             resolve: `gatsby-remark-highlight-code`,
             options: {
               terminal: 'carbon',
               theme: 'monokai',
               lineNumbers: true
             }
-          },
-          'gatsby-remark-emoji'           
+          }
         ],
       },
     },
