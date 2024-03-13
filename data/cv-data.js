@@ -71,6 +71,7 @@ module.exports = {
         "societe":"INETUM",
         "period":"01/2023 à 03/2023",
         "start":"2023-01",
+        "end":"2023-03",         
         "position":"Architecte Technique ",
         "summary":"Fort de l’expérience de migration chez Cardif, j’ai pu aider Inetum Belgique et Inetum Portugal à chiffrer une migration Liferay d’un ensemble de site pour l’assurance P&V. Cette mission consiste à",
         "highlights":[
@@ -92,6 +93,7 @@ module.exports = {
         "societe":"INETUM",
         "period":"11/2021 à 12/2022",
         "start":"2021-11",
+        "end":"2022-12",         
         "position":"Architecte Technique ",
         "summary":"Au sein du service Distribution Transverse du département Socles Digitaux de BNP Paribas Cardif, la mission consiste à la migration des 25 sites corporates écrit en Liferay 6.2 vers Liferay DXP 7.4 (Roumanie, Pérou, Colombie, Luxembourg, …). <br>Plus en détails, cette mission consiste à",
         "highlights":[
@@ -1375,5 +1377,8 @@ module.exports = {
     }
    ]
  }
+ 
+
+
   
 }
