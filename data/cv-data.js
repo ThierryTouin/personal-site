@@ -49,11 +49,10 @@ module.exports = {
         "position":"Architecte Technique ",
         "summary":"O2 qui est le leader des services à la personne a décidé de refondre son site www.o2recrute.fr. Le projet consiste en la réécriture du site en Liferay 7.4. Pour O2, l’enjeu de cette migration est stratégique. Il consiste à <ul><li>Moderniser l’image d’O2</li><li>Fluidifier les parcours des candidats & proposer de l’information utile</li><li>Optimiser le SEO du site</li><li>Accoster à la plateforme Liferay DXP Cloud qui héberge déjà les site d’O2 et notamment le site www.o2.fr</li></ul>Plus en détails, cette mission consiste à",
         "highlights":[
-           "Concevoir techniquement le site en utilisant les dernières fonctionnalités fournies par le produit (Fragments, Liferay Object, Cloud, Batch de synchronisation vers une API pour les offres d’emploi, …)",
-           "Porter et expliquer les choix techniques au client",
-           "Mettre en place l’environnement de développements",
-           "Accoster au socle de développements O2 déjà en place",
-           "Encadrer techniquement les équipes sur site et à distance (Maroc)"
+           "Partager mon expertise sur la conception technique du site en utilisant les dernières fonctionnalités de Liferay DXP (Fragments, Liferay Object, Cloud, Batch de synchronisation vers une API pour les offres d’emploi, …).",
+           "Assurer la relation client en lui communiquant la conception et les choix techniques",
+           "Mettre en place l’environnement de développements pour notre équipe. Les développements doivent s’intégrer aux développements O2 déjà existant.",
+           "Manager et encadrer techniquement l’équipe sur site et l’équipe à distance (Maroc)."
         ],
         "keywords":[
            "DevOps",
@@ -94,10 +93,10 @@ module.exports = {
         "period":"11/2021 à 12/2022",
         "start":"2021-11",
         "position":"Architecte Technique ",
-        "summary":"Au sein du service Distribution Transverse du département Socles Digitaux de BNP Paribas Cardif, la mission consiste à la migration des 25 sites corporates écrit en Liferay 6.2 vers Liferay DXP 7.4. <ul><li>Roumanie</li><li>Perou</li><li>Colombie</li><li>Luxembourg</li><li>...</li></ul>Plus en détails, cette mission consiste à",
+        "summary":"Au sein du service Distribution Transverse du département Socles Digitaux de BNP Paribas Cardif, la mission consiste à la migration des 25 sites corporates écrit en Liferay 6.2 vers Liferay DXP 7.4 (Roumanie, Pérou, Colombie, Luxembourg, …). <br>Plus en détails, cette mission consiste à",
         "highlights":[
-           "Affiner le chiffrage de la migration au fur et mesure du projet",
-           "Encadrer techniquement les équipes",
+           "Partager mon expertise du produit en mettre en place un processus optimisé de migration des 25 sites (données, code et architecture).",
+           "Manager et encadrer techniquement les équipes",
            "Anticiper et gérer les problématiques d'infrastructures",
            "Assurer la mise en place des règles de sécurité des applications web",
            "Dockerisation des applications en environnements sécurisés Cardif (DMZR)"
@@ -121,10 +120,10 @@ module.exports = {
         "start":"2020-09",
         "end":"2021-11",         
         "position":"Architecte Technique ",
-        "summary":"Au sein du service Distribution Transverse du département Socles Digitaux de BNP Paribas Cardif, la mission consiste à la migration de 6 sites écrit en Liferay 6.2 vers le nouveau socle Liferay DXP 7.2. <ul><li>espace-indemnisation.cardif.fr</li><li>www.cardif.fr</li><li>FastAccess</li><li>espace-assurance.cardif.fr</li><li>Finagora</li><li>WebClient</li></ul>Plus en détails, cette mission consiste à",
+        "summary":"Au sein du service Distribution Transverse du département Socles Digitaux de BNP Paribas Cardif, la mission consiste à la migration de 6 sites écrit en Liferay 6.2 vers le nouveau socle Liferay DXP 7.2 que j’ai aidé à construire dans une mission précédente (voir ci-dessous). Les sites concernés sont par exemple : espace-indemnisation.cardif.fr, www.cardif.fr, FastAccess, espace-assurance.cardif.fr, Finagora, WebClient. Ce sont des sites avec une forte adhérence avec le SI de Cardif. <br> Plus en détails, cette mission consiste à",
         "highlights":[
            "Affiner le chiffrage de la migration au fur et mesure du projet",
-           "Encadrer techniquement les équipes",
+           "Manager et encadrer techniquement les équipes",
            "Anticiper et gérer les problématiques d'infrastructures",
            "Assurer la mise en place des règles de sécurité des applications web"
         ],
@@ -1319,14 +1318,15 @@ module.exports = {
                "Tomcat",
                " Websphere",
                " Weblogic 9",
-               "  ATG Dynamo"
+               " ATG Dynamo"
             ]
          },
          {
             "name":"VIRTUALISATION",
             "skills":[
                "VirtualBox",
-               " Docker"
+               " Docker",
+               "WSL"
             ]
          },
          {
@@ -1375,8 +1375,5 @@ module.exports = {
     }
    ]
  }
- 
-
-
   
 }
