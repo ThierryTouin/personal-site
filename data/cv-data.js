@@ -46,10 +46,12 @@ module.exports = {
         "societe":"INETUM",
         "period":"12/2022 à ce jour",
         "start":"2022-12",
-        "position":"Architecte Technique ",
+        "position":"Architecte Technique Transverse",
         "summary":"O2 qui est le leader des services à la personne a décidé de refondre son site www.o2recrute.fr. Le projet consiste en la réécriture du site en Liferay 7.4. Pour O2, l’enjeu de cette migration est stratégique. Il consiste à <ul><li>Moderniser l’image d’O2</li><li>Fluidifier les parcours des candidats & proposer de l’information utile</li><li>Optimiser le SEO du site</li><li>Accoster à la plateforme Liferay DXP Cloud qui héberge déjà les site d’O2 et notamment le site www.o2.fr</li></ul>Plus en détails, cette mission consiste à",
         "highlights":[
-           "Partager mon expertise sur la conception technique du site en utilisant les dernières fonctionnalités de Liferay DXP (Fragments, Liferay Object, Cloud, Batch de synchronisation vers une API pour les offres d’emploi, …).",
+           "Partager mon expertise sur la conception technique JAVA du backend (Batch de synchronisation vers une API pour les offres d’emploi, exposition d’API, Quartz, Machine à état, écriture de module OSGI – micro-service- …)",
+           "Partager mon expertise sur la conception technique du site en utilisant les dernières fonctionnalités de Liferay DXP (Fragments, Liferay Object, DXP Cloud).",
+           "Encadrer les équipes sur la réalisation des écrans dans un style micro-frontend.",
            "Assurer la relation client en lui communiquant la conception et les choix techniques",
            "Mettre en place l’environnement de développements pour notre équipe. Les développements doivent s’intégrer aux développements O2 déjà existant.",
            "Manager et encadrer techniquement l’équipe sur site et l’équipe à distance (Maroc)."
@@ -62,7 +64,11 @@ module.exports = {
            "Docker",
            "WSL",
            "Projet en agile",
-           "RGAA"
+           "RGAA",
+           "VueJS",
+           "JQuery",
+           "JSP",
+           "OSGI"
         ]
      },
      {
@@ -247,16 +253,16 @@ module.exports = {
          "period":"06/2018 à 11/2018",
          "start":"2018-06",
          "end":"2018-11",
-         "position":"Architecte Technique ",
+         "position":"Architecte Technique Java/JEE",
          "summary":"Projet refonte du site des cartes Business de la BNP. Site historique datant de 2001.",
          "highlights":[
-            "Mise en place des environnements de développements",
+            "Mise en place des environnements de développements Java",
             "Mise en place de l’architecture du portail",
             "Mise en place de l’architecture des web services associés",
             "Support technique à l’équipe de développement",
             "Mise en place des serveurs d’intégrations sur des plateforme cloud interne (clustering, oidc)",
             "Conception et Mise en place de l’authentification du site : serveur OIDC",
-            "Migration de mon outil d’initialisation du portail Liferay sous DXP : Le ressource Web"
+            "Migration de mon outil d’initialisation du portail Liferay sous DXP : Le ressource Web basé sur Java / OSGI."
          ],
          "keywords":[
             "Linux",
@@ -271,7 +277,9 @@ module.exports = {
             "GIT",
             "Elasticsearch",
             "OIDC/Apereo",
-            "Docker"
+            "Docker",
+            "Spring",
+            "Java"
          ]
       },
       {
@@ -281,22 +289,22 @@ module.exports = {
          "period":"06/2017 à 05/2018",
          "start":"2017-06",
          "end":"2018-05",
-         "position":"Architecte Technique ",
+         "position":"Architecte Technique Java/JEE",
          "summary":"Projet refonte portail CEIDF : Refonte de 4 portails métiers en un portail unique pour l’ensemble des collaborateurs de la Caisse d’Epargne Ile de France (> 4000 users)",
          "highlights":[
             "Mise en place de l’architecture du portail",
-            "Mise en place des environnements de développements",
+            "Mise en place des environnements de développements Java",
             "Support technique à l’équipe de développement (3 ETP)",
             "Développement Portlet en module OSGI.",
             "Réalisation de PoC",
-            "Développement des services à l’aide du service builder en module OSGI.",
+            "Développement des services à l’aide du service builder en module OSGI (Java).",
             "Contrôles des sources (sonar)",
-            "POC Matomo pour valider et tester la faisabilité d'une intégraiton avec Liferay.",
-            "Migration de mon outil d’initialisation du portail Liferay sous DXP : Le ressource Web"
+            "POC Matomo pour valider et tester la faisabilité d'une intégration avec Liferay.",
+            "Migration de mon outil d’initialisation du portail Liferay sous DXP : Le ressource Web basé sur Java / OSGI."
          ],
          "keywords":[
             "Linux",
-            "Liferay DXP 7.0",
+            "Liferay DXP 7.0 (Java)",
             "gogo shell",
             "Redmine",
             "Liferay Developer Studio",
@@ -1378,6 +1386,7 @@ module.exports = {
    ]
  }
  
+
 
 
   
