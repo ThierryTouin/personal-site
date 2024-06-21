@@ -7,9 +7,9 @@ module.exports = {
       "version":"0.1.0"
    },
    "info":{
-      "label":"Architecte Technique",
+      "label":"Architecte Solution",
       "image":"./thierrytouin.jpg",
-      "summary":"Doté d’une expérience de plus de 23 ans, j’assure depuis 8 ans le rôle d’architecte technique sur plusieurs projets digitaux et d’API.<br>Analyse du besoin client, conception, mise en place de l’architecture, du socle applicatif, des environnements de développements, ... <br>J’ai exercé un large panel d’activités sur des projets très variés, en particulier en mode Agile.<br>Mon expérience riche sur des architectures et technologies diverses me permet de bien appréhender tous types de projets."
+      "summary":"Doté d’une expérience de près de 23 ans, j’assure depuis 8 ans le rôle d’architecte technique sur plusieurs projets digitaux et d’API.<br>Mon rôle d'architecte technique m'a permis de couvrir un large éventail d'activités, allant de l'analyse des besoins des clients à la conception et la mise en place de l'architecture, du socle applicatif et des environnements de développement. J'ai travaillé sur des projets très variés, en particulier en mode Agile.<br>Grâce à une expérience sur des architectures et technologies diverses et une curiosité des nouvelles technologies, je suis capable d'appréhender tous types de projets avec une vision stratégique et une approche pragmatique. Mon objectif est de créer des solutions robustes et évolutives qui répondent aux besoins des clients tout en anticipant les défis futurs."
    },
    "contact":{
       "phone":"06 23 49 54 77",
@@ -46,15 +46,15 @@ module.exports = {
         "societe":"INETUM",
         "period":"12/2022 à ce jour",
         "start":"2022-12",
-        "position":"Architecte Technique Transverse",
+        "position":"Architecte Solution",
         "summary":"O2 qui est le leader des services à la personne a décidé de refondre son site www.o2recrute.fr. Le projet consiste en la réécriture du site en Liferay 7.4. Pour O2, l’enjeu de cette migration est stratégique. Il consiste à <ul><li>Moderniser l’image d’O2</li><li>Fluidifier les parcours des candidats & proposer de l’information utile</li><li>Optimiser le SEO du site</li><li>Accoster à la plateforme Liferay DXP Cloud qui héberge déjà les site d’O2 et notamment le site www.o2.fr</li></ul>Plus en détails, cette mission consiste à",
         "highlights":[
+           "En tant qu’architecte et mentor, à manager et à encadrer techniquement l’équipe sur site et l’équipe à distance (Maroc), tout en favorisant une démarche Agile, respectueuse des normes de développement en vigueur (modularité, design pattern, sécurité, …).",
+           "Assurer la relation client en lui communiquant notre vision, notre conception et nos choix techniques.",
            "Partager mon expertise sur la conception technique JAVA du backend (Batch de synchronisation vers une API pour les offres d’emploi, exposition d’API, Quartz, Machine à état, écriture de module OSGI – micro-service- …)",
            "Partager mon expertise sur la conception technique du site en utilisant les dernières fonctionnalités de Liferay DXP (Fragments, Liferay Object, DXP Cloud).",
            "Encadrer les équipes sur la réalisation des écrans dans un style micro-frontend.",
-           "Assurer la relation client en lui communiquant la conception et les choix techniques",
-           "Mettre en place l’environnement de développements pour notre équipe. Les développements doivent s’intégrer aux développements O2 déjà existant.",
-           "Manager et encadrer techniquement l’équipe sur site et l’équipe à distance (Maroc)."
+           "Mettre en place l’environnement de développements pour notre équipe. Les développements doivent s’intégrer aux développements O2 déjà existant."
         ],
         "keywords":[
            "DevOps",
@@ -73,19 +73,20 @@ module.exports = {
      },
      {
         "employer":"P&V Assurance",
-        "projet":"MIGRATION LIFERAY 6.2 VERS 7.4",
+        "projet":"CONSEIL EN MIGRATION",
         "societe":"INETUM",
         "period":"01/2023 à 03/2023",
         "start":"2023-01",
         "end":"2023-03",         
-        "position":"Architecte Technique ",
-        "summary":"Fort de l’expérience de migration chez Cardif, j’ai pu aider Inetum Belgique et Inetum Portugal à chiffrer une migration Liferay d’un ensemble de site pour l’assurance P&V. Cette mission consiste à",
+        "position":"Architecte Solution ",
+        "summary":"Fort de l’expérience précédente de migration chez Cardif, j’ai eu l’opportunité de conseiller Inetum Belgique et Inetum Portugal pour évaluer le coût d’une migration Liferay 6.2 vers 7.4 d’un ensemble de site pour l’assurance P&V.<br>Cette mission consiste à",
         "highlights":[
-           "Conseiller les équipes Inetum dans le processus d’une migration multisite",
+           "Conseiller les équipes Inetum dans le processus optimisé d’une migration multisite",
            "Fournir et mettre à jour nos abaques de chiffrage au contexte P&V.",
            "Et enfin chiffrer la migration"
         ],
         "keywords":[
+           "OSGI",
            "Liferay 6.2",
            "Liferay DXP 7.4",
            "OpenJDK 8 (Java)",
@@ -95,17 +96,17 @@ module.exports = {
      },
      {
         "employer":"Cardif",
-        "projet":"Migration Liferay 6.2 vers 7.4",
+        "projet":"Migration vers le Cloud",
         "societe":"INETUM",
         "period":"11/2021 à 12/2022",
         "start":"2021-11",
         "end":"2022-12",         
-        "position":"Architecte Technique ",
-        "summary":"Au sein du service Distribution Transverse du département Socles Digitaux de BNP Paribas Cardif, la mission consiste à la migration des 25 sites corporates écrit en Liferay 6.2 vers Liferay DXP 7.4 (Roumanie, Pérou, Colombie, Luxembourg, …). <br>Plus en détails, cette mission consiste à",
+        "position":"Architecte Solution ",
+        "summary":"Au sein du service Distribution Transverse du département Socles Digitaux de BNP Paribas Cardif, la mission consiste à la migration des 25 sites corporates écrit en Liferay 6.2 vers Liferay DXP 7.4 (Roumanie, Pérou, Colombie, Luxembourg, …).Un aspect clé de ce projet a été la Dockerisation sous kubernetes des socles digitaux en environnements sécurisés Cardif, une étape essentielle pour faciliter la migration vers le cloud privé de Cardif (DMZR / IBM).<br>Plus en détails, cette mission consiste à",
         "highlights":[
-           "Partager mon expertise du produit en mettre en place un processus optimisé de migration des 25 sites (données, code et architecture).",
+           "Partager mon expertise du produit en mettre en place un processus optimisé de migration des 25 sites. Cela comprenait la migration des données, du code et de l'architecture d’un environnement onPremise vers la solution cloud privé DMZr.",
            "Manager et encadrer techniquement les équipes",
-           "Anticiper et gérer les problématiques d'infrastructures",
+           "Anticiper et gérer les problématiques d'infrastructures et de sécurités.",
            "Assurer la mise en place des règles de sécurité des applications web",
            "Dockerisation des applications en environnements sécurisés Cardif (DMZR)"
         ],
@@ -122,12 +123,12 @@ module.exports = {
      },
      {
         "employer":"Cardif",
-        "projet":"Migration Liferay 6.2 vers 7.2",
+        "projet":"Cadrage et Migration",
         "societe":"INETUM",
         "period":"09/2020 à 11/2021",
         "start":"2020-09",
         "end":"2021-11",         
-        "position":"Architecte Technique ",
+        "position":"Architecte Solution ",
         "summary":"Au sein du service Distribution Transverse du département Socles Digitaux de BNP Paribas Cardif, la mission consiste à la migration de 6 sites écrit en Liferay 6.2 vers le nouveau socle Liferay DXP 7.2 que j’ai aidé à construire dans une mission précédente (voir ci-dessous). Les sites concernés sont par exemple : espace-indemnisation.cardif.fr, www.cardif.fr, FastAccess, espace-assurance.cardif.fr, Finagora, WebClient. Ce sont des sites avec une forte adhérence avec le SI de Cardif. <br> Plus en détails, cette mission consiste à",
         "highlights":[
            "Affiner le chiffrage de la migration au fur et mesure du projet",
@@ -197,13 +198,13 @@ module.exports = {
     },
     {
        "employer":"SGFGAS",
-       "projet":"Mise en place d’un serveur Keycloak",
+       "projet":"Mise en place d’un serveur SSO (Keycloak)",
        "societe":"GFI",
        "period":"09/2019 à 10/2019",
        "start":"2019-09",
        "end":"2019-10",
        "position":"Architecte Technique ",
-       "summary":"Validation du bon fonctionnement d’une architecture après remplacement d’un serveur OpenAM par un serveur Keycloak (authentification OIDC)",
+       "summary":"Validation du bon fonctionnement d’une architecture après remplacement d’un serveur OpenAM par un serveur Keycloak (authentification OIDC - openid connect -)",
        "highlights":[
           "Déblocage du client dans la configuration de keycloak",
           "Validation de sa nouvelle architecture",
@@ -212,7 +213,8 @@ module.exports = {
        "keywords":[
           "Docker 19",
           "Liferay 6.2",
-          "Keycloak 4.8.3"
+          "Keycloak 4.8.3",
+          "SSO"
        ]
     },     
     {
@@ -261,7 +263,7 @@ module.exports = {
             "Mise en place de l’architecture des web services associés",
             "Support technique à l’équipe de développement",
             "Mise en place des serveurs d’intégrations sur des plateforme cloud interne (clustering, oidc)",
-            "Conception et Mise en place de l’authentification du site : serveur OIDC",
+            "Conception et Mise en place de l’authentification SSO du site : serveur OIDC",
             "Migration de mon outil d’initialisation du portail Liferay sous DXP : Le ressource Web basé sur Java / OSGI."
          ],
          "keywords":[
@@ -1094,6 +1096,16 @@ module.exports = {
       "degree":"BSCS",
       "history":[        
         {
+           "start":"2024",
+           "end":"2024",
+           "institution":"Etude : Automatisation Low Code / AI (n8n)"
+        },
+        {
+           "start":"2023",
+           "end":"2023",
+           "institution":"Formation Interne Inetum Do you speak Gen AI ?"
+        },
+        {
            "start":"2021",
            "end":"2021",
            "institution":"ReactJS, maitriser le framework (Orsys)"
@@ -1342,7 +1354,8 @@ module.exports = {
          {
           "name":"CLOUD",
           "skills":[
-             "AWS"
+             "AWS",
+             "IBM"
           ]
        },
        {
@@ -1385,6 +1398,9 @@ module.exports = {
     }
    ]
  }
+ 
+
+
  
 
 
