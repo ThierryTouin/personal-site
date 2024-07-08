@@ -4,7 +4,7 @@ import mqtt from 'mqtt';
 const MqttComponent = () => {
   useEffect(() => {
     // Configuration de la connexion MQTT
-    const client = mqtt.connect('ws://test.mosquitto.org:8080');
+    const client = mqtt.connect('wss://test.mosquitto.org:8081');
 
     // Gestion des événements de connexion et de message
     client.on('connect', () => {
