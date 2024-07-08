@@ -5,6 +5,7 @@ import { useStaticQuery, graphql, Link } from "gatsby"
 
 import Layout from "../components/layout"
 import Metadata from "../components/metadata"
+import MqttComponent from '../components/mqtt/mqtt-page1';
 
 import * as blogStyles from "./blog.module.scss"
 
@@ -72,6 +73,7 @@ const Blog = () => {
           )
         })}
       </ul>
+      <MqttComponent />
     </Layout>
   )
   
