@@ -1,6 +1,7 @@
 # Installation et développement 
 
 ```shell
+rm -rf node_modules package-lock.json
 npm install --legacy-peer-deps
 gatsby develop
 ```
