@@ -12,7 +12,7 @@ const MqttComponent = () => {
 
       // Publier un message
       var ts = ''+ new Date().getTime();
-      client.publish('tto/page1', ts , { retain: true });
+      client.publish('tto/page1', ts  , { retain: true });
     });
 
     client.on('error', (error) => {
