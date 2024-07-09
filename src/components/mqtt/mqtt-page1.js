@@ -11,7 +11,7 @@ const MqttComponent = () => {
       console.log('Connecté au broker MQTT');
 
       // Publier un message
-      client.publish('tto/page1', 'ts='+new Date().getTime());
+      client.publish('tto/page1', 'ts='+new Date().getTime(), { retain: true });
     });
 
     client.on('error', (error) => {
