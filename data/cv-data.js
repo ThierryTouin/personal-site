@@ -9,7 +9,7 @@ module.exports = {
    "info":{
       "label":"Architecte Solution",
       "image":"./thierrytouin.jpg",
-      "summary":"Doté d’une expérience de près de 23 ans, j’assure depuis 8 ans le rôle d’architecte technique sur plusieurs projets digitaux et d’API.<br>&nbsp;<br>Mon rôle d'architecte technique m'a permis de couvrir un large éventail d'activités, allant de l'analyse des besoins des clients à la conception et la mise en place de l'architecture, du socle applicatif et des environnements de développement. J'ai travaillé sur des projets très variés, en particulier en mode Agile.<br>&nbsp;<br>Grâce à une expérience sur des architectures et technologies diverses et une curiosité des nouvelles technologies, je suis capable d'appréhender tous types de projets avec une vision stratégique et une approche pragmatique. Mon objectif est de créer des solutions robustes et évolutives qui répondent aux besoins des clients tout en anticipant les défis futurs."
+      "summary":"Doté d’une expérience de près de 23 ans, j’assure depuis 8 ans le rôle d’architecte technique sur plusieurs projets digitaux et d’API.<br><br>Mon rôle d'architecte technique m'a permis de couvrir un large éventail d'activités, allant de l'analyse des besoins des clients à la conception et la mise en place de l'architecture, du socle applicatif et des environnements de développement. J'ai travaillé sur des projets très variés, en particulier en mode Agile.<br><br>Grâce à une expérience sur des architectures et technologies diverses et une curiosité des nouvelles technologies, je suis capable d'appréhender tous types de projets avec une vision stratégique et une approche pragmatique. Mon objectif est de créer des solutions robustes et évolutives qui répondent aux besoins des clients tout en anticipant les défis futurs."
    },
    "contact":{
       "phone":"06 23 49 54 77",
@@ -47,14 +47,14 @@ module.exports = {
         "period":"12/2022 à ce jour",
         "start":"2022-12",
         "position":"Architecte Solution",
-        "summary":"O2 qui est le leader des services à la personne a décidé de refondre son site www.o2recrute.fr. Le projet consiste en la réécriture du site en Liferay 7.4. Pour O2, l’enjeu de cette migration est stratégique. Il consiste à <ul><li>Moderniser l’image d’O2</li><li>Fluidifier les parcours des candidats & proposer de l’information utile</li><li>Optimiser le SEO du site</li><li>Accoster à la plateforme Liferay DXP Cloud qui héberge déjà les site d’O2 et notamment le site www.o2.fr</li></ul>Plus en détails, cette mission consiste à",
+        "summary":"O2 qui est le leader des services à la personne a décidé de refondre son site www.o2recrute.fr. Le projet consiste en la réécriture du site en Liferay 7.4. Pour O2, l’enjeu de cette migration est stratégique et consiste à <ul><li>Moderniser l’image d’O2</li><li>Fluidifier les parcours des candidats & proposer de l’information utile</li><li>Optimiser le SEO du site</li><li>Accoster à la plateforme Liferay DXP Cloud, qui héberge déjà les sites d’O2 et notamment le site www.o2.fr</li></ul>En seconde phase, O2 nous a également demandé de migrer de la même façon leur site https://www.apefrecrute.fr (la partie des offres d’emploi).<br>En tant qu’architecte et mentor, cette mission consiste à :",
         "highlights":[
-           "En tant qu’architecte et mentor, à manager et à encadrer techniquement l’équipe sur site et l’équipe à distance (Maroc), tout en favorisant une démarche Agile, respectueuse des normes de développement en vigueur (modularité, design pattern, sécurité, …).",
+           "Manager et à encadrer techniquement l’équipe sur site et l’équipe à distance (Maroc), tout en favorisant une démarche Agile et respectueuse des normes de développement en vigueur (modularité, design pattern, sécurité, …).",
            "Assurer la relation client en lui communiquant notre vision, notre conception et nos choix techniques.",
            "Partager mon expertise sur la conception technique JAVA du backend (Batch de synchronisation vers une API pour les offres d’emploi, exposition d’API, Quartz, Machine à état, écriture de module OSGI – micro-service- …)",
            "Partager mon expertise sur la conception technique du site en utilisant les dernières fonctionnalités de Liferay DXP (Fragments, Liferay Object, DXP Cloud).",
            "Encadrer les équipes sur la réalisation des écrans dans un style micro-frontend.",
-           "Mettre en place l’environnement de développements pour notre équipe. Les développements doivent s’intégrer aux développements O2 déjà existant."
+           "Mettre en place un environnement de développement pour notre équipe qui doit s’intégrer aux développements O2 déjà existant."
         ],
         "keywords":[
            "DevOps",
@@ -79,11 +79,11 @@ module.exports = {
         "start":"2023-01",
         "end":"2023-03",         
         "position":"Architecte Solution ",
-        "summary":"Fort de l’expérience précédente de migration chez Cardif, j’ai eu l’opportunité de conseiller Inetum Belgique et Inetum Portugal pour évaluer le coût d’une migration Liferay 6.2 vers 7.4 d’un ensemble de site pour l’assurance P&V.<br>Cette mission consiste à",
+        "summary":"Fort de l’expérience précédente de migration chez Cardif, j’ai eu l’opportunité de conseiller Inetum Belgique et Inetum Portugal afin d'évaluer le coût d’une migration Liferay 6.2 vers 7.4 d’un ensemble de sites pour l’assurance P&V.<br>Cette mission consiste à",
         "highlights":[
            "Conseiller les équipes Inetum dans le processus optimisé d’une migration multisite",
            "Fournir et mettre à jour nos abaques de chiffrage au contexte P&V.",
-           "Et enfin chiffrer la migration"
+           "Chiffrer la migration"
         ],
         "keywords":[
            "OSGI",
@@ -102,13 +102,13 @@ module.exports = {
         "start":"2021-11",
         "end":"2022-12",         
         "position":"Architecte Solution ",
-        "summary":"Au sein du service Distribution Transverse du département Socles Digitaux de BNP Paribas Cardif, la mission consiste à la migration des 25 sites corporates écrit en Liferay 6.2 vers Liferay DXP 7.4 (Roumanie, Pérou, Colombie, Luxembourg, …).Un aspect clé de ce projet a été la Dockerisation sous kubernetes des socles digitaux en environnements sécurisés Cardif, une étape essentielle pour faciliter la migration vers le cloud privé de Cardif (DMZR / IBM).<br>Plus en détails, cette mission consiste à",
+        "summary":"Au sein du service Distribution Transverse du département Socles Digitaux de BNP Paribas Cardif, la mission consiste à la migration des 25 sites corporates, écrits en Liferay 6.2 vers Liferay DXP 7.4 (Roumanie, Pérou, Colombie, Luxembourg, …).Un aspect clé de ce projet a été la Dockerisation sous Kubernetes des socles digitaux dans des environnements sécurisés Cardif, une étape essentielle pour faciliter la migration vers le cloud privé de Cardif (DMZR / IBM).<br>Plus en détails, cette mission consiste à",
         "highlights":[
-           "Partager mon expertise du produit en mettre en place un processus optimisé de migration des 25 sites. Cela comprenait la migration des données, du code et de l'architecture d’un environnement onPremise vers la solution cloud privé DMZr.",
+           "Partager mon expertise du produit en mettant en place un processus optimisé de migration des 25 sites. Cela comprenait la migration des données, du code et de l'architecture d’un environnement onPremise vers la solution cloud privé DMZr.",
            "Manager et encadrer techniquement les équipes",
            "Anticiper et gérer les problématiques d'infrastructures et de sécurités.",
            "Assurer la mise en place des règles de sécurité des applications web",
-           "Dockerisation des applications en environnements sécurisés Cardif (DMZR)"
+           "Dockeriser des applications dans des environnements sécurisés Cardif (DMZR)"
         ],
         "keywords":[
            "Devops",
@@ -129,7 +129,7 @@ module.exports = {
         "start":"2020-09",
         "end":"2021-11",         
         "position":"Architecte Solution ",
-        "summary":"Au sein du service Distribution Transverse du département Socles Digitaux de BNP Paribas Cardif, la mission consiste à la migration de 6 sites écrit en Liferay 6.2 vers le nouveau socle Liferay DXP 7.2 que j’ai aidé à construire dans une mission précédente (voir ci-dessous). Les sites concernés sont par exemple : espace-indemnisation.cardif.fr, www.cardif.fr, FastAccess, espace-assurance.cardif.fr, Finagora, WebClient. Ce sont des sites avec une forte adhérence avec le SI de Cardif. <br> Plus en détails, cette mission consiste à",
+        "summary":"Au sein du service Distribution Transverse du département Socles Digitaux de BNP Paribas Cardif, la mission consiste à la migration de 6 sites écrits en Liferay 6.2 vers le nouveau socle Liferay DXP 7.2 que j’ai aidé à construire dans une mission précédente (voir ci-dessous). Les sites concernés sont par exemple : espace-indemnisation.cardif.fr, www.cardif.fr, FastAccess, espace-assurance.cardif.fr, Finagora, WebClient. Ce sont des sites avec une forte adhérence avec le SI de Cardif. <br> Plus en détails, cette mission consiste à",
         "highlights":[
            "Affiner le chiffrage de la migration au fur et mesure du projet",
            "Manager et encadrer techniquement les équipes",
@@ -154,12 +154,12 @@ module.exports = {
        "start":"2019-12",
        "end":"2020-07",
        "position":"Architecte Technique ",
-       "summary":"Au sein du service Distribution Transverse du département Socles Digitaux de BNP Paribas Cardif, la mission consiste à cadrer et chiffrer la migration de 30 sites écrit en Liferay 6.2 vers le nouveau socle Liferay DXP 7.2. Plus en détails, ce cadrage consiste à",
+       "summary":"Au sein du service Distribution Transverse du département Socles Digitaux de BNP Paribas Cardif, la mission consiste à cadrer et chiffrer la migration de 30 sites (usine à sites) écrits en Liferay 6.2 devenant obsolète vers le nouveau socle Liferay DXP 7.2. La migration devra également s'intéresser à la ré-urbanisation des sites. Plus en détails, ce cadrage consiste à",
        "highlights":[
           "Auditer et diagnostiquer l’existant des 3 plateformes Liferay 6.2 et 200 repository GIT de code source",
-          "Mise en place d’un outillage permettant d’auditer un grand volume de code et de données.",
-          "Définir une stratégie de migration des trois plateformes Liferay 6.2 vers deux plateformes Liferay DXP 7.2. Ce processus prend en compte les contraintes liées aux changements d’architecture des plateformes, des données et enfin les contraintes liées au passage du code vers une architecture modulaire de type OSGI.",
-          "Chiffrager"
+          "Créer un abaque permettant d’auditer un grand volume de code et de données.",
+          "Définir une stratégie de migration des trois plateformes Liferay 6.2 vers deux plateformes Liferay DXP 7.2 en prenant en compte les contraintes liées aux changements d’architecture des plateformes, des données et enfin les contraintes liées au passage du code vers une architecture modulaire de type OSGI.",
+          "Réaliser des chiffrages"
        ],
        "keywords":[
           "Devops",
@@ -180,11 +180,11 @@ module.exports = {
        "start":"2019-09",
        "end":"2020-03",
        "position":"Architecte Technique ",
-       "summary":"Au sein du service Distribution Transverse du département Socles Digitaux de BNP Paribas Cardif, la mission a pour objectif ",
+       "summary":"Au sein du service Distribution Transverse du département Socles Digitaux de BNP Paribas Cardif, la mission a pour objectif de :",
        "highlights":[
-          "De concevoir la nouvelle plateforme mutualisée de Cardif  (Socle Liferay DXP 7.2)",
-          "D’encadrer les équipes Devops afin de les aider à mettre en place la nouvelle plateforme via la toolchain Cardif. Cette mise en place doit respecter les contraintes Cardif de mutualisation des serveurs. L’automatisation doit permettre également le déploiement de nouveaux usages (nouveaux sites).",
-          "D’encadrer et de former l’équipe de développement afin qu’elle puisse migrer le code source du Socle Liferay 6.2 vers Liferay DXP 7.2."
+          "Concevoir la nouvelle plateforme mutualisée de Cardif  (Socle Liferay DXP 7.2)",
+          "Encadrer les équipes Devops afin de les aider à mettre en place la nouvelle plateforme via la toolchain Cardif. Cette mise en place doit respecter les contraintes Cardif de mutualisation des serveurs. L’automatisation doit permettre également le déploiement de nouveaux usages (nouveaux sites).",
+          "Former et encadrer l’équipe de développement afin qu’elle puisse migrer le code source du Socle Liferay 6.2 vers Liferay DXP 7.2."
        ],
        "keywords":[
           "Devops",
@@ -204,11 +204,11 @@ module.exports = {
        "start":"2019-09",
        "end":"2019-10",
        "position":"Architecte Technique ",
-       "summary":"Validation du bon fonctionnement d’une architecture après remplacement d’un serveur OpenAM par un serveur Keycloak (authentification OIDC - openid connect -)",
+       "summary":"Validation du bon fonctionnement d’une architecture après remplacement d’un serveur OpenAM par un serveur Keycloak (authentification OIDC - OpenID Connect -)",
        "highlights":[
-          "Déblocage du client dans la configuration de keycloak",
-          "Validation de sa nouvelle architecture",
-          "Simulation de sa nouvelle architecture dans un environnement Dockerisé"
+          "Débloquer le client dans la configuration de keycloak",
+          "Valider sa nouvelle architecture",
+          "Réaliser la simulation de sa nouvelle architecture dans un environnement Dockerisé"
        ],
        "keywords":[
           "Docker 19",
@@ -218,21 +218,21 @@ module.exports = {
        ]
     },     
     {
-         "employer":"Eulerhermes –  Resource manager",
+         "employer":"Euler Hermes –  Resource manager",
          "projet":"Resource manager",
          "societe":"GFI",
          "period":"12/2018 à 08/2019",
          "start":"2018-12",
          "end":"2019-08",
          "position":"Architecte Technique ",
-         "summary":"Dans le cadre d'un programme de refonte du système d’information d’Eulerhermes, création d’une API de gestion des permissions sur les resources du client. La première famille de resource étant les polices d’assurances. Cette API s’intègre dans l’architecture de microservices mise en place pour la refonte.<br>(> 300 000 users, > 400 000 polices d'assurances)",
+         "summary":"Dans le cadre d'un programme de refonte du système d’information d’Euler Hermes, création d’une API de gestion des permissions sur les resources du client. La première famille de resource étant les polices d’assurances. Cette API s’intègre dans l’architecture de microservices mise en place pour la refonte.<br>(> 300 000 users, > 400 000 polices d'assurances)",
          "highlights":[
             "Mise en place de l’architecture fonctionnelle",
             "Mise en place de l’architecture technique de la solution => socle technique : API et Batch d’initialisation",
             "Mise en place des environnements de développements",
             "Support technique à l’équipe de développement",
             "Dockerisation de l’application",
-            "Intégration du Resourcemanager à la solution de déploiement du client via gitLab vers AWS (Terraform)",
+            "Intégration du Resourcemanager à la solution de déploiement du client via GitLab vers AWS (Terraform)",
             "Participation au Big Planning des applications"
          ],
          "keywords":[
@@ -292,16 +292,16 @@ module.exports = {
          "start":"2017-06",
          "end":"2018-05",
          "position":"Architecte Technique Java/JEE",
-         "summary":"Projet refonte portail CEIDF : Refonte de 4 portails métiers en un portail unique pour l’ensemble des collaborateurs de la Caisse d’Epargne Ile de France (> 4000 users)",
+         "summary":"Projet de refonte du portail CEIDF : Refonte de 4 portails métiers en un portail unique pour l’ensemble des collaborateurs de la Caisse d’Epargne Ile de France (> 4000 users)",
          "highlights":[
             "Mise en place de l’architecture du portail",
             "Mise en place des environnements de développements Java",
             "Support technique à l’équipe de développement (3 ETP)",
-            "Développement Portlet en module OSGI.",
-            "Réalisation de PoC",
+            "Développement de Portlets en module OSGI.",
+            "Réalisation de POC",
             "Développement des services à l’aide du service builder en module OSGI (Java).",
             "Contrôles des sources (sonar)",
-            "POC Matomo pour valider et tester la faisabilité d'une intégration avec Liferay.",
+            "Réalisation d'un POC Matomo pour valider et tester la faisabilité d'une intégration avec Liferay.",
             "Migration de mon outil d’initialisation du portail Liferay sous DXP : Le ressource Web basé sur Java / OSGI."
          ],
          "keywords":[
@@ -328,7 +328,7 @@ module.exports = {
          "start":"2016-03",
          "end":"2017-04",
          "position":"Expert Technique ",
-         "summary":"Dans le cadre de sa stratégie digitale, BNP Paribas Leasing Solutions a mis en place un portail de services et de contenu au bénéfice de ses clients directs et indirects. La trajectoire de ce déploiement incorpore le développement progressif de services tels que la consultation de documents dématérialisés afférents aux contrats et issus de relations d’affaires B2BC ou B2C, la diffusion sur le site, de divers contenus tels que les mentions légales, les messages éditoriaux, etc…",
+         "summary":"Dans le cadre de sa stratégie digitale, BNP Paribas Leasing Solutions a mis en place un portail de services et de contenus au bénéfice de ses clients directs et indirects. La trajectoire de ce déploiement incorpore le développement progressif de services tels que la consultation de documents dématérialisés afférents aux contrats et issus de relations d’affaires B2BC ou B2C, la diffusion sur le site, de divers contenus tels que les mentions légales, les messages éditoriaux, etc…",
          "highlights":[
             "Lead technique de l’équipe",
             "Atelier fonctionnel et technique",
@@ -337,7 +337,7 @@ module.exports = {
             "Conception technique des vitrines / templates / redirection avec changement de domaine",
             "Conception et développement d’un bouchon de service SOAP",
             "Automatisation de l’installation",
-            "Coordination de l’l’intégration HTML"
+            "Coordination de l’intégration HTML"
          ],
          "keywords":[
             "Liferay 6.2",
@@ -354,10 +354,10 @@ module.exports = {
          "position":"Architecte technique",
          "summary":"Creation d'un POC sur la mise en place d'un Identity Management (OpenIDM) entre LiferayDXP / SI Airbus",
          "highlights":[
-            "Analyser via des ateliers le SI d'Airbus",
+            "Analyser le SI d'Airbus via des ateliers",
             "Se former à la solution OpenIDM",
-            "Initialisation du POC",
-            "Creation de connecteur OpenIDM / Formation d'une semaine en Engleterre"
+            "Initialiser le POC",
+            "Créer un connecteur OpenIDM / Formation d'une semaine en Angleterre"
          ],
          "keywords":[
             "Java",
@@ -398,7 +398,7 @@ module.exports = {
          "position":"Expert Technique ",
          "summary":"Total a souhaité la mise en œuvre d’une plateforme d’usine à sites internationale à destination des professionnels de la route. <br>Les principales fonctionnalités offertes sont :<ul><li>Site full responsive design</li><li>Fil d’actualité</li><li>Forum interactif</li><li>Petites annonces</li><li>Simulateur d’économie</li><li>Connexion avec le CRM sales force</li></ul> Sur ce projet, j'ai réalisé:",
          "highlights":[
-            "Création d’une portlet Simulateur. <br>Le socle technique de la portlet est <ul><li>AngularJS</li><li>Service REST Spring</li><li>Portlet Liferay</li></ul>"
+            "Création d’une portlet Simulateur avec comme socle technique : <ul><li>AngularJS</li><li>Service REST Spring</li><li>Portlet Liferay</li></ul>"
          ],
          "keywords":[
             "Java 1.7",
@@ -423,9 +423,9 @@ module.exports = {
          "start":"2015-04",
          "end":"2016-02",
          "position":"Expert Technique ",
-         "summary":"Arval propose des contrats de location de véhicules à des professionnels et se dote d'un portail dédié aux drivers (les employés des professionnels ayant souscrit un contrat) leur permettant de gérer leur véhicule (commande, renouvellement, fin de contrat, …). Sur cette application, j’interviens en tant que référent technique pour la partie front :",
+         "summary":"Arval propose des contrats de location de véhicules à des professionnels et se dote d'un portail dédié aux drivers (les employés des professionnels ayant souscrit un contrat) leur permettant de gérer leur véhicule (commande, renouvellement, fin de contrat, …). Sur cette application, je suis intervenu en tant que référent technique pour la partie front :",
          "highlights":[
-            "Mise en place du poste de développement pour l’équipe",
+            "Mise en place des postes de développement pour l’équipe",
             "Mise en place du socle technique AngularJS",
             "Mise en place d’un bouchon Java (API REST)",
             "Définition de l’API REST",
@@ -452,7 +452,7 @@ module.exports = {
          "start":"2014-12",
          "end":"2015-03",
          "position":"Expert Technique ",
-         "summary":"Transilien a confié à SQLI la refonte du site transilien.com dédié aux usagers des transports en commun en ile de France. Dans ce projet, je suis intervenu en qualité d’expert technique",
+         "summary":"Transilien a confié à SQLI la refonte du site transilien.com dédié aux usagers des transports en commun en Ile-de-France. Dans ce projet, je suis intervenu en qualité d’expert technique",
          "highlights":[
             "Intégration Javascript / HTML des développements liés à la cartographie: <ul> <li>Tracé des lignes </li><li> Picto / Marqueur pour les gares </li><li> Tracé des itinéraires</li></ul>. La carte utilisée est le système de cartographie Open Street Map couplé avec Mapbox.",
             "Support technique à l’équipe",
@@ -486,10 +486,10 @@ module.exports = {
          "position":"Chef de Projet Technique / Expert Liferay",
          "summary":"Etude, conception, développement, conseil et expertise autour de différents projets Liferay pour plusieurs clients",
          "highlights":[
-            "<b>LVMH</b> : Expertise technique et développement dans la version 2 de l’application de saisie de l’intéressement chez LVMH :",
-            "<b>Auchan</b> : Expertise technique dans la refonte du site intranet des employés d’Auchan.           <ul><li>Mise en place d’un cluster Liferay chez SQLI et chez le client Auchan pour valider la plateforme technique</li><li>Mise en place de l’environnement de développement (Windows 7 sous VirtualBox, machine de rebond permettant l’accès au dépôt Maven Auchan via VPN)</li><li>Mise en place de l’intégration continue (côté SQLI)</li><li>Assistance technique du client</li></ul>",
+            "<b>LVMH</b> : Expertise technique et développement dans la version 2 de l’application de saisie de l’intéressement",
+            "<b>Auchan</b> : Expertise technique dans la refonte du site intranet des employés d’Auchan.           <ul><li>Mise en place d’un cluster Liferay chez SQLI et chez le client pour valider la plateforme technique</li><li>Mise en place de l’environnement de développement (Windows 7 sous VirtualBox, machine de rebond permettant l’accès au dépôt Maven Auchan via VPN)</li><li>Mise en place de l’intégration continue (côté SQLI)</li><li>Assistance technique du client</li></ul>",
  
-            "<b>CEAC</b> : Expertise technique dans la refonte du site internet de la commission de l’aviation civile. Le site a pour but de : <ul><li>Présentation de la CEAC</li><li>Gérer les événements de la CEAC (workshop, meeting, conférence, training)</li><li>Gérer les inscriptions online / offline des participants</li><li>Sur ce projet, j’ai : <br>Chiffrer le développement,<br>Réaliser des poc de faisabilité,<br>Mise en place de l’environnement de développement (Xubuntu sous VirtualBox),<br>Encadré l’équipe de développeur,Développé des composants permettant d’automatiser la livraison. Ces composants sont réutilisables sur d’autres projets.</li></ul>",            
+            "<b>CEAC</b> : Expertise technique dans la refonte du site internet de la commission de l’aviation civile. Le site a pour but de : <ul><li>Présenter la CEAC</li><li>Gérer les événements de la CEAC (workshop, meeting, conférence, training)</li><li>Gérer les inscriptions online / offline des participants</li><li>Sur ce projet, j’ai : <br>Chiffrer le développement,<br>Réaliser des POC de faisabilité,<br>Mettre en place de l’environnement de développement (Xubuntu sous VirtualBox),<br>Encadrer l’équipe de développeur,Développé des composants permettant d’automatiser la livraison. Ces composants sont réutilisables sur d’autres projets.</li></ul>",            
             "<b>Eco-emballages</b> : Expertise technique pour la réalisation d’un POC mettant en œuvre une intégration entre Liferay et SAP. Dans ce context, Liferay est le point d’entrée (internet) des clients d’eco-emballages dans le système. ",
             "<b>Saint Gobain</b> : Encadrement et participation à la réalisation d’une application webproxy. Cette application est basée sur une portlet existante. Le principal enjeu était de mettre un place un protocole spécifique (une extension du protocole http : CSP protocol) et de gérer des préférences pour les applications distantes.",
             "<b>La Fepem</b> : <ul><li>Réalisation des ateliers de travail pour la mise en place d’un RSE (Liferay Social Office) dans un portail Liferay existant</li><li>Réalisation d’un audit de migration de Liferay 6.0 EE vers Liferay 6.1 EE</li></ul>",       
@@ -543,9 +543,9 @@ module.exports = {
          "start":"2012-09",
          "end":"2012-12",
          "position":"Expert Technique ",
-         "summary":"CARDIF est la filiale assurance de groupe BNP PARIBAS. Pour cette mission, j’ai intégré le pôle support du centre de compétence Java (CDJ) de CARDIF.CARDIF a choisi de migrer toutes ses applications web vers Webphere 6 pour avoir un parc de serveur d’application plus homogène. La migration technique étant faite par la société Indienne Cognizant.Ma mission consistait pour un lot d’une dizaine d’application :",
+         "summary":"CARDIF est la filiale assurance de groupe BNP PARIBAS. Pour cette mission, j’ai intégré le pôle support du centre de compétence Java (CDJ) de CARDIF.CARDIF a choisi de migrer toutes ses applications web vers WebSphere 6 pour avoir un parc de serveur d’application plus homogène. La migration technique étant faite par la société Indienne Cognizant.Ma mission consistait pour un lot d’une dizaine d’application :",
          "highlights":[
-            "A la mise en place de prérequis techniques pour des migrations de Tomcat vers Websphere ;",
+            "A la mise en place de prérequis techniques pour des migrations de Tomcat vers WebSphere ;",
             "Au support technique des équipes Indiennes ;",
             "Au support et à la coordination des différents Chef de projet fonctionnel des applications en migration"
          ],
@@ -569,10 +569,10 @@ module.exports = {
          "summary":"Socodei est une société de traitement des déchets nucléaires (filiale d’EDF).Notre mission consiste à mettre en place un intranet / extranet collaboratif pour les employés de Socodei.",
          "highlights":[
             "Point d’entrée de l’équipe parisienne, le pilotage étant assuré par Sqli Lyon ;",
-            "Création d’un POK de portlet permettant la synchronisation avec la messagerie et le calendrier Outlook 2010 (via webdav et le protocole Ews de Microsoft) ;",
+            "Création d’un POC de portlet permettant la synchronisation avec la messagerie et le calendrier Outlook 2010 (via webdav et le protocole Ews de Microsoft) ;",
             "Conception et développement d’une portlet d’import automatique d’un thesaurus dans Liferay (via csv) ;",
             "Conception et développement d’une portlet de connexion à une application métier du client via webservices. Formation du client pour lui permettre d’intégrer de nouvelles applications métiers;",
-            "Test d’intégration sur le site client"
+            "Réalisation de tests d’intégration sur le site client"
          ],
          "keywords":[
             "Eclipse",
@@ -591,7 +591,7 @@ module.exports = {
          "start":"2012-04",
          "end":"2012-05",
          "position":"Chef de Projet Technique",
-         "summary":"L’argus de la presse est une société historique. Argus de la presse accompagne ses clients dans leur volonté de s’informer sur leur présence et leur image dans les médias, de comprendre leur environnement médiatique et de piloter leurs campagnes de communication.Notre mission consistait à modifier le système d’approvisionnement web en place pour y intégrer une nouvelle source d’approvisionnement alimenté par le prestataire Opoint.",
+         "summary":"L’Argus de la presse est une société historique. L'Argus de la presse accompagne ses clients dans leur volonté de s’informer sur leur présence et leur image dans les médias, de comprendre leur environnement médiatique et de piloter leurs campagnes de communication.Notre mission consistait à modifier le système d’approvisionnement web en place pour y intégrer une nouvelle source d’approvisionnement alimentée par le prestataire Opoint.",
          "highlights":[
             "Spécification fonctionnelle et atelier avec le client ;",
             "Conception technique ;",
@@ -606,16 +606,16 @@ module.exports = {
       },
       {
          "employer":"OCEAN SYSTEM - OUTIL DE GEOLOCALISATION",
-         "projet":"OUTIL DE GEOLOCALISATION",
+         "projet":"Outil de géolocalisation",
          "societe":"SQLI",
          "period":"01/2012 à 03/2012",
          "start":"2012-01",
          "end":"2012-03",
          "position":"Expert Technique",
-         "summary":"La société Ocean a développé depuis 2003 une offre de Géomanagement à destination d’entreprise telle que de grand groupe ou des artisans.Ma mission était une mission ponctuelle qui a permis d’aider le client à fournir une nouvelle version de son extranet de reporting et d’analyse des données gps (Les données gps sont envoyées par des boitiers installés dans les véhicules des clients).",
+         "summary":"La société Ocean a développé depuis 2003 une offre de Géomanagement à destination d’entreprises telle que de grands groupes ou des artisans.Ma mission était ponctuelle et a permis d’aider le client à fournir une nouvelle version de son extranet de reporting et d’analyse des données gps (Les données gps sont envoyées par des boitiers installés dans les véhicules des clients).",
          "highlights":[
             "Mise en place d’une solution technique d’impression générique des rapports et analyses",
-            "Développement et test unitaire"
+            "Développement et tests unitaires"
          ],
          "keywords":[
             "Eclipse",
@@ -634,12 +634,12 @@ module.exports = {
          "start":"2011-04",
          "end":"2011-12",
          "position":"Chef de Projet Technique / Expert Liferay",
-         "summary":"Intégration de la BU Entreprise 2.0 au siège de SQLI. Cette BU est spécialisée dans les solutions pour les entreprises tel que : Les portails : Liferay , La gestion documentaire : Alfresco ",
+         "summary":"Intégration de la BU Entreprise 2.0 au siège de SQLI. Cette BU est spécialisée dans les solutions pour les entreprises tel que les portails (Liferay) et la gestion documentaire (Alfresco).",
          "highlights":[
             "Réponse à des avant ventes : Ministère de la Défense, Société Générale, EDF",
             "Formateur Liferay : CNMSS à Toulon",
             "Développement de POC (Proof of concept) afin de valider des solutions techniques",
-            "Projet Cockpit : Expertise technique (couche présentation) pour le groupe ATOS afin de les conseiller dans le développement d’un produit de supervision d’application.<ul><li>Coordination d’équipes (Pologne, Maroc)</li><li>Réalisation de documentation technique</li><li>Développement de portlet et service Liferay</li></ul>",        
+            "Projet Cockpit : Expertise technique (couche présentation) pour le groupe ATOS afin de les conseiller dans le développement d’un produit de supervision d’application.<ul><li>Coordination d’équipes (Pologne, Maroc)</li><li>Réalisation de documentation technique</li><li>Développement de portlets et services Liferay</li></ul>",        
             "<b>Veille technique</b>"
          ],
          "keywords":[
@@ -657,13 +657,13 @@ module.exports = {
          "start":"2010-10",
          "end":"2011-03",
          "position":"Chef de Projet Technique",
-         "summary":"RTE achète régulièrement de l’électricité à la chambre de compensation et reçoit quotidiennement des factures à payer. State permet donc : de calculer le montant quotidien à payer en dispatchant le total par nature comptable et par contrat, de générer des restitutions pour le service de comptabilité et le service trésorerie. Projet pilote chez RTE pour la mise en place de la méthode Agile (accompagnement par un consultant Agile)",
+         "summary":"RTE achète régulièrement de l’électricité à la chambre de compensation et reçoit quotidiennement des factures à payer. Le projet State permet donc : de calculer le montant quotidien à payer en dispatchant le total par nature comptable et par contrat, de générer des restitutions pour le service de comptabilité et le service trésorerie. Il s'agit d'un projet pilote chez RTE pour la mise en place de la méthode Agile (accompagnement par un consultant Agile)",
          "highlights":[
             "Rédaction des spécifications fonctionnelles détaillées",
             "Réunion MOA",
-            "Mise en place des itérations, indicateurs scrum (Burndown d’itération et de release)",
+            "Mise en place des itérations, indicateurs SCRUM (Burndown d’itération et de release)",
             "Gestion d’une équipe de 2 personnes",
-            "Test et Relecture de code",
+            "Tests et Relecture de code",
             "Suivi de recette"
          ],
          "keywords":[
@@ -690,15 +690,15 @@ module.exports = {
          "start":"2008-12",
          "end":"2010-07",
          "position":"Chef de Projet Technique",
-         "summary":"RTE comprend un nombre important d’immobilisation et doit donc générer un grand volume de déclaration. De plus, RTE doit faire des contrôles sur les montants réclamés des avis reçu de l’administration fiscale. OGTF permet donc : de générer les déclarations (en base et au format pdf), de contrôler les avis (comparaison des montants réclamés des avis reçus et des montants calculés par l’outil), de générer des écritures comptables.",
+         "summary":"RTE comprend un nombre important d’immobilisation et doit donc générer un grand volume de déclarations. De plus, RTE doit faire des contrôles sur les montants réclamés des avis reçu de l’administration fiscale. L'outil OGTF permet de générer les déclarations (en base et au format pdf), de contrôler les avis (comparaison des montants réclamés des avis reçus et des montants calculés par l’outil) et de générer des écritures comptables.",
          "highlights":[
             "Rédaction des spécifications fonctionnelles détaillées",
             "Réunion MOA",
             "Mise en place du planning",
             "Gestion d’une équipe de 5 personnes",
-            "Test et Relecture de code",
+            "Tests et Relecture de code",
             "Suivi de recette",
-            "Développement de correctif et évolution"
+            "Développement de correctifs et évolutions"
          ],
          "keywords":[
             "Eclipse",
@@ -730,7 +730,7 @@ module.exports = {
             "Rédaction des spécifications fonctionnelles détaillées du lot 2",
             "Conception et développement de l’application web de configuration",
             "Conception et développement du serveur ;",
-            "Documentation technique ;",
+            "Rédaction de la documentation technique ;",
             "Tests techniques et validation fonctionnelle",
             "Démarche qualité à l’aide de l’outil PMD"
          ],
@@ -791,7 +791,7 @@ module.exports = {
          "start":"2006-09",
          "end":"2006-12",         
          "position":"Ingénieur Concepteur Développeur",
-         "summary":"CUSCO est une une application WEB de gestion de table Business object.  Cette IHM est une aide aux paramétrages de table Oracle utilisée par Business Object.",
+         "summary":"CUSCO est une application WEB de gestion de table Business object.  Cette IHM est une aide aux paramétrages de table Oracle utilisée par Business Object.",
          "highlights":[
             "Conception technique",
             "Développement",
@@ -857,8 +857,8 @@ module.exports = {
          ]
       },
       {
-         "employer":"BOUYGUES TELECOM - PROJET ARCYS",
-         "projet":"PROJET ARCYS",
+         "employer":"BOUYGUES TELECOM - PROJET ArcSys",
+         "projet":"PROJET ArcSys",
          "societe":"INFOTEL",
          "period":"10/2005 à 06/2006",
          "start":"2005-10",
@@ -875,8 +875,8 @@ module.exports = {
          ]
       },
       {
-         "employer":"INFOTEL - PROJET ARCSYS – MODULE CONTENT SERVER",
-         "projet":"PROJET ARCSYS – MODULE CONTENT SERVER",
+         "employer":"INFOTEL - PROJET ArcSys – MODULE CONTENT SERVER",
+         "projet":"PROJET ArcSys – MODULE CONTENT SERVER",
          "societe":"INFOTEL",
          "period":"Pendant 3 mois",
          "start":"2003-10",
@@ -1098,12 +1098,17 @@ module.exports = {
         {
            "start":"2024",
            "end":"2024",
+           "institution":"Architecture d'Entreprise TOGAF 10 (Udemy)"
+        },
+        {
+           "start":"2024",
+           "end":"2024",
            "institution":"Etude : Automatisation Low Code / AI (n8n)"
         },
         {
            "start":"2023",
            "end":"2023",
-           "institution":"Formation Interne Inetum Do you speak Gen AI ?"
+           "institution":"Formation Do you speak Gen AI ? (Inetum)"
         },
         {
            "start":"2021",
@@ -1148,7 +1153,7 @@ module.exports = {
          {
             "start":"2012",
             "end":"2012",
-            "institution":"Formation Scrum Master (Xebia)"
+            "institution":"Certification Scrum Master (Xebia)"
          },
          {
             "start":"2011",
@@ -1255,20 +1260,22 @@ module.exports = {
          {
             "name":"IDE",
             "skills":[
+               "vscode",
                "Eclipse",
-               " IRWD",
-               " Visual Age ",
-               " Toad",
-               " Squirrel SQL et Power AMC"
+               "IRWD",
+               "Visual Age ",
+               "Toad",
+               "Squirrel SQL et Power AMC"
             ]
          },
          {
             "name":"SGBDR",
             "skills":[
+               "PostgreSQL",
                "Oracle (PL/SQL)",
-               " MySQL",
-               " HSQLDB",
-               " DB2"
+               "MySQL",
+               "HSQLDB",
+               "DB2"
             ]
          },
          {
@@ -1348,14 +1355,17 @@ module.exports = {
             "skills":[
                "VirtualBox",
                " Docker",
-               "WSL"
+               "WSL",
+               "Kubernetes"
             ]
          },
          {
           "name":"CLOUD",
           "skills":[
              "AWS",
-             "IBM"
+             "IBM",
+             "DMZR (Cardif)", 
+             "Azure"
           ]
        },
        {
@@ -1401,7 +1411,6 @@ module.exports = {
  
 
 
- 
 
 
 
