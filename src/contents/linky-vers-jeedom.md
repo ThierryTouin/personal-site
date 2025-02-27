@@ -1,8 +1,10 @@
 ---
-title: "Consommation électrique Linky vers Jeedom !"
-description: "Un article pour expliquer comment je transmets ma consommation électrique de on compteur linky en temps réel vers ma box Jeedom !" 
-date: "2023-01-06"
-featured: "../images/conso/light-bulb.jpg"
+title: Consommation électrique Linky vers Jeedom !
+description: >-
+  Un article pour expliquer comment je transmets ma consommation électrique de
+  on compteur linky en temps réel vers ma box Jeedom !
+date: '2023-01-06'
+featured: ../images/conso/light-bulb.jpg
 ---
 
 # /!\ Article en construction
@@ -15,7 +17,7 @@ Pour faire cela, je devais pouvoir
 - Lire les données de consommation sur le bornier du Linky
 - Extraire les informations intéressantes de ces données
 - Transmettre les informations extraites vers ma box Jeedom
-- Afficher ces données dans le dashboard Jeedom ainsi que dans mon application Android.
+- Afficher ces données dans le dashboard Jeedom ainsi que dans mon application Android..
 
 ### 1. Composition
 
@@ -108,5 +110,3 @@ class ELEC styleInvisible;
 J'espère que ce projet pourra vous être utile ou vous donner des idées pour votre propre installation! Il vous permettra de suivre votre consommation électrique et de faire des économies.
 
 Si vous avez des questions ou des commentaires, n'hésitez pas à m'envoyer un message.
-
-
