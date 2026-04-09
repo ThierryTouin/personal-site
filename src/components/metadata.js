@@ -49,7 +49,7 @@ const Metadata = ({ title, description }) => {
       <meta name="twitter:image" content={imgUrl} />
 
       <script async src="//static.getclicky.com/101361743.js"></script>
-      <noscript><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101361743ns.gif" /></noscript>
+      <noscript>{`<img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101361743ns.gif" />`}</noscript>
 
     </Helmet>
   )
