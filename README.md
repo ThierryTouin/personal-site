@@ -1,10 +1,23 @@
 # Installation et développement 
 
+## Avec Docker
+
+```shell
+./run.sh site-start        # Démarre le site (http://localhost:8000)
+./run.sh site-stop         # Stoppe les containers
+./run.sh site-logs         # Logs du site
+./run.sh builder-start     # Démarre l'environnement de dev
+./run.sh builder-shell     # Shell dans le builder
+./run.sh builder-stop      # Stoppe le builder
+./run.sh clean-all         # Supprime tout (images + volumes)
+```
+
+## En local (Node.js 22)
+
 ```shell
 rm -rf node_modules package-lock.json
-npm install --legacy-peer-deps
+npm install
 gatsby develop
-gatsby develop -H 0.0.0.0
 ```
 
 http://localhost:8000
