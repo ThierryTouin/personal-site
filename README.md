@@ -4,6 +4,7 @@
 rm -rf node_modules package-lock.json
 npm install --legacy-peer-deps
 gatsby develop
+gatsby develop -H 0.0.0.0
 ```
 
 http://localhost:8000
