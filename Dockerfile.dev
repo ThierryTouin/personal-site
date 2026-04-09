@@ -1,0 +1,18 @@
+FROM node:18-bullseye-slim
+
+RUN apt-get update && apt-get install -y \
+    python3 \
+    build-essential \
+    git \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN npm install -g gatsby-cli
+
+WORKDIR /app
+
+COPY package.json ./
+RUN npm install --legacy-peer-deps
+
+COPY . .
+
+CMD ["bash"]

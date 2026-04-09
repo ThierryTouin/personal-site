@@ -1,49 +1,48 @@
 #!/bin/bash
 
-IMAGE_NAME="personal-site"
-CONTAINER_NAME="personal-site-dev"
+set -e
+
+COMPOSE_FILE="docker-compose.yml"
+
+if docker compose version >/dev/null 2>&1; then
+  DOCKER_COMPOSE="docker compose"
+elif command -v docker-compose >/dev/null 2>&1; then
+  DOCKER_COMPOSE="docker-compose"
+else
+  echo "Docker Compose is required (docker compose or docker-compose)."
+  exit 1
+fi
 
 case "$1" in
   start)
-    echo "Building image..."
-    docker build -t "$IMAGE_NAME" .
-
-    echo "Starting container..."
-    docker run -d \
-      --name "$CONTAINER_NAME" \
-      -p 8000:8000 \
-      -v "$(pwd)/src:/app/src" \
-      -v "$(pwd)/data:/app/data" \
-      -v "$(pwd)/static:/app/static" \
-      -v "$(pwd)/gatsby-config.js:/app/gatsby-config.js" \
-      -v "$(pwd)/gatsby-node.js:/app/gatsby-node.js" \
-      -v "$(pwd)/gatsby-browser.js:/app/gatsby-browser.js" \
-      "$IMAGE_NAME"
-
-    echo "Container started. Site available at http://localhost:8000"
-    echo "GraphQL explorer at http://localhost:8000/___graphql"
+    echo "Building and starting runtime service..."
+    $DOCKER_COMPOSE -f "$COMPOSE_FILE" up -d --build run
     echo ""
-    echo "Logs: docker logs -f $CONTAINER_NAME"
+    echo "Site available at http://localhost:8000"
+    echo "GraphQL explorer at http://localhost:8000/___graphql"
+    echo "Logs: $DOCKER_COMPOSE -f $COMPOSE_FILE logs -f run"
+    echo "Dev shell: $DOCKER_COMPOSE -f $COMPOSE_FILE run --rm dev"
+    ;;
+
+  shell)
+    echo "Opening development shell..."
+    $DOCKER_COMPOSE -f "$COMPOSE_FILE" run --rm dev
     ;;
 
   stop)
-    echo "Stopping container..."
-    docker stop "$CONTAINER_NAME" 2>/dev/null
-    docker rm "$CONTAINER_NAME" 2>/dev/null
-    echo "Container stopped."
+    echo "Stopping containers..."
+    $DOCKER_COMPOSE -f "$COMPOSE_FILE" down --remove-orphans
+    echo "Containers stopped."
     ;;
 
   clean)
-    echo "Stopping container..."
-    docker stop "$CONTAINER_NAME" 2>/dev/null
-    docker rm "$CONTAINER_NAME" 2>/dev/null
-    echo "Removing image..."
-    docker rmi "$IMAGE_NAME" 2>/dev/null
+    echo "Stopping containers and removing images/volumes..."
+    $DOCKER_COMPOSE -f "$COMPOSE_FILE" down --rmi all --volumes --remove-orphans
     echo "Clean done."
     ;;
 
   *)
-    echo "Usage: $0 {start|stop|clean}"
+    echo "Usage: $0 {start|stop|clean|shell}"
     exit 1
     ;;
 esac

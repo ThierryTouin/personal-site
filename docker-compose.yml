@@ -1,0 +1,28 @@
+services:
+  run:
+    build:
+      context: .
+      dockerfile: Dockerfile.run
+    container_name: personal-site-run
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+      - personal_site_node_modules:/app/node_modules
+    command: gatsby develop -H 0.0.0.0 -p 8000
+
+  dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: personal-site-dev
+    working_dir: /app
+    stdin_open: true
+    tty: true
+    volumes:
+      - .:/app
+      - personal_site_node_modules:/app/node_modules
+    command: bash
+
+volumes:
+  personal_site_node_modules:
