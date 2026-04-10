@@ -46,7 +46,6 @@ module.exports = {
     ...cv
   },
   plugins: [
-    "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
     "gatsby-plugin-sass",
     {
@@ -73,15 +72,8 @@ module.exports = {
             resolve: "gatsby-remark-images",
             options: {
               //maxWidth: 300,
-              maxHeight: 500,
               linkImagesToOriginal: false,
             },
-          },
-          {
-            resolve: `gatsby-remark-image-attributes`,
-            options: {
-              dataAttributes: true
-            }
           },
           'gatsby-remark-emoji',
           {
@@ -123,7 +115,6 @@ module.exports = {
           },
         },
       },
-    },       
-    "gatsby-plugin-netlify",
+    },
   ],
 }
