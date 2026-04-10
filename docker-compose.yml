@@ -26,5 +26,17 @@ services:
       - personal_site_node_modules:/app/node_modules
     command: bash
 
+  static-build:
+    build:
+      context: .
+      dockerfile: Dockerfile.static
+    container_name: personal-site-static
+    ports:
+      - "9000:9000"
+    volumes:
+      - .:/app
+      - static_node_modules:/app/node_modules
+
 volumes:
   personal_site_node_modules:
+  static_node_modules:
