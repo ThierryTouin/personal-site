@@ -36,3 +36,22 @@ https://github.com/ThierryTouin/personal-site
 https://www.netlify.com/
 
 https://thierrytouin.fr/
+
+
+# Domain
+
+## Check domain
+dig www.thierrytouin.fr +short
+dig thierrytouin.fr +short
+dig @8.8.8.8 thierrytouin.fr +short
+dig @8.8.8.8 www.thierrytouin.fr +short
+
+
+## Conf ovh => github
+
+thierrytouin.fr. IN A 185.199.108.153
+thierrytouin.fr. IN A 185.199.109.153
+thierrytouin.fr. IN A 185.199.110.153
+thierrytouin.fr. IN A 185.199.111.153
+www.thierrytouin.fr. IN CNAME thierrytouin.github.io.
+
