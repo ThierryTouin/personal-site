@@ -20,6 +20,9 @@ npm install
 gatsby develop
 ```
 
+gatsby develop -H 0.0.0.0
+
+
 http://localhost:8000
 
 http://localhost:8000/___graphql
