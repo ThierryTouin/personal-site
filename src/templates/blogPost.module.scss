@@ -1,4 +1,4 @@
-@import "./../styles/style.scss";
+@use "./../styles/style.scss" as *;
 
 .content {
   max-width: 750px;

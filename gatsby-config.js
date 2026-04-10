@@ -46,6 +46,7 @@ module.exports = {
     ...cv
   },
   plugins: [
+    "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
     "gatsby-plugin-sass",
     {
