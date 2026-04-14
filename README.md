@@ -47,6 +47,8 @@ dig @8.8.8.8 thierrytouin.fr +short
 dig @8.8.8.8 www.thierrytouin.fr +short
 
 
+dig NS thierrytouin.fr
+
 ## Conf ovh => github
 
 thierrytouin.fr. IN A 185.199.108.153
@@ -54,4 +56,8 @@ thierrytouin.fr. IN A 185.199.109.153
 thierrytouin.fr. IN A 185.199.110.153
 thierrytouin.fr. IN A 185.199.111.153
 www.thierrytouin.fr. IN CNAME thierrytouin.github.io.
+
+
+
+https://manager.eu.ovhcloud.com/#/web-domains/domain/thierrytouin.fr/dns
 
