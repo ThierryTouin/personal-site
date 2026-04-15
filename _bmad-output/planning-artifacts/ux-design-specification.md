@@ -1,5 +1,5 @@
 ---
-stepsCompleted: [1, 2, 3, 4, 5, 6, 7, 8]
+stepsCompleted: [1, 2, 3, 4, 5, 6, 7, 8, 9]
 inputDocuments:
   - /data/work/dev-perso/personal-site/_bmad-output/project-documentation.md
 ---
@@ -291,3 +291,44 @@ Regles d'accessibilite:
 
 Compromis assume:
 - Le visuel reste raffine et chaleureux, tout en conservant une base d'accessibilite robuste sur les parcours critiques.
+
+## Design Direction Decision
+
+### Design Directions Explored
+6 directions ont ete explorees dans le showcase visuel:
+- D01 Editorial Warm Classic
+- D02 Dark Ink Accent
+- D03 Grid Precision
+- D04 Story Stripe
+- D05 Soft Magazine
+- D06 Hybrid Signature
+
+Chaque direction testait un equilibre different entre credibilite, chaleur, densite d'information et confort de lecture mobile.
+
+### Chosen Direction
+Direction retenue: D06 Hybrid Signature.
+
+Caracteristiques cles:
+- Clarte de hierarchie inspiree des interfaces orientees conversion.
+- Rigueur structurelle adaptee a un profil Architecte Solution.
+- Chaleur editoriale suffisante pour eviter l'effet froid/impersonnel.
+- Tres bonne continuite entre Accueil, Blog et CV.
+
+### Design Rationale
+D06 repond le mieux aux objectifs UX valides:
+- Message de valeur compris sans scroll.
+- Confiance immediate, puis curiosite.
+- Confort de lecture long format.
+- Pattern familier avec une touche distinctive (innovation mesuree).
+- Capacite a soutenir la recommandation en fin de parcours.
+
+### Implementation Approach
+Mise en oeuvre recommandee en 3 iterations:
+1. Accueil: hero, promesse, preuves, CTA.
+2. Blog: cartes d'articles + lisibilite long format.
+3. CV/About: hierarchie d'information et navigation coherentes avec l'accueil.
+
+Gardes-fous de realisation:
+- Utiliser uniquement les tokens visuels definis a l'etape 8.
+- Limiter les animations a des transitions discretes.
+- Verifier systematiquement lisibilite mobile et coherence desktop.
