@@ -1,5 +1,5 @@
 ---
-stepsCompleted: [1, 2, 3]
+stepsCompleted: [1, 2, 3, 4]
 inputDocuments:
   - /data/work/dev-perso/personal-site/_bmad-output/project-documentation.md
 ---
@@ -66,3 +66,41 @@ Principes directeurs:
 - Lecture longue sans fatigue.
 - Personnalite graphique maitrisee, jamais decorative.
 - Chaque ecran doit renforcer la confiance.
+
+## Desired Emotional Response
+
+### Primary Emotional Goals
+Le site doit d'abord installer une confiance immediate, puis ouvrir une curiosite naturelle qui donne envie d'explorer davantage.
+L'emotion dominante recherchee est: "ce professionnel est solide, clair et humain".
+
+### Emotional Journey Mapping
+- Decouverte (premier ecran): curiosite + credibilite instantanee.
+- Exploration (scroll/navigation): sentiment de clarte, rythme calme, comprehension progressive.
+- Lecture longue (CV/articles): confort, concentration, absence de fatigue cognitive.
+- Fin de visite: respect professionnel suffisamment fort pour declencher la recommandation.
+- Retour sur le site: familiarite et continuite, sans friction.
+
+### Micro-Emotions
+Micro-etats a favoriser:
+- Confiance plutot que scepticisme.
+- Curiosite plutot qu'indifference.
+- Confort de lecture plutot qu'effort.
+- Fierte de recommandation plutot que simple satisfaction passive.
+
+Micro-etat a eviter en priorite:
+- Froid/impersonnel (distance emotionnelle, ton trop neutre, esthetique trop generique).
+
+### Design Implications
+Connexions emotion -> choix UX:
+- Confiance immediate -> hierarchie visuelle nette, message de valeur explicite au-dessus de la ligne de flottaison.
+- Curiosite -> progression narrative legere (promesse -> preuves -> contact) avec transitions discretes.
+- Confort de lecture -> typographie editoriale bien calibree, largeur de ligne maitrisee, interlignage genereux.
+- Recommandation -> coherence percue, details soignes, personnalite graphique subtile mais memorable.
+- Eviter le froid/impersonnel -> tonalite redactionnelle plus humaine, visuels moins "template", accents de marque mesures.
+
+### Emotional Design Principles
+- Inspirer la confiance avant de convaincre.
+- Susciter la curiosite sans creer de confusion.
+- Faire de la lecture un espace de confort.
+- Construire une personnalite graphique chaleureuse et professionnelle.
+- Terminer chaque parcours sur une impression recommandable.
