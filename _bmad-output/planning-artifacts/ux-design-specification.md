@@ -1,5 +1,5 @@
 ---
-stepsCompleted: [1, 2, 3, 4, 5, 6, 7]
+stepsCompleted: [1, 2, 3, 4, 5, 6, 7, 8]
 inputDocuments:
   - /data/work/dev-perso/personal-site/_bmad-output/project-documentation.md
 ---
@@ -219,3 +219,75 @@ Approche retenue: mix de patterns etablis + touche distinctive.
 4. Completion:
 - Le visiteur termine avec une conviction claire sur la valeur du profil.
 - Les suites naturelles sont: prise de contact, recommandation, ou retour ulterieur.
+
+## Visual Design Foundation
+
+### Color System
+Le systeme couleur vise une identite professionnelle chaleureuse avec un contraste maitrise et une personnalite discrete.
+
+Palette proposee:
+- --color-bg: #F7F5F2 (fond principal doux, non clinique)
+- --color-surface: #FFFFFF (cartes et sections)
+- --color-text: #1F252B (texte principal, lisibilite forte)
+- --color-text-muted: #5C6670 (texte secondaire)
+- --color-primary: #1E5A96 (bleu confiance, action et reperes)
+- --color-primary-strong: #15446F (etats actifs/hover)
+- --color-accent-warm: #C47A3A (accent chaleureux mesure)
+- --color-border: #D9D4CC (separations discretes)
+
+Mapping semantique:
+- Primaire: credibilite et navigation
+- Secondaire: contenu et surfaces
+- Accent: points d'attention editoriaux
+- Neutres: hierarchie textuelle et respiration visuelle
+
+### Typography System
+Objectif: autorite editoriale + confort de lecture.
+
+Pairing typographique:
+- Titres (serif): caractere editorial premium
+- Corps (sans-serif): lecture fluide longue duree
+
+Type scale recommande:
+- H1: 44/52 (desktop), 34/40 (mobile)
+- H2: 32/38, H3: 24/30
+- Body large: 20/32
+- Body: 18/30
+- Meta/labels: 14/20
+
+Regles cles:
+- Largeur de ligne contenu: 62-70 caracteres
+- Contraste titre/corps net
+- Espaces verticaux guides par la base 8px
+
+### Spacing & Layout Foundation
+Le layout doit rester structure sans rigidite.
+
+Systeme d'espacement:
+- Base: 8px
+- Echelle: 8, 16, 24, 32, 48, 64, 96
+
+Principes de layout:
+- Densite equilibree: information riche mais lisible
+- Grille flexible: 12 colonnes desktop, 4 colonnes mobile
+- Conteneur principal: max-width 1120px
+- Rythme de section: 64-96px desktop, 40-64px mobile
+
+Structure dominante:
+- Hero
+- Promesse de valeur
+- Preuves (articles/experiences)
+- Transition vers action (contact)
+
+### Accessibility Considerations
+Priorite: equilibre visuel sans sacrifier l'usage.
+
+Regles d'accessibilite:
+- Contraste minimum AA sur texte et actions principales
+- Focus visible coherent sur tous les elements interactifs
+- Taille tactile min 44px pour actions mobile
+- Etats interactifs explicites (hover, active, focus)
+- Respect des preferences utilisateur pour motion reduite
+
+Compromis assume:
+- Le visuel reste raffine et chaleureux, tout en conservant une base d'accessibilite robuste sur les parcours critiques.
