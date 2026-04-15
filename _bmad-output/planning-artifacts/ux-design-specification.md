@@ -1,5 +1,5 @@
 ---
-stepsCompleted: [1, 2, 3, 4]
+stepsCompleted: [1, 2, 3, 4, 5]
 inputDocuments:
   - /data/work/dev-perso/personal-site/_bmad-output/project-documentation.md
 ---
@@ -104,3 +104,46 @@ Connexions emotion -> choix UX:
 - Faire de la lecture un espace de confort.
 - Construire une personnalite graphique chaleureuse et professionnelle.
 - Terminer chaque parcours sur une impression recommandable.
+
+## UX Pattern Analysis & Inspiration
+
+### Inspiring Products Analysis
+Stripe excelle dans la mise en confiance immediate: hierarchie visuelle nette, message de valeur explicite, et structure qui guide sans friction.
+Linear se distingue par une interface reduite a l'essentiel, ou chaque interaction semble evidente et rapide, sans surcharge.
+Medium reussit la lecture longue grace a une typographie respirante, une largeur de ligne maitrisee, et une progression de contenu tres confortable sur mobile.
+
+### Transferable UX Patterns
+Patterns de navigation transferables:
+- Navigation principale courte et stable, visible des l'arrivee.
+- Parcours narratif simple: promesse -> preuves -> action.
+
+Patterns d'interaction transferables:
+- Transitions discretes et rapides, jamais decoratives.
+- Etats hover/focus propres et lisibles pour renforcer la sensation de maitrise.
+
+Patterns visuels transferables:
+- Hero clair avec message principal fort (inspiration Stripe).
+- Densite reduite, composants aeres, alignements stricts (inspiration Linear).
+- Systeme typographique oriente lecture profonde (inspiration Medium).
+
+### Anti-Patterns to Avoid
+- Interfaces "vitrine" trop generiques qui paraissent impersonnelles.
+- Multiplication d'effets visuels qui ralentissent la lecture mobile.
+- Blocs trop denses sans respiration typographique.
+- CTA noyes dans le contenu sans hierarchie claire.
+
+### Design Inspiration Strategy
+Ce qu'on adopte:
+- Clarte de proposition de valeur au premier ecran.
+- Minimalisme fonctionnel dans la navigation et les interactions.
+- Confort editorial maximal pour CV et blog.
+
+Ce qu'on adapte:
+- Le niveau de sobriete de Linear, en ajoutant plus de chaleur humaine.
+- Le confort de lecture de Medium, applique a un site vitrine oriente conversion.
+- La credibilite "enterprise" de Stripe, calibree pour un profil personnel.
+
+Ce qu'on evite:
+- Le style trop froid/standardise.
+- Les animations ostentatoires.
+- Les structures de page qui noient la promesse principale.
