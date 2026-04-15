@@ -1,5 +1,5 @@
 ---
-stepsCompleted: [1, 2, 3, 4, 5]
+stepsCompleted: [1, 2, 3, 4, 5, 6]
 inputDocuments:
   - /data/work/dev-perso/personal-site/_bmad-output/project-documentation.md
 ---
@@ -147,3 +147,29 @@ Ce qu'on evite:
 - Le style trop froid/standardise.
 - Les animations ostentatoires.
 - Les structures de page qui noient la promesse principale.
+
+## Design System Foundation
+
+### 1.1 Design System Choice
+Nous retenons une approche de design system thematique leger, fondee sur une architecture SCSS tokenisee et un set de composants UI maison cibles.
+Le projet n'adopte pas de framework UI lourd; il conserve une base front legere et performante, orientee vitrine professionnelle mobile-first.
+
+### Rationale for Selection
+- Le site doit exprimer une personnalite visuelle forte sans tomber dans un rendu generique.
+- Le contexte est un site personnel expert, pas une application metier necessitant une bibliotheque exhaustive de composants complexes.
+- La strategie mobile-first et le besoin de confort de lecture longue favorisent un systeme maitrise et sobre.
+- L'existant Gatsby + SCSS permet une migration progressive sans dette d'integration inutile.
+
+### Implementation Approach
+- Creer une couche de design tokens centralisee (couleurs, typo, espacements, rayons, ombres, z-index, transitions).
+- Structurer les styles autour de primitives reutilisables: container, stack, grid, section, surface, text styles.
+- Definir un noyau de composants maison: Hero, Nav, Button, Card, ArticlePreview, SectionHeader, Footer.
+- Etablir des regles d'accessibilite par defaut: contrastes AA, focus visible, tailles tactiles, etats interactifs coherents.
+- Deployer en iterations: accueil d'abord, puis pages CV, puis templates article.
+
+### Customization Strategy
+- Typographie editoriale pilotee par tokens (titres serif, texte courant sans-serif si necessaire pour lisibilite).
+- Palette sobre et professionnelle avec accents controles pour guider l'attention.
+- Motion discrete: transitions courtes, revelations legeres, aucune animation decorative lourde.
+- Signature visuelle via hero photo + overlays geometriques subtils.
+- Regles anti-derive: pas de composant sans token, pas de variante visuelle sans justification UX.
