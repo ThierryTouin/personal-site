@@ -1,0 +1,147 @@
+// ============================================================================
+// DESIGN TOKENS - personal-site
+// Direction: D06 Hybrid Signature
+// Generated: 15 avril 2026
+// ============================================================================
+
+// ------ COLOR TOKENS ------
+// Palette: Professional Warm Editorial
+$color-bg: #f7f5f2;           // Fond principal doux
+$color-surface: #ffffff;       // Cartes et sections
+$color-text: #1f252b;          // Texte principal, lisibilité forte
+$color-text-muted: #5c6670;    // Texte secondaire
+$color-primary: #1e5a96;       // Bleu confiance, actions et repères
+$color-primary-strong: #15446f; // États actifs/hover
+$color-accent-warm: #c47a3a;   // Accent chaleureux mesuré
+$color-border: #d9d4cc;        // Séparations discrètes
+$color-success: #2d8a4a;
+$color-warning: #b87d3a;
+$color-error: #c64545;
+
+// Semantic color mappings
+$primary: $color-primary;
+$secondary: $color-text;
+$tertiary: $color-primary-strong;
+$accent: $color-accent-warm;
+$muted: $color-text-muted;
+$line: $color-border;
+$ok: #e9f2fc;
+
+// ------ TYPOGRAPHY TOKENS ------
+// Serif éditoriale pour titres, sans-serif pour corps
+$font-serif: "Merriweather", Georgia, "Times New Roman", serif;
+$font-sans: "Source Sans 3", "Segoe UI", Roboto, Verdana, "Helvetica Neue", sans-serif;
+
+// Type scale (desktop / mobile)
+$h1-font-size-desktop: 44px;
+$h1-font-size-mobile: 34px;
+$h1-line-height: 1.2;
+
+$h2-font-size-desktop: 32px;
+$h2-font-size-mobile: 28px;
+$h2-line-height: 1.25;
+
+$h3-font-size-desktop: 24px;
+$h3-font-size-mobile: 22px;
+$h3-line-height: 1.3;
+
+$body-large-font-size: 20px;
+$body-large-line-height: 1.6;
+
+$body-font-size: 18px;
+$body-line-height: 1.65; // Confort lecture longue
+
+$meta-font-size: 14px;
+$meta-line-height: 1.5;
+
+$small-font-size: 13px;
+$small-line-height: 1.4;
+
+// Typography settings
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// Content width for optimal reading
+$content-max-width: 70ch; // 62-70 caractères optimal
+
+// ------ SPACING TOKENS ------
+// Base unit: 8px
+$space-1: 8px;
+$space-2: 16px;
+$space-3: 24px;
+$space-4: 32px;
+$space-5: 48px;
+$space-6: 64px;
+$space-7: 96px;
+
+// Layout containers
+$container-max-width: 1120px;
+$container-horizontal-padding-desktop: $space-4;
+$container-horizontal-padding-mobile: $space-3;
+
+// Section rhythms
+$section-spacing-desktop: 64px;
+$section-spacing-mobile: 40px;
+$section-spacing-large: 96px;
+
+// Component spacing rules
+$component-gap-tight: $space-1;
+$component-gap-normal: $space-2;
+$component-gap-loose: $space-3;
+
+// ------ BORDER & RADIUS TOKENS ------
+$border-radius-small: 8px;
+$border-radius-default: 14px;
+$border-radius-large: 20px;
+$border-radius-full: 999px;
+
+$border-width-thin: 1px;
+$border-width-medium: 2px;
+$border-width-thick: 3px;
+
+// ------ SHADOW TOKENS ------
+// Soft, subtle shadows for editorial feel
+$shadow-sm: 0 2px 8px rgba(31, 37, 43, 0.04);
+$shadow-md: 0 4px 16px rgba(31, 37, 43, 0.06);
+$shadow-lg: 0 8px 30px rgba(31, 37, 43, 0.08);
+$shadow-xl: 0 12px 48px rgba(31, 37, 43, 0.10);
+
+// ------ TRANSITION & MOTION TOKENS ------
+// Discrete, fast transitions (no heavy animations)
+$transition-fast: 150ms ease-out;
+$transition-base: 200ms ease-out;
+$transition-slow: 300ms ease-out;
+
+$easing-swift: cubic-bezier(0.2, 0.6, 0.3, 1);
+$easing-smooth: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+// ------ Z-INDEX TOKENS ------
+$z-dropdown: 100;
+$z-sticky: 200;
+$z-fixed: 300;
+$z-modal-backdrop: 400;
+$z-modal: 410;
+$z-notification: 500;
+
+// ------ BREAKPOINTS ------
+$breakpoint-mobile: 480px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+$breakpoint-wide: 1280px;
+
+// ------ ACCESSIBILITY TOKENS ------
+$focus-outline-width: 2px;
+$focus-outline-color: $color-primary;
+$focus-outline: $focus-outline-width solid $focus-outline-color;
+$focus-outline-offset: 2px;
+
+// Minimum interactive target size for touch
+$touch-target-min: 44px;
+
+// Contrast requirements (WCAG AA minimum)
+$contrast-text-on-bg: $color-text on $color-bg;    // 13.5:1 ✓
+$contrast-text-on-surface: $color-text on $color-surface; // 14.7:1 ✓
+$contrast-primary-on-bg: $color-primary on $color-bg;     // 6.8:1 ✓
+$contrast-primary-on-surface: $color-primary on $color-surface; // 7.2:1 ✓

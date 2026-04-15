@@ -1,37 +1,76 @@
-$color1:#0066CC;
-$color2:#2D3436;
-$color3:#2D3436;
-//$color4:#E9E5F4;
-$color4:#F8F9FA;
-$color5:#F8F9FA;
-$color6:#2D3436;
-$color7:#F8F9FA;
+@import "tokens.scss";
 
+// ============================================================================
+// Global Styles - Direction D06 Hybrid Signature
+// ============================================================================
 
-$primaryColor: $color3;
-$secondaryColor: $color1;
-$mainWhite: $color4;
+// Legacy color aliases for backward compatibility
+$color1: $color-primary;
+$color2: $color-text;
+$color3: $color-text;
+$color4: $color-surface;
+$color5: $color-surface;
+$color6: $color-text;
+$color7: $color-surface;
 
-
+$primaryColor: $color-text;
+$secondaryColor: $color-primary;
+$mainWhite: $color-surface;
 
 * {
   box-sizing: border-box;
 }
+
 body {
-  color: $primaryColor;
+  color: $color-text;
+  background-color: $color-bg;
   font-size: 100%;
   margin: 0;
-  line-height: 1.4283;
-  font-family: "Segoe UI", Roboto, Verdana, "Helvetica Neue", sans-serif;
+  line-height: $body-line-height;
+  font-family: $font-sans;
 }
+
 h1,
 h2,
-h3 {
-  font-weight: 400;
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-serif;
+  font-weight: $font-weight-regular;
+  letter-spacing: 0.2px;
+  margin: 0;
 }
+
+h1 {
+  font-size: $h1-font-size-desktop;
+  line-height: $h1-line-height;
+}
+
+h2 {
+  font-size: $h2-font-size-desktop;
+  line-height: $h2-line-height;
+}
+
+h3 {
+  font-size: $h3-font-size-desktop;
+  line-height: $h3-line-height;
+}
+
 a {
-  color: $secondaryColor;
+  color: $color-primary;
   text-decoration: none;
+  transition: color $transition-base;
+  
+  &:hover {
+    color: $color-primary-strong;
+  }
+  
+  &:focus-visible {
+    outline: $focus-outline;
+    outline-offset: $focus-outline-offset;
+    border-radius: 2px;
+  }
 }
 
 
@@ -40,28 +79,34 @@ a {
   position: fixed;
   bottom: 50px;
   right: 10%;
-  z-index: 99;
+  z-index: $z-fixed;
   font-size: 1.125rem;
   border: none;
   outline: none;
   background-color: transparent;
   color: white;
   cursor: pointer;
-  padding: 0.9375rem;
-  border-radius: 0.25rem;
+  padding: $space-2;
+  border-radius: $border-radius-small;
   background-image: url("/arrow-up.svg");
   background-repeat: no-repeat;
   width: 50px;
   height: 50px;
   background-position: center;
-
-
-
+  transition: opacity $transition-base;
+  
+  &:hover {
+    opacity: 0.8;
+  }
+  
+  &:focus-visible {
+    outline: $focus-outline;
+    outline-offset: $focus-outline-offset;
+  }
 }
 
 #scroll-btn {
   right: 15%;
   background-image: url("/arrow-up.svg");
-  background-color: $color4;
-
+  background-color: $color-primary;
 }
