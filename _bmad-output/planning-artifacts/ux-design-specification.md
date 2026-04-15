@@ -1,5 +1,5 @@
 ---
-stepsCompleted: [1, 2, 3, 4, 5, 6]
+stepsCompleted: [1, 2, 3, 4, 5, 6, 7]
 inputDocuments:
   - /data/work/dev-perso/personal-site/_bmad-output/project-documentation.md
 ---
@@ -173,3 +173,49 @@ Le projet n'adopte pas de framework UI lourd; il conserve une base front legere 
 - Motion discrete: transitions courtes, revelations legeres, aucune animation decorative lourde.
 - Signature visuelle via hero photo + overlays geometriques subtils.
 - Regles anti-derive: pas de composant sans token, pas de variante visuelle sans justification UX.
+
+## 2. Core User Experience
+
+### 2.1 Defining Experience
+L'experience definissante du site est la comprehension immediate de la valeur professionnelle de Thierry en moins de 10 secondes, suivie d'une exploration naturelle du blog pour valider la profondeur technique avant de consulter le CV detaille ou de passer au contact.
+
+### 2.2 User Mental Model
+Le visiteur arrive avec un besoin de preuves concretes immediates.
+Son modele mental est:
+- "Montre-moi rapidement ce que tu vaux."
+- "Donne-moi un signal fort de credibilite."
+- "Laisse-moi verifier cette credibilite via un contenu reel (articles)."
+
+Le parcours doit donc reduire l'incertitude des le premier ecran, puis transformer la curiosite en conviction par des preuves lisibles.
+
+### 2.3 Success Criteria
+Critere principal:
+- Message de valeur compris sans scroll.
+
+Indicateurs complementaires:
+- Le visiteur identifie clairement le positionnement d'Architecte Solution au premier ecran.
+- La transition vers le contenu de preuve (blog/CV) se fait sans hesitation.
+- La lecture percue reste fluide et ordonnee sur mobile.
+
+### 2.4 Novel UX Patterns
+Approche retenue: mix de patterns etablis + touche distinctive.
+- Patterns etablis: hero clair, sections hierarchisees, navigation simple, CTA lisibles.
+- Touche distinctive: traitement editorial de la lecture et direction visuelle personnelle (hero photo + overlays, rythme typographique premium).
+- Niveau d'innovation: modere, pour ne pas creer de friction d'apprentissage.
+
+### 2.5 Experience Mechanics
+1. Initiation:
+- Le visiteur arrive sur un hero explicite (promesse + credibilite) avec une hierarchie nette.
+- Le message principal est comprehensible immediatement sans interaction.
+
+2. Interaction:
+- Le parcours dominant suit: Hero -> Blog d'abord -> CV ensuite.
+- Le visiteur accede rapidement a 2-3 contenus techniques phares puis au parcours professionnel detaille.
+
+3. Feedback:
+- La clarte du positionnement et des reperes visuels confirment qu'il est au bon endroit.
+- Les elements de preuve (articles, experiences, competences) renforcent la confiance a chaque etape.
+
+4. Completion:
+- Le visiteur termine avec une conviction claire sur la valeur du profil.
+- Les suites naturelles sont: prise de contact, recommandation, ou retour ulterieur.
