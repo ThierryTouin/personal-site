@@ -8,6 +8,7 @@ import Metadata from "../components/metadata"
 import MqttComponent from '../components/mqtt/mqtt-page1';
 
 import * as blogStyles from "./blog.module.scss"
+import Promise from '../components/promise'
 
 
 const Blog = () => {
@@ -43,6 +44,7 @@ const Blog = () => {
   return (
     <Layout>
       <Metadata title="Blog" description="La partie blog" />  
+      <Promise />
       <ul className={blogStyles.posts}>
         {data.allMarkdownRemark.edges.map(edge => {
           return (
