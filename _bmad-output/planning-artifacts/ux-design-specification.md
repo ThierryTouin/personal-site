@@ -1,5 +1,5 @@
 ---
-stepsCompleted: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+stepsCompleted: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 inputDocuments:
   - /data/work/dev-perso/personal-site/_bmad-output/project-documentation.md
 ---
@@ -332,3 +332,72 @@ Gardes-fous de realisation:
 - Utiliser uniquement les tokens visuels definis a l'etape 8.
 - Limiter les animations a des transitions discretes.
 - Verifier systematiquement lisibilite mobile et coherence desktop.
+
+## User Journey Flows
+
+### Journey 1: Recruteur en mode rapide (20-30 secondes)
+
+Objectif: valider seniorite et positionnement.
+
+Flux:
+- Arrivee sur Accueil.
+- Hero explicite (Architecte Solution + accroche).
+- Si message compris: scroll court avec 3 preuves visuelles (titre pro, 1 article phare, 1 competence cle).
+- Si impression positive: clic CTA Contact ou retour ulterieur.
+- Sinon: quitter le site.
+
+Moments critiques:
+- Hero: doit dire qui + valeur en 1 phrase.
+- Preuves: 3 elements visibles sans scroll.
+- CTA Contact: tres visible, pas de friction.
+
+### Journey 2: Client exploratoire (3-5 minutes)
+
+Objectif: explorer seniorite, style, fit culturel.
+
+Flux:
+- Arrivee Accueil.
+- Descend lire 2-3 articles phares (valide: style d'ecriture + profondeur technique).
+- Si interesse: clique About, parcourt CV rapide.
+- Consulte experiences + competences.
+- Si fit valide: contact direct ou bookmark pour apres.
+- Sinon: quitter.
+
+Moments critiques:
+- Articles: pertinence, bien structures, signature d'expert.
+- About/CV: clarte hierarchie (titre -> grandes missions -> tech stack).
+- Navigation: tres fluide article -> About.
+
+### Journey 3: Pair technique (5-15 minutes)
+
+Objectif: evaluer profondeur, pertinence, perspective.
+
+Flux:
+- Arrivee Accueil.
+- Va droit au Blog, cherche contenu dense.
+- Lit article 1 en profondeur (valide qualite).
+- Si qualite validee: lit article 2-3.
+- Peut cliquer About, verifier CV technique.
+- Consulte Skills + Experiences (valide alignement).
+- Si respect professionnel: recommande ou suit parcours contact.
+- Sinon: quitter.
+
+Moments critiques:
+- Contenu: technique, nuance, bien ecrit.
+- Lisibilite longue: confort typographique maximal.
+- CV: competences detaillees, coherence avec blog.
+
+### Journey Patterns
+
+Patterns reutilisables identifies:
+- Hero clair: chaque parcours commence par clarification du positionnement.
+- Preuves progressives: promesse -> article -> detail CV.
+- Navigation fluide: passer d'une section a l'autre sans friction.
+- CTA ou recommandation finale: circulation claires vers contact ou partage.
+
+### Flow Optimization Principles
+
+- Minimiser scroll initial pour recruteur rapide.
+- Garantir confort lecture longue pour pair technique.
+- Disponibilite du detail CV sans effort pour client exploratoire.
+- Rendre evident parcours Blog -> CV sans imposer l'ordre.
