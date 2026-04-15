@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>UX Design Directions - personal-site</title>
+  <style>
+    :root {
+      --bg: #f3f0eb;
+      --surface: #ffffff;
+      --ink: #1f252b;
+      --muted: #5c6670;
+      --line: #d9d4cc;
+      --primary: #1e5a96;
+      --primary-strong: #15446f;
+      --warm: #c47a3a;
+      --ok: #e9f2fc;
+      --radius: 14px;
+      --space-1: 8px;
+      --space-2: 16px;
+      --space-3: 24px;
+      --space-4: 32px;
+      --space-5: 48px;
+      --shadow: 0 8px 30px rgba(31, 37, 43, 0.08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: radial-gradient(circle at 10% 5%, #faf7f2, var(--bg));
+      font-family: "Source Sans 3", "Segoe UI", Roboto, Arial, sans-serif;
+      line-height: 1.5;
+    }
+    h1, h2, h3 {
+      font-family: "Merriweather", Georgia, serif;
+      letter-spacing: 0.2px;
+      margin: 0;
+    }
+    .wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: var(--space-5) var(--space-3);
+    }
+    .title {
+      margin-bottom: var(--space-3);
+    }
+    .title p {
+      margin: var(--space-1) 0 0;
+      color: var(--muted);
+    }
+    .legend {
+      display: flex;
+      gap: var(--space-2);
+      flex-wrap: wrap;
+      margin-bottom: var(--space-4);
+    }
+    .chip {
+      border: 1px solid var(--line);
+      background: var(--surface);
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: var(--space-3);
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      min-height: 500px;
+    }
+    .mockup {
+      border-bottom: 1px solid var(--line);
+      padding: var(--space-3);
+      min-height: 330px;
+      position: relative;
+      overflow: hidden;
+    }
+    .meta {
+      padding: var(--space-2) var(--space-3) var(--space-3);
+    }
+    .meta h3 {
+      font-size: 20px;
+      margin-bottom: 6px;
+    }
+    .meta p { margin: 0 0 10px; color: var(--muted); }
+    .meta ul { margin: 0; padding-left: 18px; }
+
+    .hero {
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 18px;
+      background: linear-gradient(135deg, #fefefe 0%, #f8f6f1 100%);
+      margin-bottom: 14px;
+    }
+    .hero .kicker { font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: var(--primary); }
+    .hero h4 { margin: 6px 0 8px; font: 700 22px/1.2 "Merriweather", Georgia, serif; }
+    .hero p { margin: 0 0 10px; color: var(--muted); font-size: 14px; }
+    .btn {
+      display: inline-block;
+      border: 0;
+      background: var(--primary);
+      color: #fff;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 13px;
+    }
+    .row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .block {
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 12px;
+      background: #fff;
+      font-size: 13px;
+    }
+
+    /* Direction skins */
+    .d1 .mockup::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(130deg, rgba(30,90,150,.10), rgba(196,122,58,.08));
+      pointer-events: none;
+    }
+    .d2 .hero { background: #1f252b; color: #f4f0ea; }
+    .d2 .hero .kicker { color: #d8a572; }
+    .d2 .hero p { color: #d4d8dc; }
+    .d2 .btn { background: #c47a3a; }
+    .d3 .mockup { background: repeating-linear-gradient(90deg, #fff, #fff 44px, #f8f8f8 44px, #f8f8f8 45px); }
+    .d4 .hero { border-radius: 0; border-left: 4px solid var(--primary); }
+    .d5 .mockup { background: linear-gradient(160deg, #fbfaf8, #f1ede6); }
+    .d5 .block { background: #fffefb; }
+    .d6 .hero { background: #ffffff; box-shadow: 0 10px 24px rgba(21,68,111,.12); }
+    .d6 .btn { background: var(--primary-strong); }
+
+    .notes {
+      margin-top: var(--space-4);
+      border: 1px dashed var(--line);
+      padding: var(--space-3);
+      border-radius: var(--radius);
+      background: #fffdf9;
+    }
+
+    @media (max-width: 980px) {
+      .grid { grid-template-columns: 1fr; }
+      .wrap { padding: var(--space-4) var(--space-2); }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header class="title">
+      <h1>Design Directions - personal-site</h1>
+      <p>6 variantes visuelles pour une vitrine d'Architecte Solution: mobile-first, editoriale, chaleureuse, lisible.</p>
+    </header>
+
+    <section class="legend" aria-label="criteres">
+      <span class="chip">Objectif: valeur comprise en 10s</span>
+      <span class="chip">Parcours: Hero -> Blog -> CV</span>
+      <span class="chip">Ton: professionnel chaleureux</span>
+      <span class="chip">Structure: base 8px</span>
+    </section>
+
+    <section class="grid" aria-label="directions">
+      <article class="card d1">
+        <div class="mockup">
+          <div class="hero"><span class="kicker">Direction 01</span><h4>Editorial Warm Classic</h4><p>Serif forte, overlays discrets, promesse claire puis preuves.</p><button class="btn">Voir les preuves</button></div>
+          <div class="row"><div class="block">Article phare #1</div><div class="block">Competence cle #1</div></div>
+        </div>
+        <div class="meta"><h3>D01 - Editorial Warm Classic</h3><p>Le plus proche de vos choix actuels.</p><ul><li>Confiance immediate</li><li>Lecture longue prioritaire</li><li>Elegance sobre</li></ul></div>
+      </article>
+
+      <article class="card d2">
+        <div class="mockup">
+          <div class="hero"><span class="kicker">Direction 02</span><h4>Dark Ink Accent</h4><p>Fond encre + accent cuivre pour signaler expertise premium.</p><button class="btn">Parcourir le blog</button></div>
+          <div class="row"><div class="block">Exp. recente</div><div class="block">CTA contact</div></div>
+        </div>
+        <div class="meta"><h3>D02 - Dark Ink Accent</h3><p>Plus contrasté, très “cabinet d’architecture”.</p><ul><li>Forte personnalite</li><li>Impact visuel eleve</li><li>Risque: tonalite plus froide</li></ul></div>
+      </article>
+
+      <article class="card d3">
+        <div class="mockup">
+          <div class="hero"><span class="kicker">Direction 03</span><h4>Grid Precision</h4><p>Grille apparente, rythme editorial strict, sensation de maitrise.</p><button class="btn">Comprendre le profil</button></div>
+          <div class="row"><div class="block">Preuve technique</div><div class="block">Preuve parcours</div></div>
+        </div>
+        <div class="meta"><h3>D03 - Grid Precision</h3><p>Tres adapte au profil Architecte Solution.</p><ul><li>Clarte structurelle</li><li>Hierarchie ultra nette</li><li>Moins emotionnel</li></ul></div>
+      </article>
+
+      <article class="card d4">
+        <div class="mockup">
+          <div class="hero"><span class="kicker">Direction 04</span><h4>Story Stripe</h4><p>Narration en sections courtes, conversion progressive.</p><button class="btn">Voir 3 articles</button></div>
+          <div class="row"><div class="block">Valeur</div><div class="block">Call to action</div></div>
+        </div>
+        <div class="meta"><h3>D04 - Story Stripe</h3><p>Optimisée conversion recruteur/client.</p><ul><li>Tres lisible mobile</li><li>Flow clair</li><li>Moins “magazine”</li></ul></div>
+      </article>
+
+      <article class="card d5">
+        <div class="mockup">
+          <div class="hero"><span class="kicker">Direction 05</span><h4>Soft Magazine</h4><p>Ambiance magazine technique, chaleur subtile, respiration forte.</p><button class="btn">Lire un article</button></div>
+          <div class="row"><div class="block">Resume parcours</div><div class="block">Technologies cle</div></div>
+        </div>
+        <div class="meta"><h3>D05 - Soft Magazine</h3><p>Confort de lecture maximal.</p><ul><li>Approche humaine</li><li>Excellent pour long-form</li><li>Impact hero un peu moindre</li></ul></div>
+      </article>
+
+      <article class="card d6">
+        <div class="mockup">
+          <div class="hero"><span class="kicker">Direction 06</span><h4>Hybrid Signature</h4><p>Combine clarté Stripe + rigueur Grid + chaleur magazine.</p><button class="btn">Explorer le site</button></div>
+          <div class="row"><div class="block">Blog d'abord</div><div class="block">CV ensuite</div></div>
+        </div>
+        <div class="meta"><h3>D06 - Hybrid Signature</h3><p>Candidat naturel pour direction finale.</p><ul><li>Equilibre identite/usabilite</li><li>Bonne base de systeme</li><li>Tres adaptable</li></ul></div>
+      </article>
+    </section>
+
+    <section class="notes">
+      <h2>Comment choisir rapidement</h2>
+      <ol>
+        <li>Retenez 2 directions maximum.</li>
+        <li>Choisissez celle qui rend votre valeur explicite sans scroll.</li>
+        <li>Conservez la meilleure lecture longue.</li>
+        <li>Ajoutez la touche visuelle de la seconde direction si necessaire.</li>
+      </ol>
+    </section>
+  </main>
+</body>
+</html>
