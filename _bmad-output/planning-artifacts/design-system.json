@@ -1,0 +1,304 @@
+{
+  "designSystemMetadata": {
+    "projectName": "personal-site",
+    "version": "1.0.0",
+    "date": "2026-04-16",
+    "author": "Thierry Touin",
+    "branch": "feat/ux-editorial-minimal",
+    "status": "ready-for-figma"
+  },
+  "designSystem": {
+    "vision": {
+      "concept": "Vitrine personnelle d'Architecte Solution au style éditorial minimaliste",
+      "targetUsers": [
+        "Recruteurs évaluant rapidement la séniorité",
+        "Clients potentiels cherchant un profil fiable",
+        "Pairs techniques validant la profondeur"
+      ],
+      "principles": [
+        "Clarté avant exhaustivité",
+        "Mobile d'abord, desktop amplifié",
+        "Lecture longue sans fatigue",
+        "Personnalité graphique maîtrisée",
+        "Chaque écran renforce la confiance"
+      ]
+    },
+    "colors": {
+      "palette": [
+        {
+          "name": "Fond Principal",
+          "token": "color-bg",
+          "value": "#f7f5f2",
+          "usage": "Background global, beige chaud"
+        },
+        {
+          "name": "Surface",
+          "token": "color-surface",
+          "value": "#ffffff",
+          "usage": "Cartes, sections, conteneurs"
+        },
+        {
+          "name": "Texte Principal",
+          "token": "color-text",
+          "value": "#1f252b",
+          "usage": "Corps, titres, lisibilité forte"
+        },
+        {
+          "name": "Texte Muted",
+          "token": "color-text-muted",
+          "value": "#5c6670",
+          "usage": "Métadonnées, texte secondaire"
+        },
+        {
+          "name": "Primaire",
+          "token": "color-primary",
+          "value": "#1e5a96",
+          "usage": "Actions, repères, confiance"
+        },
+        {
+          "name": "Primaire Strong",
+          "token": "color-primary-strong",
+          "value": "#15446f",
+          "usage": "États hover/active"
+        },
+        {
+          "name": "Accent Chaud",
+          "token": "color-accent-warm",
+          "value": "#c47a3a",
+          "usage": "Accent mesuré, signature"
+        },
+        {
+          "name": "Border",
+          "token": "color-border",
+          "value": "#d9d4cc",
+          "usage": "Séparations discrètes"
+        },
+        {
+          "name": "Success",
+          "token": "color-success",
+          "value": "#2d8a4a",
+          "usage": "États positifs"
+        },
+        {
+          "name": "Warning",
+          "token": "color-warning",
+          "value": "#b87d3a",
+          "usage": "États d'alerte"
+        },
+        {
+          "name": "Error",
+          "token": "color-error",
+          "value": "#c64545",
+          "usage": "États d'erreur"
+        }
+      ],
+      "psychology": {
+        "primary": "Bleu confiance - professionnel, stable, fiable",
+        "background": "Beige chaud - accessible, intemporel, editorial",
+        "accent": "Accent chaud - personnalité, signature subtile"
+      }
+    },
+    "typography": {
+      "families": [
+        {
+          "name": "Serif Editorial",
+          "font": "Merriweather",
+          "usage": "Titres (H1, H2, H3), branding",
+          "character": "élégant, autorité, editorial"
+        },
+        {
+          "name": "Sans-Serif Opérationnel",
+          "font": "Source Sans 3",
+          "usage": "Corps, métadonnées, UI",
+          "character": "lisible, moderne, accessible"
+        }
+      ],
+      "scale": {
+        "headings": [
+          {
+            "level": "H1",
+            "desktop": "44px",
+            "mobile": "34px",
+            "lineHeight": 1.2,
+            "weight": 700,
+            "family": "Merriweather"
+          },
+          {
+            "level": "H2",
+            "desktop": "32px",
+            "mobile": "28px",
+            "lineHeight": 1.25,
+            "weight": 600,
+            "family": "Merriweather"
+          },
+          {
+            "level": "H3",
+            "desktop": "24px",
+            "mobile": "22px",
+            "lineHeight": 1.3,
+            "weight": 600,
+            "family": "Merriweather"
+          }
+        ],
+        "body": [
+          {
+            "type": "Body Large",
+            "size": "20px",
+            "lineHeight": 1.6,
+            "weight": 400,
+            "family": "Source Sans 3",
+            "usage": "Highlights"
+          },
+          {
+            "type": "Body Regular",
+            "size": "18px",
+            "lineHeight": 1.65,
+            "weight": 400,
+            "family": "Source Sans 3",
+            "usage": "Lecture longue"
+          },
+          {
+            "type": "Meta",
+            "size": "14px",
+            "lineHeight": 1.5,
+            "weight": 400,
+            "family": "Source Sans 3",
+            "usage": "Métadonnées"
+          },
+          {
+            "type": "Small",
+            "size": "13px",
+            "lineHeight": 1.4,
+            "weight": 400,
+            "family": "Source Sans 3",
+            "usage": "UI minor"
+          }
+        ]
+      },
+      "constraints": {
+        "contentMaxWidth": "70ch",
+        "optimalRange": "62-70 caractères",
+        "readingComfort": "1.65 line-height pour lecture longue"
+      }
+    },
+    "components": {
+      "header": {
+        "name": "Header/Hero",
+        "background": "Image responsive (header-image2.avif)",
+        "minHeight": {
+          "mobile": "280px",
+          "tablet": "350px",
+          "max": "500px"
+        },
+        "height": {
+          "mobile": "60vh",
+          "tablet": "65vh"
+        },
+        "overlay": "Text shadow pour lisibilité",
+        "content": "Centré, 90% max-width",
+        "brand": {
+          "fontFamily": "Merriweather",
+          "size": {
+            "mobile": "32px",
+            "desktop": "44px"
+          },
+          "color": "white",
+          "weight": {
+            "mobile": 600,
+            "desktop": 700
+          }
+        }
+      },
+      "contentContainer": {
+        "name": "Content Containers",
+        "maxWidth": "1120px",
+        "spacingVertical": "8px-96px modulaires",
+        "padding": {
+          "mobile": "16px sides",
+          "desktop": "32px+ sides"
+        }
+      },
+      "navigation": {
+        "name": "Navigation",
+        "style": "Stable et prévisible",
+        "primaryColor": "#1e5a96",
+        "hoverState": "underline 2px, offset 4px"
+      }
+    },
+    "responsive": {
+      "strategy": "Mobile-first",
+      "breakpoints": [
+        {
+          "name": "Mobile",
+          "condition": "< 768px",
+          "heroMinHeight": "280px",
+          "contentWidth": "90%",
+          "padding": "16px"
+        },
+        {
+          "name": "Tablet",
+          "condition": "≥ 768px",
+          "heroMinHeight": "350px",
+          "contentWidth": "1120px max",
+          "padding": "32px+"
+        },
+        {
+          "name": "Desktop",
+          "condition": "≥ 1024px",
+          "heroMinHeight": "350px",
+          "contentWidth": "1120px max",
+          "padding": "32px+"
+        }
+      ],
+      "principles": [
+        "Design d'abord pour petit écran",
+        "Hiérarchie de contenu en blocs courts/scannables",
+        "Navigation simple et stable",
+        "Desktop enrichit l'espace sans changer la logique d'usage"
+      ]
+    },
+    "experience": {
+      "criticalMoments": [
+        {
+          "moment": "Premier Écran (Perception)",
+          "goal": "Perception immédiate : séniorité, clarté, crédibilité",
+          "elements": "Hero image + message fort + hiérarchie claire"
+        },
+        {
+          "moment": "Premier Scroll (Confirmation)",
+          "goal": "Preuves concrètes : parcours, expertise, contenu",
+          "elements": "Rythme naturel sans surcharge"
+        },
+        {
+          "moment": "Fin de Session (Intent)",
+          "goal": "Intention claire : revenir ou prendre contact",
+          "elements": "CTA visible et motivant"
+        }
+      ],
+      "emotionalGoals": {
+        "primary": "Confiance immédiate",
+        "secondary": "Curiosité naturelle",
+        "dominant": "Ce professionnel est solide, clair et humain"
+      }
+    }
+  },
+  "implementation": {
+    "branch": "feat/ux-editorial-minimal",
+    "lastCommit": "test design",
+    "date": "2026-04-16",
+    "filesAffected": [
+      "src/components/header.module.scss",
+      "src/components/promise.js",
+      "src/components/promise.module.scss",
+      "src/pages/index.js",
+      "src/styles/style.scss",
+      "src/styles/tokens.scss"
+    ],
+    "status": "Prêt pour synchronisation Figma"
+  },
+  "artifacts": {
+    "designSpec": "_bmad-output/planning-artifacts/figma-design-sync.md",
+    "syncGuide": "_bmad-output/planning-artifacts/FIGMA-SYNC-GUIDE.md",
+    "this": "_bmad-output/planning-artifacts/design-system.json"
+  }
+}
