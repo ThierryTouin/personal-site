@@ -1,0 +1,93 @@
+<!DOCTYPE html><html lang="fr" data-astro-cid-sckkx6r4> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" type="image/x-icon" href="/favicon.ico"><title>Consommation électrique Linky vers Jeedom ! | tto&#39;s blog</title><meta name="description" content="Un article pour expliquer comment je transmets ma consommation électrique de on compteur linky en temps réel vers ma box Jeedom !"><meta property="og:locale" content="fr_FR"><meta property="og:site_name" content="tto's blog"><meta property="og:title" content="Consommation électrique Linky vers Jeedom !"><meta property="og:url" content="https://thierrytouin.fr/blog/linky-vers-jeedom/"><meta property="og:type" content="website"><meta property="og:description" content="Un article pour expliquer comment je transmets ma consommation électrique de on compteur linky en temps réel vers ma box Jeedom !"><meta property="og:image" content="https://thierrytouin.fr/header-image2.avif"><meta property="og:image:width" content="400"><meta name="twitter:card" content="summary_large_image"><meta property="twitter:domain" content="thierrytouin.fr"><meta property="twitter:url" content="https://thierrytouin.fr/blog/linky-vers-jeedom/"><meta name="twitter:title" content="Consommation électrique Linky vers Jeedom !"><meta name="twitter:description" content="Un article pour expliquer comment je transmets ma consommation électrique de on compteur linky en temps réel vers ma box Jeedom !"><meta name="twitter:image" content="https://thierrytouin.fr/header-image2.avif"><link rel="canonical" href="https://thierrytouin.fr/blog/linky-vers-jeedom/"><style>[data-astro-cid-sckkx6r4]{box-sizing:border-box}body{color:#2d3436;font-size:100%;margin:0;line-height:1.4283;font-family:Segoe UI,Roboto,Verdana,Helvetica Neue,sans-serif}h1[data-astro-cid-sckkx6r4],h2[data-astro-cid-sckkx6r4],h3[data-astro-cid-sckkx6r4]{font-weight:400}a[data-astro-cid-sckkx6r4]{color:#06c;text-decoration:none}.sidebar-btns[data-astro-cid-sckkx6r4]{display:none;position:fixed;bottom:50px;right:10%;z-index:99;font-size:1.125rem;border:none;outline:none;background-color:transparent;color:#fff;cursor:pointer;padding:.9375rem;border-radius:.25rem;background-image:url(/arrow-up.svg);background-repeat:no-repeat;width:50px;height:50px;background-position:center}#scroll-btn[data-astro-cid-sckkx6r4]{right:15%;background-image:url(/arrow-up.svg);background-color:#f8f9fa}.container[data-astro-cid-sckkx6r4]{display:flex;flex-direction:column;min-height:100vh}.content[data-astro-cid-sckkx6r4]{flex-grow:1}.main-content[data-astro-cid-sckkx6r4]{margin:0 auto;padding:3rem 1rem 4rem}.header[data-astro-cid-sckkx6r4]{position:relative;height:200px;text-shadow:0 1px 2px rgba(0,0,0,.4);background-position:center center;background-repeat:no-repeat;background-size:cover;background-image:url(/header-image2.avif)}.overlay[data-astro-cid-sckkx6r4]{position:absolute;inset:0;background-color:#2d3436;opacity:.5}.hero-content[data-astro-cid-sckkx6r4]{position:absolute;top:35%;margin:0;text-align:center;width:100%;text-transform:uppercase}.brand[data-astro-cid-sckkx6r4]{margin:0;padding:0 0 10px;font-size:28px;font-weight:300;line-height:1.2;letter-spacing:5.5px}.brand[data-astro-cid-sckkx6r4] a[data-astro-cid-sckkx6r4]{color:#f8f9fa}.description[data-astro-cid-sckkx6r4]{margin:0;padding:0 0 10px;font-size:12px;font-weight:500;line-height:1.5;letter-spacing:3.5px;opacity:.7;color:#f8f9fa}.nav-container[data-astro-cid-sckkx6r4]{position:absolute;bottom:0;left:0;right:0;background:#2d3436;opacity:.7;border-top:1px solid #2D3436}.nav-list[data-astro-cid-sckkx6r4]{margin:0;display:flex;flex-flow:wrap;justify-content:center;padding:0;list-style:none}.nav-list[data-astro-cid-sckkx6r4] li[data-astro-cid-sckkx6r4]{letter-spacing:.05em;background:none;padding:7px 14px 10px}.nav-list[data-astro-cid-sckkx6r4] a[data-astro-cid-sckkx6r4]{text-transform:uppercase;color:#f8f9fa;font-size:14px;opacity:.9;font-weight:600}.nav-list[data-astro-cid-sckkx6r4] a[data-astro-cid-sckkx6r4]:hover{text-decoration:underline}.site-footer[data-astro-cid-sckkx6r4]{background-color:#2d3436;color:#f8f9fa}.footer-container[data-astro-cid-sckkx6r4]{margin:0 auto;max-width:750px;padding:1rem}
+[data-astro-cid-4sn4zg3r]{box-sizing:border-box}body{color:#2d3436;font-size:100%;margin:0;line-height:1.4283;font-family:Segoe UI,Roboto,Verdana,Helvetica Neue,sans-serif}h1[data-astro-cid-4sn4zg3r],h2[data-astro-cid-4sn4zg3r],h3[data-astro-cid-4sn4zg3r]{font-weight:400}a[data-astro-cid-4sn4zg3r]{color:#06c;text-decoration:none}.sidebar-btns[data-astro-cid-4sn4zg3r]{display:none;position:fixed;bottom:50px;right:10%;z-index:99;font-size:1.125rem;border:none;outline:none;background-color:transparent;color:#fff;cursor:pointer;padding:.9375rem;border-radius:.25rem;background-image:url(/arrow-up.svg);background-repeat:no-repeat;width:50px;height:50px;background-position:center}#scroll-btn[data-astro-cid-4sn4zg3r]{right:15%;background-image:url(/arrow-up.svg);background-color:#f8f9fa}.content[data-astro-cid-4sn4zg3r]{max-width:750px;margin:0 auto;color:#2d3436}.content[data-astro-cid-4sn4zg3r] h1[data-astro-cid-4sn4zg3r]{font-size:35px;margin:0 0 10px;text-align:center}.content[data-astro-cid-4sn4zg3r] a{color:#06c;font-weight:800}.content[data-astro-cid-4sn4zg3r] a:hover{color:#222}.content[data-astro-cid-4sn4zg3r] img{max-width:100%;height:auto}.meta[data-astro-cid-4sn4zg3r]{font-size:13px;display:block;text-align:center;font-weight:300;margin-bottom:20px}
+</style></head> <body data-astro-cid-sckkx6r4> <div class="container" data-astro-cid-sckkx6r4> <div class="content" data-astro-cid-sckkx6r4> <header class="header" data-astro-cid-sckkx6r4> <div class="overlay" data-astro-cid-sckkx6r4></div> <div class="hero-content" data-astro-cid-sckkx6r4> <p class="brand" data-astro-cid-sckkx6r4><a href="/" data-astro-cid-sckkx6r4>tto&#39;s blog</a></p> <p class="description" data-astro-cid-sckkx6r4>Blog de Thierry Touin</p> </div> <nav class="nav-container" data-astro-cid-sckkx6r4> <ul class="nav-list" data-astro-cid-sckkx6r4> <li data-astro-cid-sckkx6r4><a href="/" data-astro-cid-sckkx6r4>Home</a></li> <li data-astro-cid-sckkx6r4><a href="/cv/" data-astro-cid-sckkx6r4>About-Me</a></li> <li data-astro-cid-sckkx6r4><a href="/contact/" data-astro-cid-sckkx6r4>Contact</a></li> </ul> </nav> </header> <main class="main-content" data-astro-cid-sckkx6r4>  <article class="content" data-astro-cid-4sn4zg3r> <h1 data-astro-cid-4sn4zg3r>Consommation électrique Linky vers Jeedom !</h1> <span class="meta" data-astro-cid-4sn4zg3r>
+Publié le 6 janvier 2023 </span> <h1 id="-article-en-construction">/!\ Article en construction</h1>
+<p>Salut à tous!</p>
+<p>Je voulais partager avec vous mon projet de suivi de ma consommation électrique en temps réel.
+Les données récupérées sont donc les données de consommation électrique en sortie du compteur Linky.
+Pour faire cela, je devais pouvoir</p>
+<ul>
+<li>Lire les données de consommation sur le bornier du Linky</li>
+<li>Extraire les informations intéressantes de ces données</li>
+<li>Transmettre les informations extraites vers ma box Jeedom</li>
+<li>Afficher ces données dans le dashboard Jeedom ainsi que dans mon application Android..</li>
+</ul>
+<h3 id="1-composition">1. Composition</h3>
+<p>Mon projet est composé des éléments suivants :</p>
+<ul>
+<li>Un <em>Raspberry pi zero w</em> (modèle 1) : modèle recyclé en provenance dans ma console GPI Case.</li>
+<li>Une alimentation pour le raspberry pi acheté sur internet <a href="https://www.amazon.fr/MeanWell-DR-15-5-Source-dalimentation-pour/dp/B00MWQEBAU?th=1">ici</a> . Cette dernière permet d’avoir une alimentation 5 volt dans le tableau électrique. Ce n’est pas nécessaire si vous avez une prise électrique à proximité.</li>
+<li>Un module  <em>PITinfo</em>  permettant de lire des informations à la sortie du compteur Linky acheté sur internet <a href="https://www.tindie.com/products/Hallard/pitinfo/">ici</a>. Il est également possible de faire le sien avec un fer à souder et quelques composants. L’avantage de celui la est qu’il arrive tout pret, propre et fonctionnel :smile: .</li>
+</ul>
+<h3 id="2-code">2. Code</h3>
+<p>J’ai écris un script Python pour lire les données du module <em>PITinfo</em> et les envoyer à la box <em>Jeedom</em> via une requête HTTP. Les données sont reçues dans Jeedom via un plugin virtuel (pour avoir plus d’information sur le plugin virtuel, vous devrez consulter la documentation de Jeedom).</p>
+<p>Vous trouverez le projet et donc le script <img src="/images/conso/teleinfo.zip" alt="ici">.</p>
+<p>Dans ce script, vous devrez renseigner les variables suivantes :</p>
+<ul>
+<li><code>&#x3C;jeedom-domain></code> : le nom de domain ou l’ip de <em>Jeedom</em></li>
+<li><code>&#x3C;jeedom-key></code> : l’api key de <em>Jeedom</em></li>
+<li>iinst_id = <code>&#x3C;id correspondant dans le plugin virtuel Jeedom></code></li>
+<li>papp_id = <code>&#x3C;id correspondant dans le plugin virtuel Jeedom></code></li>
+<li>hchc_id = <code>&#x3C;id correspondant dans le plugin virtuel Jeedom></code></li>
+<li>hchp_id = <code>&#x3C;id correspondant dans le plugin virtuel Jeedom></code></li>
+</ul>
+<p>Ces identifiants sont a récupérer dans le backoffice de <em>Jeedom</em> à la création du plugin virtuel. Dans le plugin virtuel, vous devrez donc créer les 4 entrées ci-dessus (iinst, papp, hchc, hchp).</p>
+<p>Il est important de noter que vous devrez / pourrez adapter le script Python en fonction de vos propres besoins et de votre installation. Assurez-vous de bien comprendre comment le script fonctionne et de le tester avant de l’utiliser de manière permanente.</p>
+<h3 id="3-schéma">3. Schéma</h3>
+<p>Voici comment mon installation est organisée:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="mermaid"><code><span class="line"><span style="color:#E1E4E8">graph LR</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">%% Nodes</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">subgraph TBL[" "]</span></span>
+<span class="line"><span style="color:#E1E4E8">	subgraph ELEC[" "]</span></span>
+<span class="line"><span style="color:#E1E4E8">		Linky(fa:fa-plug Compteur Linky)</span></span>
+<span class="line"><span style="color:#E1E4E8">		meanwell(fa:fa-plug MeanWell DR-15-5)</span></span>
+<span class="line"><span style="color:#E1E4E8">	end</span></span>
+<span class="line"><span style="color:#E1E4E8">	subgraph RPi+PITinfo</span></span>
+<span class="line"><span style="color:#E1E4E8">		PITinfo(fa:fa-microchip PITinfo)</span></span>
+<span class="line"><span style="color:#E1E4E8">		RPi(fa:fa-microchip Raspberry Pi)</span></span>
+<span class="line"><span style="color:#E1E4E8">	end</span></span>
+<span class="line"><span style="color:#E1E4E8">end	</span></span>
+<span class="line"><span style="color:#E1E4E8">Jeedom(fa:fa-server Box Jeedom)</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">%% Links	</span></span>
+<span class="line"><span style="color:#E1E4E8">   Linky -- Data --> PITinfo</span></span>
+<span class="line"><span style="color:#E1E4E8">   PITinfo -- GPIO --> RPi</span></span>
+<span class="line"><span style="color:#E1E4E8">   RPi -- WiFi --> Jeedom</span></span>
+<span class="line"><span style="color:#E1E4E8">   meanwell -- 5 V --> RPi</span></span>
+<span class="line"><span style="color:#E1E4E8">  </span></span>
+<span class="line"><span style="color:#E1E4E8">%% Defining node styles</span></span>
+<span class="line"><span style="color:#E1E4E8">  classDef styleBloc fill:white,stroke:black,stroke-width:4px,color:black;</span></span>
+<span class="line"><span style="color:#E1E4E8">  classDef styleBlocRed fill:white,stroke:red,stroke-width:4px,color:black,stroke-dasharray: 5, 5;</span></span>
+<span class="line"><span style="color:#E1E4E8">  classDef styleInvisible fill:white,stroke:white;</span></span>
+<span class="line"><span style="color:#E1E4E8">  </span></span>
+<span class="line"><span style="color:#E1E4E8">  </span></span>
+<span class="line"><span style="color:#E1E4E8">  </span></span>
+<span class="line"><span style="color:#E1E4E8">%% Assigning styles to nodes</span></span>
+<span class="line"><span style="color:#E1E4E8">class RPi+PITinfo styleBloc;</span></span>
+<span class="line"><span style="color:#E1E4E8">class TBL styleBlocRed;  </span></span>
+<span class="line"><span style="color:#E1E4E8">class ELEC styleInvisible;  </span></span></code></pre>
+<ul>
+<li>Le module <em>PITinfo</em> est relié au bornié du compteur Linky et au Raspberry Pi via les entrées GPIO.</li>
+<li>Le Raspberry Pi envoie les données lues par le module <em>PITinfo</em> à la box <em>Jeedom</em></li>
+<li>Le module MeanWell DR-15-5 alimente le <em>Raspberry Pi.</em></li>
+</ul>
+<h3 id="4-quelques-photos">4. Quelques photos</h3>
+<ul>
+<li>Dans le tableau électrique :</li>
+</ul>
+<p><img src="/images/conso/linky2.jpg" alt="PI Zero"></p>
+<p><img src="/images/conso/linky1.jpg" alt="Bornier Linky"></p>
+<ul>
+<li>Dans la box <em>Jeedom</em></li>
+</ul>
+<p><img src="/images/conso/jeedom1.png" alt="Jeedom 1"></p>
+<p><img src="/images/conso/jeedom2.png" alt="Jeedom 2"></p>
+<ul>
+<li>Dans mon application mobile <a href="https://play.google.com/store/apps/details?id=fr.touin.thierry.homecontrol">playstore</a></li>
+</ul>
+<p><img src="/images/conso/home-control.jpeg" alt="Home Control"></p>
+<p>J’espère que ce projet pourra vous être utile ou vous donner des idées pour votre propre installation! Il vous permettra de suivre votre consommation électrique et de faire des économies.</p>
+<p>Si vous avez des questions ou des commentaires, n’hésitez pas à m’envoyer un message.</p> </article>  </main> </div> <button id="scroll-btn" class="sidebar-btns" title="Scroll to top" data-astro-cid-sckkx6r4></button> <footer class="site-footer" data-astro-cid-sckkx6r4> <div class="footer-container" data-astro-cid-sckkx6r4> <p data-astro-cid-sckkx6r4>Site developed by TTO &copy; 2026</p> </div> </footer> </div> <script type="module">function n(){const e=document.getElementById("scroll-btn");e&&(window.addEventListener("scroll",()=>{e.style.display=document.documentElement.scrollTop>300?"block":"none"}),e.addEventListener("click",()=>{document.documentElement.scrollTop=0}))}n();document.addEventListener("astro:after-swap",n);</script> </body> </html>  
