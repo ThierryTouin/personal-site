@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 
+const base = import.meta.env.BASE_URL;
 const posts = (await getCollection('blog')).sort(
   (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
 );
@@ -12,7 +13,7 @@ const posts = (await getCollection('blog')).sort(
     {posts.map((post) => (
       <li class="post">
         <h2>
-          <a href={`/blog/${post.id}/`}>{post.data.title}</a>
+          <a href={`${base}blog/${post.id}/`}>{post.data.title}</a>
         </h2>
         <div class="meta">
           <span>Publié le {new Date(post.data.date).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })}</span>
@@ -21,7 +22,7 @@ const posts = (await getCollection('blog')).sort(
           <p class="excerpt">{post.data.description}</p>
         )}
         <div class="button">
-          <a href={`/blog/${post.id}/`}>Read More</a>
+          <a href={`${base}blog/${post.id}/`}>Read More</a>
         </div>
       </li>
     ))}

@@ -1,7 +1,8 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: 'https://thierrytouin.fr',
+  site: 'https://thierrytouin.github.io',
+  base: '/personal-site/',
   vite: {
     css: {
       preprocessorOptions: {

@@ -29,7 +29,7 @@ Mon projet est composé des éléments suivants :
 
 J'ai écris un script Python pour lire les données du module *PITinfo* et les envoyer à la box *Jeedom* via une requête HTTP. Les données sont reçues dans Jeedom via un plugin virtuel (pour avoir plus d'information sur le plugin virtuel, vous devrez consulter la documentation de Jeedom).
 
-Vous trouverez le projet et donc le script ![ici](/images/conso/teleinfo.zip).
+Vous trouverez le projet et donc le script ![ici](/personal-site/images/conso/teleinfo.zip).
 
 Dans ce script, vous devrez renseigner les variables suivantes :
 - `<jeedom-domain>` : le nom de domain ou l'ip de *Jeedom* 
@@ -92,19 +92,19 @@ class ELEC styleInvisible;
 ### 4. Quelques photos
 - Dans le tableau électrique :
 
-![PI Zero](/images/conso/linky2.jpg '')
+![PI Zero](/personal-site/images/conso/linky2.jpg '')
 
-![Bornier Linky](/images/conso/linky1.jpg) 
+![Bornier Linky](/personal-site/images/conso/linky1.jpg) 
 
 - Dans la box *Jeedom*
 
-![Jeedom 1](/images/conso/jeedom1.png '')
+![Jeedom 1](/personal-site/images/conso/jeedom1.png '')
 
-![Jeedom 2](/images/conso/jeedom2.png)
+![Jeedom 2](/personal-site/images/conso/jeedom2.png)
 
 -  Dans mon application mobile [playstore](https://play.google.com/store/apps/details?id=fr.touin.thierry.homecontrol)
 
-![Home Control](/images/conso/home-control.jpeg)
+![Home Control](/personal-site/images/conso/home-control.jpeg)
 
 J'espère que ce projet pourra vous être utile ou vous donner des idées pour votre propre installation! Il vous permettra de suivre votre consommation électrique et de faire des économies.
 

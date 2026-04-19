@@ -18,7 +18,7 @@ J'utilise cet environnement de développement depuis des mois sur plusieurs post
 
 Voici un schéma du principe de son fonctionnement
 
-![docker-dev-station-schema](/images/1581932078634.png)
+![docker-dev-station-schema](/personal-site/images/1581932078634.png)
 
 Sous un poste Linux, à l’aide de mes scripts et de Docker, vous allez générer un ensemble de container Docker:
 

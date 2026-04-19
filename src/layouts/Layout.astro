@@ -6,8 +6,9 @@ interface Props {
 
 const { title, description = "Blog de Thierry Touin" } = Astro.props;
 const siteTitle = "tto's blog";
-const siteUrl = "https://thierrytouin.fr";
-const imgUrl = `${siteUrl}/header-image2.avif`;
+const base = import.meta.env.BASE_URL;
+const siteUrl = "https://thierrytouin.github.io";
+const imgUrl = `${siteUrl}${base}header-image2.avif`;
 const canonicalUrl = new URL(Astro.url.pathname, siteUrl).href;
 ---
 
@@ -16,7 +17,7 @@ const canonicalUrl = new URL(Astro.url.pathname, siteUrl).href;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href={`${base}favicon.ico`} />
 
     <title>{title} | {siteTitle}</title>
     <meta name="description" content={description} />
@@ -42,17 +43,17 @@ const canonicalUrl = new URL(Astro.url.pathname, siteUrl).href;
   <body>
     <div class="container">
       <div class="content">
-        <header class="header">
+        <header class="header" style={`background-image: url('${base}header-image2.avif')`}>
           <div class="overlay"></div>
           <div class="hero-content">
-            <p class="brand"><a href="/">{siteTitle}</a></p>
+            <p class="brand"><a href={`${base}`}>{siteTitle}</a></p>
             <p class="description">Blog de Thierry Touin</p>
           </div>
           <nav class="nav-container">
             <ul class="nav-list">
-              <li><a href="/">Home</a></li>
-              <li><a href="/cv/">About-Me</a></li>
-              <li><a href="/contact/">Contact</a></li>
+              <li><a href={`${base}`}>Home</a></li>
+              <li><a href={`${base}cv/`}>About-Me</a></li>
+              <li><a href={`${base}contact/`}>Contact</a></li>
             </ul>
           </nav>
         </header>
@@ -60,7 +61,7 @@ const canonicalUrl = new URL(Astro.url.pathname, siteUrl).href;
           <slot />
         </main>
       </div>
-      <button id="scroll-btn" class="sidebar-btns" title="Scroll to top"></button>
+      <button id="scroll-btn" class="sidebar-btns" style={`background-image: url('${base}arrow-up.svg')`} title="Scroll to top"></button>
       <footer class="site-footer">
         <div class="footer-container">
           <p>Site developed by TTO with <a href="https://astro.build" target="_blank" rel="noopener noreferrer">Astro</a> &copy; {new Date().getFullYear()}</p>
@@ -110,7 +111,6 @@ const canonicalUrl = new URL(Astro.url.pathname, siteUrl).href;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url("/header-image2.avif");
 }
 
 .overlay {
