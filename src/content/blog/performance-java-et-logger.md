@@ -2,7 +2,6 @@
 title: "Performance Java et Logger !"
 description: "Un benchmark des logs." 
 date: "2022-04-13"
-featured: "./media/performance-java-et-logger/light-bulb.jpg"
 ---
 
 Je voulais vous présenter un benchmark que j'ai réalisé, il y a déjà deux ans.
