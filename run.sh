@@ -66,6 +66,9 @@ case "$1" in
   clean-all)
     echo "Stopping containers and removing all images/volumes..."
     $DOCKER_COMPOSE -f "$COMPOSE_FILE" down --rmi all --volumes --remove-orphans
+    # Force remove any remaining containers
+    docker container rm -f personal-site-dev 2>/dev/null || true
+    docker container rm -f personal-site-build 2>/dev/null || true
     echo "Clean done."
     ;;
 

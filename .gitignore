@@ -67,3 +67,10 @@ yarn-error.log
 .pnp.js
 # Yarn Integrity file
 .yarn-integrity
+
+
+# Astro
+.astro
+
+# Build output
+dist/

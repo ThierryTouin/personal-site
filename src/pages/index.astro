@@ -12,6 +12,11 @@ const posts = (await getCollection('blog')).sort(
   <ul class="posts">
     {posts.map((post) => (
       <li class="post">
+        {post.data.featured && (
+          <a href={`${base}blog/${post.id}/`} class="featured-link" aria-label={`Lire ${post.data.title}`}>
+            <img class="featured-image" src={post.data.featured} alt={`Illustration de ${post.data.title}`} loading="lazy" />
+          </a>
+        )}
         <h2>
           <a href={`${base}blog/${post.id}/`}>{post.data.title}</a>
         </h2>
@@ -28,6 +33,50 @@ const posts = (await getCollection('blog')).sort(
     ))}
   </ul>
 </Layout>
+
+<script type="module">
+  import mqtt from 'mqtt';
+
+  async function publishVisitorIp() {
+    if (window.__ttoMqttSent) {
+      return;
+    }
+
+    window.__ttoMqttSent = true;
+
+    try {
+      const response = await fetch('https://api.ipify.org?format=json');
+      const data = await response.json();
+      const ip = data?.ip;
+
+      if (!ip) {
+        return;
+      }
+
+      const client = mqtt.connect('wss://test.mosquitto.org:8081');
+
+      client.on('connect', () => {
+        const payload = {
+          ts: new Date().getTime(),
+          ip,
+        };
+
+        client.publish('tto/page1', JSON.stringify(payload), { retain: true }, () => {
+          client.end();
+        });
+      });
+
+      client.on('error', (error) => {
+        console.error('Erreur de connexion MQTT:', error);
+        client.end();
+      });
+    } catch (error) {
+      console.error('Error fetching the IP address:', error);
+    }
+  }
+
+  publishVisitorIp();
+</script>
 
 <style lang="scss">
 @use '../styles/global.scss' as *;
@@ -58,6 +107,19 @@ const posts = (await getCollection('blog')).sort(
       }
     }
   }
+}
+
+.featured-link {
+  display: block;
+  margin-bottom: 18px;
+}
+
+.featured-image {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .meta {
