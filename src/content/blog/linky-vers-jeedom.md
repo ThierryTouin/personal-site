@@ -4,6 +4,7 @@ description: >-
   Un article pour expliquer comment je transmets ma consommation électrique de
   on compteur linky en temps réel vers ma box Jeedom !
 date: '2023-01-06'
+featured: '/static/f6be94d833126c317a503d8663953327/222b7/jeedom2.png'
 ---
 
 # /!\ Article en construction
@@ -29,7 +30,7 @@ Mon projet est composé des éléments suivants :
 
 J'ai écris un script Python pour lire les données du module *PITinfo* et les envoyer à la box *Jeedom* via une requête HTTP. Les données sont reçues dans Jeedom via un plugin virtuel (pour avoir plus d'information sur le plugin virtuel, vous devrez consulter la documentation de Jeedom).
 
-Vous trouverez le projet et donc le script ![ici](/personal-site/images/conso/teleinfo.zip).
+Vous trouverez le projet et donc le script dans le dépôt associé.
 
 Dans ce script, vous devrez renseigner les variables suivantes :
 - `<jeedom-domain>` : le nom de domain ou l'ip de *Jeedom* 
@@ -92,19 +93,19 @@ class ELEC styleInvisible;
 ### 4. Quelques photos
 - Dans le tableau électrique :
 
-![PI Zero](/personal-site/images/conso/linky2.jpg '')
+![PI Zero](./media/linky-vers-jeedom/linky2.jpg '')
 
-![Bornier Linky](/personal-site/images/conso/linky1.jpg) 
+![Bornier Linky](./media/linky-vers-jeedom/linky1.jpg) 
 
 - Dans la box *Jeedom*
 
-![Jeedom 1](/personal-site/images/conso/jeedom1.png '')
+![Jeedom 1](./media/linky-vers-jeedom/jeedom1.png '')
 
-![Jeedom 2](/personal-site/images/conso/jeedom2.png)
+![Jeedom 2](./media/linky-vers-jeedom/jeedom2.png)
 
 -  Dans mon application mobile [playstore](https://play.google.com/store/apps/details?id=fr.touin.thierry.homecontrol)
 
-![Home Control](/personal-site/images/conso/home-control.jpeg)
+![Home Control](./media/linky-vers-jeedom/home-control.jpg)
 
 J'espère que ce projet pourra vous être utile ou vous donner des idées pour votre propre installation! Il vous permettra de suivre votre consommation électrique et de faire des économies.
 

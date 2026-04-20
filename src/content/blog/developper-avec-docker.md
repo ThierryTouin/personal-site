@@ -2,6 +2,7 @@
 title: "Développer avec Docker !"
 description: "Un article sur un ensemble de script permettant de faciliter mon usage de docker." 
 date: "2022-02-21"
+featured: "/static/249ac3f5409ef0971e55d85e6b1069bb/222b7/1581932078634.png"
 ---
 
 Vous recherchez un environnement de développement sous Docker ?
@@ -18,7 +19,7 @@ J'utilise cet environnement de développement depuis des mois sur plusieurs post
 
 Voici un schéma du principe de son fonctionnement
 
-![docker-dev-station-schema](/personal-site/images/1581932078634.png)
+![docker-dev-station-schema](./media/developper-avec-docker/docker-dev-station-schema.png)
 
 Sous un poste Linux, à l’aide de mes scripts et de Docker, vous allez générer un ensemble de container Docker:
 

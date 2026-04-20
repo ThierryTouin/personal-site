@@ -1,5 +1,17 @@
 # Documentation Projet — Site Personnel thierrytouin.fr
 
+## 0. Statut de synchronisation (20 avril 2026)
+
+Cette documentation contient encore des sections historiques Gatsby qui ne reflètent plus totalement l'implémentation Astro actuelle.
+
+Références d'alignement à jour :
+- `planning-artifacts/us-catalog-astro-2026-04-20.md`
+- `planning-artifacts/us-code-alignment-2026-04-20.md`
+
+Points clés vérifiés :
+- MQTT est bien implémenté dans le code Astro (page d'accueil) et documenté fonctionnellement.
+- Plusieurs US/critères historiques restent à réaligner (routing CV, stack technique, infra Docker, analytics Clicky).
+
 ## 1. Vue d'ensemble
 
 ### 1.1 Description
