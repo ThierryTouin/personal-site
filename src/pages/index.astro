@@ -34,7 +34,7 @@ const posts = (await getCollection('blog')).sort(
   </ul>
 </Layout>
 
-<script type="module">
+<script>
   import mqtt from 'mqtt';
 
   async function publishVisitorIp() {
