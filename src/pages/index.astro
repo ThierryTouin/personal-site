@@ -1,0 +1,94 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const base = import.meta.env.BASE_URL;
+const posts = (await getCollection('blog')).sort(
+  (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+);
+---
+
+<Layout title="Blog" description="La partie blog">
+  <ul class="posts">
+    {posts.map((post) => (
+      <li class="post">
+        <h2>
+          <a href={`${base}blog/${post.id}/`}>{post.data.title}</a>
+        </h2>
+        <div class="meta">
+          <span>Publié le {new Date(post.data.date).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })}</span>
+        </div>
+        {post.data.description && (
+          <p class="excerpt">{post.data.description}</p>
+        )}
+        <div class="button">
+          <a href={`${base}blog/${post.id}/`}>Read More</a>
+        </div>
+      </li>
+    ))}
+  </ul>
+</Layout>
+
+<style lang="scss">
+@use '../styles/global.scss' as *;
+
+.posts {
+  list-style-type: none;
+  padding: 0;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.post {
+  padding-bottom: 40px;
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+
+  h2 {
+    font-size: 27px;
+    margin: 0 0 10px;
+    text-align: center;
+
+    a {
+      color: $color6;
+      &:hover {
+        color: #222;
+      }
+    }
+  }
+}
+
+.meta {
+  font-size: 13px;
+  text-align: center;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.excerpt {
+  margin: 30px 0 15px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.button {
+  font-size: 14px;
+  font-weight: 300;
+  text-align: center;
+  padding: 20px 0;
+
+  a {
+    color: #555;
+    padding: 8px 12px;
+    border: 1px solid #555;
+    border-radius: 4px;
+
+    &:hover {
+      background: $color6;
+      color: $color4;
+    }
+  }
+}
+</style>

@@ -1,0 +1,15 @@
+FROM node:20-bookworm-slim
+
+RUN npm install -g serve
+
+WORKDIR /app
+
+COPY package.json package-lock.json ./
+
+RUN npm install
+
+COPY . .
+
+EXPOSE 9000
+
+CMD ["sh", "-c", "npx astro build && echo '--- Build OK --- Serving on http://localhost:9000' && serve dist -l 9000"]

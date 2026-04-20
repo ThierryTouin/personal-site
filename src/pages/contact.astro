@@ -1,0 +1,42 @@
+---
+import Layout from '../layouts/Layout.astro';
+import cv from '../data/cv.json';
+---
+
+<Layout title="Contact" description="Me contacter">
+  <div class="contact">
+    <div class="text">
+      <h2>Mail</h2>
+      <p>{cv.contact.email}</p>
+    </div>
+    {cv.social.map((s) => (
+      <div class="text">
+        <h2>{s.network}</h2>
+        <a href={s.url} target="_blank" rel="noopener noreferrer">{s.url}</a>
+      </div>
+    ))}
+  </div>
+</Layout>
+
+<style lang="scss">
+@use '../styles/global.scss' as *;
+
+.contact {
+  max-width: 750px;
+  margin: 0 auto;
+  color: $color3;
+
+  .text {
+    font-style: italic;
+    margin-bottom: 1.5rem;
+
+    h2 {
+      margin-bottom: 0.25rem;
+    }
+
+    a {
+      color: $color2;
+    }
+  }
+}
+</style>

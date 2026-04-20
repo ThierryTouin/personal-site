@@ -12,6 +12,8 @@
 ./run.sh clean-all         # Supprime tout (images + volumes)
 ```
 
+## Migration vers Astro
+
 ## En local (Node.js 22)
 
 ```shell
