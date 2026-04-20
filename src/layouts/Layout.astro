@@ -5,7 +5,6 @@ interface Props {
 }
 
 import headerImage from '../assets/site/header-image2.avif';
-import arrowUpIcon from '../assets/site/arrow-up.svg?url';
 import faviconUrl from '../assets/site/favicon.ico?url';
 
 const { title, description = "Blog de Thierry Touin" } = Astro.props;
@@ -64,7 +63,7 @@ const canonicalUrl = new URL(Astro.url.pathname, siteUrl).href;
           <slot />
         </main>
       </div>
-      <button id="scroll-btn" class="sidebar-btns" style={`background-image: url('${arrowUpIcon}')`} title="Scroll to top"></button>
+      <button id="scroll-btn" class="sidebar-btns" style="background-image: url('/arrow-up.svg')" title="Scroll to top"></button>
       <footer class="site-footer">
         <div class="footer-container">
           <p>Site developed by TTO with <a href="https://astro.build" target="_blank" rel="noopener noreferrer">Astro</a> &copy; {new Date().getFullYear()}</p>
