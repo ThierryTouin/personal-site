@@ -2,7 +2,7 @@
 title: "Mon site perso sans Wordpress !"
 description: "Un article sur la genèse de ce site." 
 date: "2022-03-22"
-featured: "/static/b33aa49443dc44f49a9e9fd1f6ca8309/f9913/1582889227259.jpg"
+featured: "./media/site-perso-sans-wordpress/1582889227259.jpg"
 ---
 
 Depuis déjà un petit moment, je pensais mettre en ligne mon propre site internet.

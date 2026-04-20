@@ -12,4 +12,4 @@ COPY . .
 
 EXPOSE 9000
 
-CMD ["sh", "-c", "npx astro build && mkdir -p dist/images/conso && cp dist/static/249ac3f5409ef0971e55d85e6b1069bb/222b7/1581932078634.png dist/images/1581932078634.png && cp dist/static/0532387202ba1ee3ed3e2ecf7a700eb4/6aca1/linky2.jpg dist/images/conso/linky2.jpg && cp dist/static/cf01b24add2ca9116fd78d3d10435d1a/6aca1/linky1.jpg dist/images/conso/linky1.jpg && cp dist/static/b14381d056c5f54154c037a92553ab94/222b7/jeedom1.png dist/images/conso/jeedom1.png && cp dist/static/f6be94d833126c317a503d8663953327/222b7/jeedom2.png dist/images/conso/jeedom2.png && cp dist/static/13605868f6e4deecf669c1a675521793/6aca1/home-control.jpg dist/images/conso/home-control.jpg && echo '--- Build OK --- Serving on http://localhost:9000' && serve dist -l 9000"]
+CMD ["sh", "-c", "npx astro build && echo '--- Build OK --- Serving on http://localhost:9000' && serve dist -l 9000"]

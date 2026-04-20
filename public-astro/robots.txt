@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://thierrytouin.fr/sitemap-index.xml
+Host: thierrytouin.fr

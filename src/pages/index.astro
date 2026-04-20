@@ -14,7 +14,7 @@ const posts = (await getCollection('blog')).sort(
       <li class="post">
         {post.data.featured && (
           <a href={`${base}blog/${post.id}/`} class="featured-link" aria-label={`Lire ${post.data.title}`}>
-            <img class="featured-image" src={post.data.featured} alt={`Illustration de ${post.data.title}`} loading="lazy" />
+            <img class="featured-image" src={post.data.featured.src} alt={`Illustration de ${post.data.title}`} loading="lazy" />
           </a>
         )}
         <h2>

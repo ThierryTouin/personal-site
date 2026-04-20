@@ -4,7 +4,7 @@ description: >-
   Un article pour expliquer comment je transmets ma consommation électrique de
   on compteur linky en temps réel vers ma box Jeedom !
 date: '2023-01-06'
-featured: '/static/f6be94d833126c317a503d8663953327/222b7/jeedom2.png'
+featured: "./media/linky-vers-jeedom/jeedom2.png"
 ---
 
 # /!\ Article en construction
