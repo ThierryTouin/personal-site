@@ -72,6 +72,71 @@ case "$1" in
     echo "Clean done."
     ;;
 
+  tester-start)
+    echo "Starting MQTT test environment..."
+    echo ""
+    echo "This will:"
+    echo "  1. Start a local Mosquitto broker (port 1883, 8081 for WebSocket)"
+    echo "  2. Run the MQTT test script"
+    echo ""
+    
+    # Check if mosquitto container already running
+    if docker ps | grep -q mosquitto-test; then
+      echo "Mosquitto broker already running..."
+    else
+      echo "Starting Mosquitto broker container..."
+      docker run -d \
+        --name mosquitto-test \
+        -p 1883:1883 \
+        -p 8081:8081 \
+        -v /mosquitto/config:/mosquitto/config \
+        -v /mosquitto/data:/mosquitto/data \
+        -v /mosquitto/log:/mosquitto/log \
+        eclipse-mosquitto:latest >/dev/null 2>&1 || true
+      
+      echo "Waiting for broker to start..."
+      sleep 2
+    fi
+    
+    echo ""
+    echo "Installing test dependencies..."
+    cd test/mqtt && npm install >/dev/null 2>&1
+    cd ../..
+    
+    echo "Running MQTT test script..."
+    echo "Testing with HiveMQ public broker: wss://broker.hivemq.com:8884 (WebSocket, no auth)"
+    echo ""
+    cd test/mqtt && npm test
+    cd ../..
+    
+    echo ""
+    echo "ℹ️  To test with other brokers:"
+    echo "   npm run test:mosquitto       # test.mosquitto.org (with credentials)"
+    echo "   npm run test:local           # Local broker"
+    echo "   cd test/mqtt && node test.js <broker-url> <topic> <ip>"
+    echo ""
+    ;;
+
+  tester-shell)
+    echo "Opening shell for manual testing..."
+    echo ""
+    echo "You can then run:"
+    echo "  cd test/mqtt"
+    echo "  npm install"
+    echo "  npm run test:public"
+    echo "  npm run test:local"
+    echo "  node test.js wss://test.mosquitto.org:8081 tto/page1 127.0.0.1"
+    echo ""
+    /bin/bash
+    ;;
+
+  tester-mosquitto-stop)
+    echo "Stopping local Mosquitto test broker..."
+    docker stop mosquitto-test 2>/dev/null || true
+    docker rm mosquitto-test 2>/dev/null || true
+    echo "Done."
+    ;;
+
   *)
     echo ""
     echo "  🚀 Personal Site — Docker Toolbox (Astro)"
@@ -87,6 +152,11 @@ case "$1" in
     echo "     build-only        Build seul (résultat dans ./dist/)"
     echo "     build-stop        Arrête le container de build"
     echo "     build-logs        Affiche les logs en continu"
+    echo ""
+    echo "  🧪 Testing MQTT Analytics"
+    echo "     tester-start      Lance le broker MQTT local + test script"
+    echo "     tester-shell      Ouvre un shell pour tester manuellement"
+    echo "     tester-mosquitto-stop  Arrête le broker MQTT local"
     echo ""
     echo "  🧹 Maintenance"
     echo "     stop              Arrête tous les containers"

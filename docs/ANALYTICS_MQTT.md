@@ -7,6 +7,22 @@ Ce système implémente une **analytique légère basée sur MQTT** pour tracker
 ### Objectif
 Collecter des données basiques de visite (quand, d'où) en temps quasi-réel via MQTT sans charger une suite analytique lourde comme Google Analytics.
 
+### 🧪 Tester l'Analytics
+
+Un **projet de test indépendant** est disponible dans [test/mqtt/](../test/mqtt/) pour valider la configuration MQTT sans toucher au site.
+
+```bash
+cd test/mqtt
+npm install
+npm run test:public      # Test avec broker public
+npm run test:local       # Test avec broker local
+
+# Ou via run.sh
+./run.sh tester-start
+```
+
+Pour plus de détails, voir [test/mqtt/README.md](../test/mqtt/README.md).
+
 ---
 
 ## Architecture
