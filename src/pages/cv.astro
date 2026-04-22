@@ -28,8 +28,15 @@ function formatDate(dateStr: string | null | undefined): string {
     <div class="cv-content">
       <!-- Info -->
       <section id="info" class="section">
-        <h2>{cv.info.label}</h2>
-        <div class="summary" set:html={cv.info.summary} />
+        <div class="info-header">
+          <div class="info-text">
+            <h2>{cv.info.label}</h2>
+            <div class="summary" set:html={cv.info.summary} />
+          </div>
+          <button id="export-pdf-btn" class="export-pdf-btn" title="Télécharger le CV en PDF">
+            📥 Télécharger PDF
+          </button>
+        </div>
       </section>
 
       <!-- Experiences -->
@@ -107,97 +114,180 @@ function formatDate(dateStr: string | null | undefined): string {
   </div>
 </Layout>
 
+<!-- Load html2pdf library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+<script>
+  // Export CV to PDF on button click
+  const exportBtn = document.getElementById('export-pdf-btn');
+  if (exportBtn) {
+    exportBtn.addEventListener('click', async () => {
+      const element = document.querySelector('.cv-layout');
+      const opt = {
+        margin: 10,
+        filename: 'CV-Thierry.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { orientation: 'portrait', unit: 'mm', format: 'a4' }
+      };
+      
+      // Change button state while generating
+      const originalText = exportBtn.textContent;
+      exportBtn.textContent = '⏳ Génération...';
+      exportBtn.disabled = true;
+      
+      try {
+        await html2pdf().set(opt).from(element).save();
+        exportBtn.textContent = '✅ PDF généré!';
+        setTimeout(() => {
+          exportBtn.textContent = originalText;
+          exportBtn.disabled = false;
+        }, 2000);
+      } catch (error) {
+        console.error('Error generating PDF:', error);
+        exportBtn.textContent = '❌ Erreur';
+        setTimeout(() => {
+          exportBtn.textContent = originalText;
+          exportBtn.disabled = false;
+        }, 2000);
+      }
+    });
+  }
+</script>
+
 <style lang="scss">
-@use '../styles/global.scss' as *;
+  @use '../styles/global.scss' as *;
 
-.cv-layout {
-  display: flex;
-  width: 100%;
-}
+  .cv-layout {
+    display: flex;
+    width: 100%;
+  }
 
-.cv-menu {
-  width: 20%;
+  .cv-menu {
+    width: 20%;
 
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 200px;
-    background-color: $color7;
-    position: fixed;
-    height: auto;
-    overflow: auto;
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      width: 200px;
+      background-color: $color7;
+      position: fixed;
+      height: auto;
+      overflow: auto;
+      cursor: pointer;
+      border-radius: 8px;
+    }
+
+    li a {
+      display: block;
+      color: $color6;
+      padding: 8px 16px;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: 0.5s all;
+
+      &:hover {
+        background-color: $color5;
+        color: $color3;
+      }
+    }
+  }
+
+  .cv-content {
+    width: 80%;
+  }
+
+  .info-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .info-text {
+    flex: 1;
+  }
+
+  .export-pdf-btn {
+    flex-shrink: 0;
+    padding: 12px 20px;
+    background-color: $color3;
+    color: $color4;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
     cursor: pointer;
-    border-radius: 8px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+
+    &:hover:not(:disabled) {
+      background-color: $color6;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    }
+
+    &:active:not(:disabled) {
+      transform: translateY(0);
+    }
+
+    &:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+    }
   }
 
-  li a {
-    display: block;
-    color: $color6;
-    padding: 8px 16px;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: 0.5s all;
+  .section {
+    margin-bottom: 2rem;
 
-    &:hover {
-      background-color: $color5;
+    h1 {
       color: $color3;
-    }
-  }
-}
-
-.cv-content {
-  width: 80%;
-}
-
-.section {
-  margin-bottom: 2rem;
-
-  h1 {
-    color: $color3;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 0.5rem;
-  }
-}
-
-.summary {
-  font-style: italic;
-  width: 80%;
-}
-
-.job-item {
-  width: 80%;
-  margin-bottom: 1.5rem;
-
-  h2 {
-    margin-top: 10px;
-    color: $color3;
-    font-weight: 1000;
-    font-style: italic;
-    font-size: large;
-    text-align: left;
-    text-transform: lowercase;
-
-    &::first-letter {
-      text-transform: uppercase;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.5rem;
     }
   }
 
-  .position {
+  .summary {
     font-style: italic;
+    width: 80%;
   }
-}
 
-.job-header {
-  display: grid;
-  grid-template-columns: 1fr 300px;
-}
+  .job-item {
+    width: 80%;
+    margin-bottom: 1.5rem;
 
-.job-date {
-  text-align: right;
-  padding-top: 20px;
-  color: $color6;
-}
+    h2 {
+      margin-top: 10px;
+      color: $color3;
+      font-weight: 1000;
+      font-style: italic;
+      font-size: large;
+      text-align: left;
+      text-transform: lowercase;
+
+      &::first-letter {
+        text-transform: uppercase;
+      }
+    }
+
+    .position {
+      font-style: italic;
+    }
+  }
+
+  .job-header {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+  }
+
+  .job-date {
+    text-align: right;
+    padding-top: 20px;
+    color: $color6;
+  }
 
 .job-body {
   .keywords {
@@ -306,6 +396,77 @@ function formatDate(dateStr: string | null | undefined): string {
 
   .job-date {
     text-align: left;
+  }
+
+  .info-header {
+    flex-direction: column;
+  }
+
+  .export-pdf-btn {
+    width: 100%;
+  }
+}
+
+/* Print styles for PDF export */
+@media print {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .cv-layout {
+    display: block;
+    width: 100%;
+  }
+
+  .cv-menu {
+    display: none; /* Hide sidebar in PDF */
+  }
+
+  .cv-content {
+    width: 100%;
+    padding: 0;
+  }
+
+  .export-pdf-btn {
+    display: none; /* Hide export button in PDF */
+  }
+
+  .section {
+    page-break-inside: avoid;
+    margin-bottom: 1rem;
+  }
+
+  .job-item {
+    page-break-inside: avoid;
+    width: 100%;
+  }
+
+  .job-header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+  }
+
+  .job-date {
+    text-align: right;
+    font-size: 0.9rem;
+  }
+
+  .info-header {
+    flex-direction: column;
+  }
+
+  .info-text {
+    margin-bottom: 1rem;
+  }
+
+  h1, h2 {
+    page-break-after: avoid;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: underline;
   }
 }
 </style>
