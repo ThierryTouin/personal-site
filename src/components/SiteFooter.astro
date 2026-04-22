@@ -1,0 +1,23 @@
+---
+---
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <p>Site developed by TTO with <a href="https://astro.build" target="_blank" rel="noopener noreferrer">Astro</a> &copy; {new Date().getFullYear()}</p>
+  </div>
+</footer>
+
+<style lang="scss">
+@use '../styles/global.scss' as *;
+
+.site-footer {
+  background-color: $color6;
+  color: $color4;
+}
+
+.footer-container {
+  margin: 0 auto;
+  max-width: 750px;
+  padding: 1rem;
+}
+</style>

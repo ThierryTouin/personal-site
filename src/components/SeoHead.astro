@@ -1,0 +1,40 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+
+import headerImage from '../assets/site/header-image2.avif';
+import faviconUrl from '../assets/site/favicon.ico?url';
+
+const { title, description = "Blog de Thierry Touin" } = Astro.props;
+const siteTitle = "tto's blog";
+const siteUrl = Astro.site ? Astro.site.toString() : 'https://thierrytouin.fr';
+const imgUrl = new URL(headerImage.src, siteUrl).href;
+const canonicalUrl = new URL(Astro.url.pathname, siteUrl).href;
+---
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" type="image/x-icon" href={faviconUrl} />
+
+<title>{title} | {siteTitle}</title>
+<meta name="description" content={description} />
+
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:site_name" content={siteTitle} />
+<meta property="og:title" content={title} />
+<meta property="og:url" content={canonicalUrl} />
+<meta property="og:type" content="website" />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={imgUrl} />
+<meta property="og:image:width" content="400" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:domain" content="thierrytouin.fr" />
+<meta property="twitter:url" content={canonicalUrl} />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={imgUrl} />
+
+<link rel="canonical" href={canonicalUrl} />

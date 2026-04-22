@@ -1,0 +1,45 @@
+---
+interface Education {
+  start: string;
+  institution: string;
+}
+
+interface Props {
+  history: Education[];
+}
+
+const { history } = Astro.props;
+---
+
+<section id="educations" class="section">
+  <h1>Formations</h1>
+  {history.map((edu) => (
+    <div class="edu-item">
+      <span class="edu-date">{edu.start}</span>
+      <span class="edu-institution"> - {edu.institution}</span>
+    </div>
+  ))}
+</section>
+
+<style lang="scss">
+  @use '../../styles/global.scss' as *;
+
+  .section {
+    margin-bottom: 2rem;
+
+    h1 {
+      color: $color3;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  .edu-item {
+    padding: 5px 0;
+
+    .edu-date {
+      color: $color6;
+      font-weight: bold;
+    }
+  }
+</style>

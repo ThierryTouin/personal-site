@@ -1,0 +1,64 @@
+---
+interface SkillSet {
+  name: string;
+  skills: string[];
+}
+
+interface Props {
+  sets: SkillSet[];
+}
+
+const { sets } = Astro.props;
+---
+
+<section id="knowledges" class="section">
+  <h1>Compétences</h1>
+  {sets.map((set) => (
+    <div class="skill-set">
+      <h2>{set.name}</h2>
+      <ul>
+        {set.skills.map((s) => (
+          <li>{s}</li>
+        ))}
+      </ul>
+    </div>
+  ))}
+</section>
+
+<style lang="scss">
+  @use '../../styles/global.scss' as *;
+
+  .section {
+    margin-bottom: 2rem;
+
+    h1 {
+      color: $color3;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  .skill-set {
+    width: 80%;
+
+    h2 {
+      margin-top: 5px;
+      color: $color3;
+      font-weight: 1000;
+      font-style: italic;
+      font-size: large;
+      text-align: left;
+      text-transform: lowercase;
+
+      &::first-letter {
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    .skill-set {
+      width: 100%;
+    }
+  }
+</style>

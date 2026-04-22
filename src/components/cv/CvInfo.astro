@@ -1,0 +1,109 @@
+---
+interface Props {
+  label: string;
+  summary: string;
+}
+
+const { label, summary } = Astro.props;
+---
+
+<section id="info" class="section">
+  <div class="info-header">
+    <div class="info-text">
+      <h2>{label}</h2>
+      <div class="summary" set:html={summary} />
+    </div>
+    <button id="export-pdf-btn" class="export-pdf-btn" title="Télécharger le CV en PDF">
+      📥 Télécharger PDF
+    </button>
+  </div>
+</section>
+
+<style lang="scss">
+  @use '../../styles/global.scss' as *;
+
+  .section {
+    margin-bottom: 2rem;
+
+    h1 {
+      color: $color3;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  .info-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .info-text {
+    flex: 1;
+  }
+
+  .summary {
+    font-style: italic;
+    width: 80%;
+  }
+
+  .export-pdf-btn {
+    flex-shrink: 0;
+    padding: 12px 20px;
+    background-color: $color3;
+    color: $color4;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+
+    &:hover:not(:disabled) {
+      background-color: $color6;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    }
+
+    &:active:not(:disabled) {
+      transform: translateY(0);
+    }
+
+    &:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    .info-header {
+      flex-direction: column;
+    }
+
+    .summary {
+      width: 100%;
+    }
+
+    .export-pdf-btn {
+      width: 100%;
+    }
+  }
+
+  @media print {
+    .export-pdf-btn {
+      display: none;
+    }
+
+    .info-header {
+      flex-direction: column;
+    }
+
+    .info-text {
+      margin-bottom: 1rem;
+    }
+  }
+</style>

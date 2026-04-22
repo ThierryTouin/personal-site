@@ -1,0 +1,40 @@
+<!-- Load html2pdf library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+<script>
+  // Export CV to PDF on button click
+  const exportBtn = document.getElementById('export-pdf-btn');
+  if (exportBtn) {
+    exportBtn.addEventListener('click', async () => {
+      const element = document.querySelector('.cv-layout');
+      const opt = {
+        margin: 10,
+        filename: 'CV-Thierry.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { orientation: 'portrait', unit: 'mm', format: 'a4' }
+      };
+      
+      // Change button state while generating
+      const originalText = exportBtn.textContent;
+      exportBtn.textContent = '⏳ Génération...';
+      exportBtn.disabled = true;
+      
+      try {
+        await html2pdf().set(opt).from(element).save();
+        exportBtn.textContent = '✅ PDF généré!';
+        setTimeout(() => {
+          exportBtn.textContent = originalText;
+          exportBtn.disabled = false;
+        }, 2000);
+      } catch (error) {
+        console.error('Error generating PDF:', error);
+        exportBtn.textContent = '❌ Erreur';
+        setTimeout(() => {
+          exportBtn.textContent = originalText;
+          exportBtn.disabled = false;
+        }, 2000);
+      }
+    });
+  }
+</script>

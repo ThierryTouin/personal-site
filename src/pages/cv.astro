@@ -1,5 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import CvInfo from '../components/cv/CvInfo.astro';
+import CvExperiences from '../components/cv/CvExperiences.astro';
+import CvEducation from '../components/cv/CvEducation.astro';
+import CvKnowledges from '../components/cv/CvKnowledges.astro';
+import CvSkills from '../components/cv/CvSkills.astro';
+import PdfExport from '../components/cv/PdfExport.astro';
 import cv from '../data/cv.json';
 
 const monthNames = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin",
@@ -26,134 +32,16 @@ function formatDate(dateStr: string | null | undefined): string {
     </nav>
 
     <div class="cv-content">
-      <!-- Info -->
-      <section id="info" class="section">
-        <div class="info-header">
-          <div class="info-text">
-            <h2>{cv.info.label}</h2>
-            <div class="summary" set:html={cv.info.summary} />
-          </div>
-          <button id="export-pdf-btn" class="export-pdf-btn" title="Télécharger le CV en PDF">
-            📥 Télécharger PDF
-          </button>
-        </div>
-      </section>
-
-      <!-- Experiences -->
-      <section id="experiences" class="section">
-        <h1>Expériences</h1>
-        {cv.employment.history.map((job) => (
-          <div class="job-item">
-            <div class="job-header">
-              <div class="job-title">
-                <h2>{job.projet}</h2>
-                <div class="position">{job.position} - {job.societe} - {job.employer}</div>
-              </div>
-              <div class="job-date">
-                <span>{formatDate(job.start)} - {formatDate(job.end)}</span>
-              </div>
-            </div>
-            <div class="job-body">
-              <div set:html={job.summary} />
-              <ul>
-                {job.highlights.map((h) => (
-                  <li set:html={h} />
-                ))}
-              </ul>
-              <ul class="keywords">
-                {job.keywords.map((k) => (
-                  <li>{k}</li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        ))}
-      </section>
-
-      <!-- Educations -->
-      <section id="educations" class="section">
-        <h1>Formations</h1>
-        {cv.education.history.map((edu) => (
-          <div class="edu-item">
-            <span class="edu-date">{edu.start}</span>
-            <span class="edu-institution"> - {edu.institution}</span>
-          </div>
-        ))}
-      </section>
-
-      <!-- Knowledges -->
-      <section id="knowledges" class="section">
-        <h1>Compétences</h1>
-        {cv.knowledges.sets.map((set) => (
-          <div class="skill-set">
-            <h2>{set.name}</h2>
-            <ul>
-              {set.skills.map((s) => (
-                <li>{s}</li>
-              ))}
-            </ul>
-          </div>
-        ))}
-      </section>
-
-      <!-- Skills -->
-      <section id="skills" class="section">
-        <h1>Skills Techniques</h1>
-        {cv.skills.sets.map((set) => (
-          <div class="skill-set">
-            <h2>{set.name}</h2>
-            <ul class="keywords">
-              {set.skills.map((s) => (
-                <li>{s}</li>
-              ))}
-            </ul>
-          </div>
-        ))}
-      </section>
+      <CvInfo label={cv.info.label} summary={cv.info.summary} />
+      <CvExperiences history={cv.employment.history} formatDate={formatDate} />
+      <CvEducation history={cv.education.history} />
+      <CvKnowledges sets={cv.knowledges.sets} />
+      <CvSkills sets={cv.skills.sets} />
     </div>
   </div>
 </Layout>
 
-<!-- Load html2pdf library -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-
-<script>
-  // Export CV to PDF on button click
-  const exportBtn = document.getElementById('export-pdf-btn');
-  if (exportBtn) {
-    exportBtn.addEventListener('click', async () => {
-      const element = document.querySelector('.cv-layout');
-      const opt = {
-        margin: 10,
-        filename: 'CV-Thierry.pdf',
-        image: { type: 'jpeg', quality: 0.98 },
-        html2canvas: { scale: 2 },
-        jsPDF: { orientation: 'portrait', unit: 'mm', format: 'a4' }
-      };
-      
-      // Change button state while generating
-      const originalText = exportBtn.textContent;
-      exportBtn.textContent = '⏳ Génération...';
-      exportBtn.disabled = true;
-      
-      try {
-        await html2pdf().set(opt).from(element).save();
-        exportBtn.textContent = '✅ PDF généré!';
-        setTimeout(() => {
-          exportBtn.textContent = originalText;
-          exportBtn.disabled = false;
-        }, 2000);
-      } catch (error) {
-        console.error('Error generating PDF:', error);
-        exportBtn.textContent = '❌ Erreur';
-        setTimeout(() => {
-          exportBtn.textContent = originalText;
-          exportBtn.disabled = false;
-        }, 2000);
-      }
-    });
-  }
-</script>
+<PdfExport />
 
 <style lang="scss">
   @use '../styles/global.scss' as *;
@@ -198,275 +86,56 @@ function formatDate(dateStr: string | null | undefined): string {
     width: 80%;
   }
 
-  .info-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 2rem;
-    margin-bottom: 2rem;
-  }
-
-  .info-text {
-    flex: 1;
-  }
-
-  .export-pdf-btn {
-    flex-shrink: 0;
-    padding: 12px 20px;
-    background-color: $color3;
-    color: $color4;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    white-space: nowrap;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-
-    &:hover:not(:disabled) {
-      background-color: $color6;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  @media only screen and (max-width: 768px) {
+    .cv-layout {
+      display: block;
     }
 
-    &:active:not(:disabled) {
-      transform: translateY(0);
-    }
-
-    &:disabled {
-      opacity: 0.7;
-      cursor: not-allowed;
-    }
-  }
-
-  .section {
-    margin-bottom: 2rem;
-
-    h1 {
-      color: $color3;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 0.5rem;
-    }
-  }
-
-  .summary {
-    font-style: italic;
-    width: 80%;
-  }
-
-  .job-item {
-    width: 80%;
-    margin-bottom: 1.5rem;
-
-    h2 {
-      margin-top: 10px;
-      color: $color3;
-      font-weight: 1000;
-      font-style: italic;
-      font-size: large;
-      text-align: left;
-      text-transform: lowercase;
-
-      &::first-letter {
-        text-transform: uppercase;
-      }
-    }
-
-    .position {
-      font-style: italic;
-    }
-  }
-
-  .job-header {
-    display: grid;
-    grid-template-columns: 1fr 300px;
-  }
-
-  .job-date {
-    text-align: right;
-    padding-top: 20px;
-    color: $color6;
-  }
-
-.job-body {
-  .keywords {
-    margin-top: 0.5em;
-
-    li {
-      display: inline-block;
-      white-space: nowrap;
-      color: $color6;
-      border-style: ridge;
-      border-width: 1px;
-      border-radius: 10px;
-      background: $color7;
-      padding-left: 5px;
-      padding-right: 5px;
-      margin-right: 10px;
-      margin-bottom: 10px;
-
-      &:hover {
-        background: $color5;
-      }
-    }
-  }
-}
-
-.edu-item {
-  padding: 5px 0;
-
-  .edu-date {
-    color: $color6;
-    font-weight: bold;
-  }
-}
-
-.skill-set {
-  width: 80%;
-
-  h2 {
-    margin-top: 5px;
-    color: $color3;
-    font-weight: 1000;
-    font-style: italic;
-    font-size: large;
-    text-align: left;
-    text-transform: lowercase;
-
-    &::first-letter {
-      text-transform: uppercase;
-    }
-  }
-}
-
-.keywords {
-  margin-top: 0.5em;
-  list-style: none;
-  padding: 0;
-
-  li {
-    display: inline-block;
-    white-space: nowrap;
-    color: $color6;
-    border-style: ridge;
-    border-width: 1px;
-    border-radius: 10px;
-    background: $color7;
-    padding-left: 5px;
-    padding-right: 5px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-
-    &:hover {
-      background: $color5;
-    }
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .cv-layout {
-    display: block;
-  }
-
-  .cv-menu {
-    width: 100%;
-    text-align: center;
-
-    ul {
-      position: relative;
+    .cv-menu {
       width: 100%;
-      display: flex;
-      flex-flow: wrap;
-      justify-content: center;
+      text-align: center;
+
+      ul {
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-flow: wrap;
+        justify-content: center;
+      }
+    }
+
+    .cv-content {
+      width: 100%;
     }
   }
 
-  .cv-content {
-    width: 100%;
-  }
+  @media print {
+    body {
+      margin: 0;
+      padding: 0;
+    }
 
-  .job-item, .summary, .skill-set {
-    width: 100%;
-  }
+    .cv-layout {
+      display: block;
+      width: 100%;
+    }
 
-  .job-header {
-    grid-template-columns: 1fr;
-  }
+    .cv-menu {
+      display: none;
+    }
 
-  .job-date {
-    text-align: left;
-  }
+    .cv-content {
+      width: 100%;
+      padding: 0;
+    }
 
-  .info-header {
-    flex-direction: column;
-  }
+    h1, h2 {
+      page-break-after: avoid;
+    }
 
-  .export-pdf-btn {
-    width: 100%;
+    a {
+      color: inherit;
+      text-decoration: underline;
+    }
   }
-}
-
-/* Print styles for PDF export */
-@media print {
-  body {
-    margin: 0;
-    padding: 0;
-  }
-
-  .cv-layout {
-    display: block;
-    width: 100%;
-  }
-
-  .cv-menu {
-    display: none; /* Hide sidebar in PDF */
-  }
-
-  .cv-content {
-    width: 100%;
-    padding: 0;
-  }
-
-  .export-pdf-btn {
-    display: none; /* Hide export button in PDF */
-  }
-
-  .section {
-    page-break-inside: avoid;
-    margin-bottom: 1rem;
-  }
-
-  .job-item {
-    page-break-inside: avoid;
-    width: 100%;
-  }
-
-  .job-header {
-    display: grid;
-    grid-template-columns: 1fr auto;
-  }
-
-  .job-date {
-    text-align: right;
-    font-size: 0.9rem;
-  }
-
-  .info-header {
-    flex-direction: column;
-  }
-
-  .info-text {
-    margin-bottom: 1rem;
-  }
-
-  h1, h2 {
-    page-break-after: avoid;
-  }
-
-  a {
-    color: inherit;
-    text-decoration: underline;
-  }
-}
 </style>

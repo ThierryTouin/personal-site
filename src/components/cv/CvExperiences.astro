@@ -1,0 +1,155 @@
+---
+interface Job {
+  projet: string;
+  position: string;
+  societe: string;
+  employer: string;
+  start: string;
+  end?: string | null;
+  summary: string;
+  highlights: string[];
+  keywords: string[];
+}
+
+interface Props {
+  history: Job[];
+  formatDate: (dateStr: string | null | undefined) => string;
+}
+
+const { history, formatDate } = Astro.props;
+---
+
+<section id="experiences" class="section">
+  <h1>Expériences</h1>
+  {history.map((job) => (
+    <div class="job-item">
+      <div class="job-header">
+        <div class="job-title">
+          <h2>{job.projet}</h2>
+          <div class="position">{job.position} - {job.societe} - {job.employer}</div>
+        </div>
+        <div class="job-date">
+          <span>{formatDate(job.start)} - {formatDate(job.end)}</span>
+        </div>
+      </div>
+      <div class="job-body">
+        <div set:html={job.summary} />
+        <ul>
+          {job.highlights.map((h) => (
+            <li set:html={h} />
+          ))}
+        </ul>
+        <ul class="keywords">
+          {job.keywords.map((k) => (
+            <li>{k}</li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  ))}
+</section>
+
+<style lang="scss">
+  @use '../../styles/global.scss' as *;
+
+  .section {
+    margin-bottom: 2rem;
+
+    h1 {
+      color: $color3;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  .job-item {
+    width: 80%;
+    margin-bottom: 1.5rem;
+
+    h2 {
+      margin-top: 10px;
+      color: $color3;
+      font-weight: 1000;
+      font-style: italic;
+      font-size: large;
+      text-align: left;
+      text-transform: lowercase;
+
+      &::first-letter {
+        text-transform: uppercase;
+      }
+    }
+
+    .position {
+      font-style: italic;
+    }
+  }
+
+  .job-header {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+  }
+
+  .job-date {
+    text-align: right;
+    padding-top: 20px;
+    color: $color6;
+  }
+
+  .job-body {
+    .keywords {
+      margin-top: 0.5em;
+      list-style: none;
+      padding: 0;
+
+      li {
+        display: inline-block;
+        white-space: nowrap;
+        color: $color6;
+        border-style: ridge;
+        border-width: 1px;
+        border-radius: 10px;
+        background: $color7;
+        padding-left: 5px;
+        padding-right: 5px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+
+        &:hover {
+          background: $color5;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    .job-item {
+      width: 100%;
+    }
+
+    .job-header {
+      grid-template-columns: 1fr;
+    }
+
+    .job-date {
+      text-align: left;
+    }
+  }
+
+  @media print {
+    .job-item {
+      page-break-inside: avoid;
+      width: 100%;
+    }
+
+    .job-header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+    }
+
+    .job-date {
+      text-align: right;
+      font-size: 0.9rem;
+    }
+  }
+</style>
