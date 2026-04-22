@@ -2,39 +2,84 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 
 <script>
-  // Export CV to PDF on button click
-  const exportBtn = document.getElementById('export-pdf-btn');
-  if (exportBtn) {
-    exportBtn.addEventListener('click', async () => {
-      const element = document.querySelector('.cv-layout');
-      const opt = {
-        margin: 10,
-        filename: 'CV-Thierry.pdf',
-        image: { type: 'jpeg', quality: 0.98 },
-        html2canvas: { scale: 2 },
-        jsPDF: { orientation: 'portrait', unit: 'mm', format: 'a4' }
-      };
-      
-      // Change button state while generating
-      const originalText = exportBtn.textContent;
-      exportBtn.textContent = '⏳ Génération...';
-      exportBtn.disabled = true;
-      
-      try {
-        await html2pdf().set(opt).from(element).save();
-        exportBtn.textContent = '✅ PDF généré!';
-        setTimeout(() => {
-          exportBtn.textContent = originalText;
-          exportBtn.disabled = false;
-        }, 2000);
-      } catch (error) {
-        console.error('Error generating PDF:', error);
-        exportBtn.textContent = '❌ Erreur';
-        setTimeout(() => {
-          exportBtn.textContent = originalText;
-          exportBtn.disabled = false;
-        }, 2000);
+  async function generatePdf(maxJobs) {
+    const element = document.querySelector('.cv-content');
+    if (!element) return;
+
+    const buttons = document.querySelector('.export-buttons');
+    if (buttons) buttons.style.visibility = 'hidden';
+
+    // Force all narrow elements to full width for PDF
+    const narrowEls = element.querySelectorAll('.job-item, .summary, .skill-set, .info-header, .info-text');
+    narrowEls.forEach((el) => el.style.setProperty('width', '100%', 'important'));
+
+    // Fix job title casing: html2canvas ignores ::first-letter pseudo-element
+    const jobTitles = element.querySelectorAll('.job-item h2');
+    const savedTitles = [];
+    jobTitles.forEach((h2) => {
+      savedTitles.push({ el: h2, text: h2.textContent, transform: h2.style.textTransform });
+      const text = h2.textContent.toLowerCase();
+      h2.textContent = text.charAt(0).toUpperCase() + text.slice(1);
+      h2.style.textTransform = 'none';
+    });
+
+    // Hide extra job items if maxJobs is set
+    const allJobs = element.querySelectorAll('.job-item');
+    const hiddenJobs = [];
+    if (maxJobs && allJobs.length > maxJobs) {
+      for (let i = maxJobs; i < allJobs.length; i++) {
+        hiddenJobs.push(allJobs[i]);
+        allJobs[i].style.display = 'none';
       }
+    }
+
+    const now = new Date();
+    const ts = now.getFullYear()
+      + String(now.getMonth() + 1).padStart(2, '0')
+      + String(now.getDate()).padStart(2, '0')
+      + '-' + String(now.getHours()).padStart(2, '0')
+      + String(now.getMinutes()).padStart(2, '0');
+    const filename = maxJobs ? `CV-Thierry-court-${ts}.pdf` : `CV-Thierry-${ts}.pdf`;
+    const opt = {
+      margin: 10,
+      filename,
+      image: { type: 'jpeg', quality: 0.98 },
+      html2canvas: { scale: 2 },
+      jsPDF: { orientation: 'portrait', unit: 'mm', format: 'a4' }
+    };
+
+    try {
+      await html2pdf().set(opt).from(element).save();
+    } catch (error) {
+      console.error('Error generating PDF:', error);
+    }
+
+    // Restore
+    narrowEls.forEach((el) => el.style.removeProperty('width'));
+    savedTitles.forEach(({ el, text, transform }) => {
+      el.textContent = text;
+      el.style.textTransform = transform;
+    });
+    hiddenJobs.forEach((el) => el.style.display = '');
+    if (buttons) buttons.style.visibility = '';
+  }
+
+  function setupPdfButton(id, maxJobs) {
+    const btn = document.getElementById(id);
+    if (!btn) return;
+    btn.addEventListener('click', async () => {
+      const originalText = btn.textContent;
+      btn.textContent = '⏳ Génération...';
+      btn.disabled = true;
+      await generatePdf(maxJobs);
+      btn.textContent = '✅ PDF généré!';
+      setTimeout(() => {
+        btn.textContent = originalText;
+        btn.disabled = false;
+      }, 2000);
     });
   }
+
+  setupPdfButton('export-pdf-btn', null);
+  setupPdfButton('export-pdf-short-btn', 5);
 </script>

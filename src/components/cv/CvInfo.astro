@@ -10,12 +10,17 @@ const { label, summary } = Astro.props;
 <section id="info" class="section">
   <div class="info-header">
     <div class="info-text">
-      <h2>{label}</h2>
+      <h1 class="cv-title">{label}</h1>
       <div class="summary" set:html={summary} />
     </div>
-    <button id="export-pdf-btn" class="export-pdf-btn" title="Télécharger le CV en PDF">
-      📥 Télécharger PDF
-    </button>
+    <div class="export-buttons">
+      <button id="export-pdf-btn" class="export-pdf-btn" title="Télécharger le CV complet en PDF">
+        📥 CV complet
+      </button>
+      <button id="export-pdf-short-btn" class="export-pdf-btn" title="Télécharger le CV court (5 dernières expériences)">
+        📥 CV court
+      </button>
+    </div>
   </div>
 </section>
 
@@ -24,12 +29,13 @@ const { label, summary } = Astro.props;
 
   .section {
     margin-bottom: 2rem;
+  }
 
-    h1 {
-      color: $color3;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 0.5rem;
-    }
+  .cv-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: $color3;
+    margin: 0 0 1rem;
   }
 
   .info-header {
@@ -47,6 +53,13 @@ const { label, summary } = Astro.props;
   .summary {
     font-style: italic;
     width: 80%;
+  }
+
+  .export-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex-shrink: 0;
   }
 
   .export-pdf-btn {
@@ -88,13 +101,17 @@ const { label, summary } = Astro.props;
       width: 100%;
     }
 
+    .export-buttons {
+      width: 100%;
+    }
+
     .export-pdf-btn {
       width: 100%;
     }
   }
 
   @media print {
-    .export-pdf-btn {
+    .export-buttons {
       display: none;
     }
 
