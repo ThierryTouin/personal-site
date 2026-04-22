@@ -94,9 +94,12 @@ const posts = (await getCollection('blog')).sort(
         port: 8081,
       });
 
+      let connectionAttempts = 0;
+      const maxRetries = 3;
+
       const client = mqtt.connect(brokerUrl, {
-        reconnectPeriod: 1000,
-        connectTimeout: 10000,
+        reconnectPeriod: 0, // Disable auto-reconnect - we'll handle it manually
+        connectTimeout: 5000, // Reduced timeout from 10s to 5s
         clean: true,
       });
 
@@ -146,18 +149,36 @@ const posts = (await getCollection('blog')).sort(
 
       // Step 7: Handle connection errors
       client.on('error', (error) => {
+        connectionAttempts++;
         window.__mqttDebug.error = error.message;
         window.__mqttDebug.status = 'error_connection';
         logDebug('MQTT_CONNECTION_ERROR', {
           error: error.message,
           code: error.code,
+          attempt: connectionAttempts,
+          maxRetries,
         });
-        client.end();
+
+        // Force disconnect after max retries to stop reconnection loop
+        if (connectionAttempts >= maxRetries) {
+          logDebug('MQTT_MAX_RETRIES_REACHED', {
+            message: 'Stopping reconnection attempts',
+          });
+          client.end(true); // Force disconnect
+        }
       });
 
       // Step 8: Handle offline event
       client.on('offline', () => {
-        logDebug('MQTT_OFFLINE', { timestamp: new Date().toISOString() });
+        logDebug('MQTT_OFFLINE', {
+          timestamp: new Date().toISOString(),
+          attempt: connectionAttempts,
+        });
+        
+        // Stop trying if we've exceeded max retries
+        if (connectionAttempts >= maxRetries) {
+          client.end(true);
+        }
       });
 
       // Step 9: Handle close event

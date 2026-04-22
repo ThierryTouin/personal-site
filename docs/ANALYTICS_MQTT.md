@@ -63,11 +63,16 @@ Chaque publication envoie un JSON minimal:
 
 ```javascript
 mqtt.connect('wss://test.mosquitto.org:8081', {
-  reconnectPeriod: 1000,      // Réessayer après 1s en cas de déconnexion
-  connectTimeout: 10000,       // Timeout de connexion: 10s
-  clean: true,                 // New session chaque fois (pas de persistent session)
+  reconnectPeriod: 0,         // DÉSACTIVÉ: pas de reconnexion infinie
+  connectTimeout: 5000,       // Timeout de connexion: 5s (réduit)
+  clean: true,                // New session chaque fois (pas de persistent session)
 })
 ```
+
+**Logique de Retry Manuel:**
+- Maximum 3 tentatives de connexion
+- Arrêt forcé après max retries pour éviter boucle infinie
+- Chaque tentative loggée avec `connectionAttempts`
 
 ### Options de Publication
 
@@ -105,6 +110,7 @@ window.__ttoMqttSent = true; // Flag pour la session
 | `MQTT_PUBLISH_SUCCESS` | Payload publié avec succès |
 | `MQTT_PUBLISH_ERROR` | Erreur lors de la publication |
 | `MQTT_CONNECTION_ERROR` | Erreur de connexion (certificat, réseau, etc.) |
+| `MQTT_MAX_RETRIES_REACHED` | 3 tentatives échouées - arrêt des reconnexions |
 | `MQTT_OFFLINE` | Passage en mode offline |
 | `MQTT_DISCONNECTED` | Déconnexion complète |
 | `EXCEPTION` | Exception non gérée |
@@ -182,6 +188,61 @@ new Date(debug.steps[debug.steps.length-1].timestamp) - new Date(debug.startTime
 ---
 
 ## Problèmes Connus & Solutions
+
+### Problème: Boucle Infinie de Reconnexion MQTT ⚠️
+
+**Symptôme:** La console affiche `MQTT_CLOSE` et `WebSocket connection failed` en boucle infinie
+
+**Cause Racine:** 
+La connexion WebSocket au broker échoue **immédiatement** et sans limite de retry. Cela se produit quand:
+- ❌ Le broker `test.mosquitto.org:8081` **n'est pas accessible** depuis votre réseau
+- ❌ Certificat SSL/TLS invalide (problème très courant avec test.mosquitto.org)
+- ❌ Firewall/Proxy bloque les connexions WSS
+- ❌ Broker down ou surchargé
+
+**Diagnostic en Console:**
+
+```javascript
+// Voir l'erreur exacte
+window.__getMqttDebug().error
+
+// Voir les tentatives de reconnexion
+window.__getMqttDebug().steps.filter(s => s.step.includes('CONNECTION'))
+
+// Voir le nombre de tentatives
+window.__getMqttDebug().steps.filter(s => s.step === 'MQTT_CONNECTION_ERROR').length
+```
+
+**Solutions:**
+
+1. **Test rapide du broker** - Vérifier si l'endpoint est accessible:
+   ```bash
+   # Depuis votre terminal
+   curl -v -N https://test.mosquitto.org:8081/
+   ```
+   Si ça timeout ou retourne erreur SSL → Le broker est inaccessible
+
+2. **Passer à un broker fiable** (recommandé pour production):
+   ```javascript
+   // Option 1: HiveMQ Cloud (gratuit tier)
+   const brokerUrl = 'wss://your-instance.hivemq.cloud:8884';
+   
+   // Option 2: EMQX Cloud
+   const brokerUrl = 'wss://your-broker.emqxcloud.com:8883';
+   
+   // Option 3: Auto-hébergé avec Docker
+   // docker run -p 1883:1883 -p 8081:8081 eclipse-mosquitto:latest
+   const brokerUrl = 'wss://your-server.com:8081';
+   ```
+
+3. **Fallback HTTP si WSS échoue** (dégradation gracieuse):
+   ```javascript
+   // À implémenter: POST vers votre backend à la place
+   const response = await fetch('/api/analytics', {
+     method: 'POST',
+     body: JSON.stringify({ ts: new Date().getTime(), ip })
+   });
+   ```
 
 ### Problème: Requête MQTT en "Pending" Infini
 
