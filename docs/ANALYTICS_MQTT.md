@@ -41,7 +41,43 @@ Disconnection gracieuse
 ## Implémentation Technique
 
 ### Localisation du Code
-📍 **Fichier:** [src/pages/index.astro](../src/pages/index.astro) (lignes 38-155)
+📍 **Fichier:** [src/pages/index.astro](../src/pages/index.astro) (scripts)
+
+### Architecture: Migration de Gatsby à Astro
+
+**En Gatsby (Ancien):**
+```javascript
+// Composant React avec useEffect - Garantit exécution côté client après hydration
+const MqttComponent = () => {
+  useEffect(() => {
+    publishVisitorIp();
+  }, []);
+};
+```
+
+**En Astro (Actuel):**
+```astro
+<!-- Script 1: is:inline - Initialisation côté client -->
+<script is:inline>
+  window.__mqttDebug = { ... };
+</script>
+
+<!-- Script 2: avec module MQTT - Exécution sur DOMContentLoaded -->
+<script>
+  import mqtt from 'mqtt';
+  
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', publishVisitorIp);
+  } else {
+    publishVisitorIp();
+  }
+</script>
+```
+
+**Différences Clés:**
+- ✅ **is:inline:** Garantit exécution côté client AVANT les modules
+- ✅ **DOMContentLoaded:** Attendu que le DOM soit prêt (comme `useEffect`)
+- ✅ **Deux scripts:** Séparation init/exécution pour éviter SSR
 
 ### Payload MQTT
 
@@ -184,6 +220,30 @@ window.__getMqttDebug().steps.filter(s => s.step.includes('PUBLISH'))
 const debug = window.__getMqttDebug();
 new Date(debug.steps[debug.steps.length-1].timestamp) - new Date(debug.startTime)
 ```
+
+---
+
+## Historique & Debugging
+
+### Migration Gatsby → Astro (Avril 2026)
+
+**Avant (15 avril):** ✅ Fonctionnait en Gatsby
+```javascript
+import MqttComponent from '../components/mqtt/mqtt-page1';
+// ...
+<MqttComponent /> // Exécution garantie côté client via React useEffect
+```
+
+**Après Migration:** ❌ Cassé en Astro 
+- Code s'exécutait en SSR ou trop tôt
+- Module MQTT échouait silencieusement
+- Pas de fallback côté client
+
+**Solution Appliquée:**
+1. **Séparation en deux scripts** pour éviter SSR
+2. **`is:inline`** pour garantir exécution client pur
+3. **`DOMContentLoaded`** pour synchroniser avec le DOM
+4. **Instrumentation complète** pour déboguer les futures migrations
 
 ---
 

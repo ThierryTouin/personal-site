@@ -34,19 +34,37 @@ const posts = (await getCollection('blog')).sort(
   </ul>
 </Layout>
 
+<script is:inline>
+  // Initialize debug object FIRST, before module import
+  if (typeof window !== 'undefined') {
+    window.__mqttDebug = {
+      status: 'initializing',
+      startTime: new Date().toISOString(),
+      steps: [],
+      error: null,
+      ipData: null,
+      connectionDetails: null,
+      publishDetails: null,
+    };
+
+    function logDebug(step, details = {}) {
+      const timestamp = new Date().toISOString();
+      const entry = { timestamp, step, ...details };
+      window.__mqttDebug.steps.push(entry);
+      console.log(`[MQTT Analytics] ${step}:`, details);
+    }
+
+    // Defer execution to ensure client hydration
+    if (window.__ttoMqttSent === undefined) {
+      window.__ttoMqttSent = false;
+    }
+
+    window.__getMqttDebug = () => window.__mqttDebug;
+  }
+</script>
+
 <script>
   import mqtt from 'mqtt';
-
-  // Initialize debug object
-  window.__mqttDebug = {
-    status: 'initializing',
-    startTime: new Date().toISOString(),
-    steps: [],
-    error: null,
-    ipData: null,
-    connectionDetails: null,
-    publishDetails: null,
-  };
 
   function logDebug(step, details = {}) {
     const timestamp = new Date().toISOString();
@@ -200,10 +218,12 @@ const posts = (await getCollection('blog')).sort(
     });
   }
 
-  // Expose helper function
-  window.__getMqttDebug = () => window.__mqttDebug;
-
-  publishVisitorIp();
+  // Execute on DOM ready, similar to React useEffect behavior
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', publishVisitorIp);
+  } else {
+    publishVisitorIp();
+  }
 </script>
 
 <style lang="scss">
