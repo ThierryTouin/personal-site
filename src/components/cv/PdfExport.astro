@@ -7,11 +7,22 @@
     if (!element) return;
 
     const buttons = document.querySelector('.export-buttons');
-    if (buttons) buttons.style.visibility = 'hidden';
+    if (buttons) buttons.style.setProperty('display', 'none', 'important');
 
-    // Force all narrow elements to full width for PDF
-    const narrowEls = element.querySelectorAll('.job-item, .summary, .skill-set, .info-header, .info-text');
+    // Force layout containers to full width for PDF
+    const cvLayout = document.querySelector('.cv-layout');
+    const cvMenu = document.querySelector('.cv-menu');
+    if (cvLayout) cvLayout.style.setProperty('display', 'block', 'important');
+    if (cvMenu) cvMenu.style.setProperty('display', 'none', 'important');
+    element.style.setProperty('width', '90%', 'important');
+
+    // Force all narrow elements to full width within the 90% container
+    const narrowEls = element.querySelectorAll('.job-item, .summary, .skill-set, .info-header, .info-text, .section');
     narrowEls.forEach((el) => el.style.setProperty('width', '100%', 'important'));
+
+    // Fix job-header grid to use flexible date column
+    const jobHeaders = element.querySelectorAll('.job-header');
+    jobHeaders.forEach((el) => el.style.setProperty('grid-template-columns', '1fr auto', 'important'));
 
     // Fix job title casing: html2canvas ignores ::first-letter pseudo-element
     const jobTitles = element.querySelectorAll('.job-item h2');
@@ -56,12 +67,16 @@
 
     // Restore
     narrowEls.forEach((el) => el.style.removeProperty('width'));
+    jobHeaders.forEach((el) => el.style.removeProperty('grid-template-columns'));
+    element.style.removeProperty('width');
+    if (cvLayout) cvLayout.style.removeProperty('display');
+    if (cvMenu) cvMenu.style.removeProperty('display');
     savedTitles.forEach(({ el, text, transform }) => {
       el.textContent = text;
       el.style.textTransform = transform;
     });
     hiddenJobs.forEach((el) => el.style.display = '');
-    if (buttons) buttons.style.visibility = '';
+    if (buttons) buttons.style.removeProperty('display');
   }
 
   function setupPdfButton(id, maxJobs) {

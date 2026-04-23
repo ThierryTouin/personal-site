@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Simple letter T -->
+  <rect x="20" y="15" width="60" height="10" fill="#1F2937" rx="2"/>
+  <rect x="44" y="25" width="12" height="60" fill="#1F2937" rx="2"/>
+</svg>
