@@ -102,11 +102,15 @@ const { label, summary } = Astro.props;
     }
 
     .export-buttons {
+      order: -1;
+      flex-direction: row;
       width: 100%;
     }
 
     .export-pdf-btn {
-      width: 100%;
+      flex: 1;
+      padding: 8px 12px;
+      font-size: 0.9rem;
     }
   }
 

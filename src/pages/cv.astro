@@ -137,5 +137,12 @@ function formatDate(dateStr: string | null | undefined): string {
       color: inherit;
       text-decoration: underline;
     }
+
+    .cv-content > :global(#experiences),
+    .cv-content > :global(#educations),
+    .cv-content > :global(#knowledges),
+    .cv-content > :global(#skills) {
+      page-break-before: always;
+    }
   }
 </style>

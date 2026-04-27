@@ -1,41 +1,7 @@
-<!-- Load html2pdf library -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-
 <script>
-  async function generatePdf(maxJobs) {
-    const element = document.querySelector('.cv-content');
-    if (!element) return;
-
-    const buttons = document.querySelector('.export-buttons');
-    if (buttons) buttons.style.setProperty('display', 'none', 'important');
-
-    // Force layout containers to full width for PDF
-    const cvLayout = document.querySelector('.cv-layout');
-    const cvMenu = document.querySelector('.cv-menu');
-    if (cvLayout) cvLayout.style.setProperty('display', 'block', 'important');
-    if (cvMenu) cvMenu.style.setProperty('display', 'none', 'important');
-    element.style.setProperty('width', '90%', 'important');
-
-    // Force all narrow elements to full width within the 90% container
-    const narrowEls = element.querySelectorAll('.job-item, .summary, .skill-set, .info-header, .info-text, .section');
-    narrowEls.forEach((el) => el.style.setProperty('width', '100%', 'important'));
-
-    // Fix job-header grid to use flexible date column
-    const jobHeaders = element.querySelectorAll('.job-header');
-    jobHeaders.forEach((el) => el.style.setProperty('grid-template-columns', '1fr auto', 'important'));
-
-    // Fix job title casing: html2canvas ignores ::first-letter pseudo-element
-    const jobTitles = element.querySelectorAll('.job-item h2');
-    const savedTitles = [];
-    jobTitles.forEach((h2) => {
-      savedTitles.push({ el: h2, text: h2.textContent, transform: h2.style.textTransform });
-      const text = h2.textContent.toLowerCase();
-      h2.textContent = text.charAt(0).toUpperCase() + text.slice(1);
-      h2.style.textTransform = 'none';
-    });
-
+  function printCv(maxJobs) {
     // Hide extra job items if maxJobs is set
-    const allJobs = element.querySelectorAll('.job-item');
+    const allJobs = document.querySelectorAll('.job-item');
     const hiddenJobs = [];
     if (maxJobs && allJobs.length > maxJobs) {
       for (let i = maxJobs; i < allJobs.length; i++) {
@@ -44,55 +10,16 @@
       }
     }
 
-    const now = new Date();
-    const ts = now.getFullYear()
-      + String(now.getMonth() + 1).padStart(2, '0')
-      + String(now.getDate()).padStart(2, '0')
-      + '-' + String(now.getHours()).padStart(2, '0')
-      + String(now.getMinutes()).padStart(2, '0');
-    const filename = maxJobs ? `CV-Thierry-court-${ts}.pdf` : `CV-Thierry-${ts}.pdf`;
-    const opt = {
-      margin: 10,
-      filename,
-      image: { type: 'jpeg', quality: 0.98 },
-      html2canvas: { scale: 2 },
-      jsPDF: { orientation: 'portrait', unit: 'mm', format: 'a4' }
-    };
+    window.print();
 
-    try {
-      await html2pdf().set(opt).from(element).save();
-    } catch (error) {
-      console.error('Error generating PDF:', error);
-    }
-
-    // Restore
-    narrowEls.forEach((el) => el.style.removeProperty('width'));
-    jobHeaders.forEach((el) => el.style.removeProperty('grid-template-columns'));
-    element.style.removeProperty('width');
-    if (cvLayout) cvLayout.style.removeProperty('display');
-    if (cvMenu) cvMenu.style.removeProperty('display');
-    savedTitles.forEach(({ el, text, transform }) => {
-      el.textContent = text;
-      el.style.textTransform = transform;
-    });
+    // Restore hidden jobs after print dialog closes
     hiddenJobs.forEach((el) => el.style.display = '');
-    if (buttons) buttons.style.removeProperty('display');
   }
 
   function setupPdfButton(id, maxJobs) {
     const btn = document.getElementById(id);
     if (!btn) return;
-    btn.addEventListener('click', async () => {
-      const originalText = btn.textContent;
-      btn.textContent = '⏳ Génération...';
-      btn.disabled = true;
-      await generatePdf(maxJobs);
-      btn.textContent = '✅ PDF généré!';
-      setTimeout(() => {
-        btn.textContent = originalText;
-        btn.disabled = false;
-      }, 2000);
-    });
+    btn.addEventListener('click', () => printCv(maxJobs));
   }
 
   setupPdfButton('export-pdf-btn', null);
