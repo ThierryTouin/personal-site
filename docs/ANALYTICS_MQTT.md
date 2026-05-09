@@ -48,7 +48,7 @@ Disconnection gracieuse
 | Composant | Description | Détails |
 |-----------|-------------|---------|
 | **Client MQTT** | Bibliothèque `mqtt` (v5.15.1) | Gère la connexion, pub/sub, reconnexion |
-| **Broker MQTT** | test.mosquitto.org | Broker public de test sur le port 8081 (WSS) |
+| **Broker MQTT** | broker.emqx.io | Broker public EMQX sur le port 8084 (WSS) |
 | **IP Resolver** | ipify.org | Détermine l'IP publique du visiteur (HTTPS) |
 | **Topic MQTT** | `tto/page1` | Canal où les données sont publiées avec `retain: true` |
 
@@ -114,7 +114,7 @@ Chaque publication envoie un JSON minimal:
 ### Paramètres de Connexion
 
 ```javascript
-mqtt.connect('wss://test.mosquitto.org:8081', {
+mqtt.connect('wss://broker.emqx.io:8084/mqtt', {
   reconnectPeriod: 0,         // DÉSACTIVÉ: pas de reconnexion infinie
   connectTimeout: 5000,       // Timeout de connexion: 5s (réduit)
   clean: true,                // New session chaque fois (pas de persistent session)
@@ -271,8 +271,7 @@ import MqttComponent from '../components/mqtt/mqtt-page1';
 
 **Cause Racine:** 
 La connexion WebSocket au broker échoue **immédiatement** et sans limite de retry. Cela se produit quand:
-- ❌ Le broker `test.mosquitto.org:8081` **n'est pas accessible** depuis votre réseau
-- ❌ Certificat SSL/TLS invalide (problème très courant avec test.mosquitto.org)
+- ❌ Le broker `broker.emqx.io:8084` **n'est pas accessible** depuis votre réseau
 - ❌ Firewall/Proxy bloque les connexions WSS
 - ❌ Broker down ou surchargé
 

@@ -69,11 +69,11 @@
       logDebug('FETCH_IP_SUCCESS', { ip });
 
       // Step 3: Connect to MQTT broker
-      const brokerUrl = 'wss://test.mosquitto.org:8081';
+      const brokerUrl = 'wss://broker.emqx.io:8084/mqtt';
       logDebug('MQTT_CONNECT_START', {
         broker: brokerUrl,
         protocol: 'wss',
-        port: 8081,
+        port: 8084,
       });
 
       let connectionAttempts = 0;

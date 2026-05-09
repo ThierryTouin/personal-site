@@ -22,6 +22,14 @@ services:
       - .:/app
       - node_modules_build:/app/node_modules
 
+  tester:
+    image: node:22-alpine
+    container_name: personal-site-tester
+    working_dir: /app
+    volumes:
+      - ./test/mqtt:/app
+    command: sh -c "npm install && echo 'Ready. Use tester-shell to run tests.' && tail -f /dev/null"
+
 volumes:
   node_modules:
   node_modules_build:

@@ -22,7 +22,7 @@ const mqtt = require('mqtt');
 
 // Configuration from command line or defaults
 // Using HiveMQ public broker (wss, no authentication required)
-const BROKER_URL = process.argv[2] || 'wss://broker.hivemq.com:8884';
+const BROKER_URL = process.argv[2] || 'wss://broker.emqx.io:8084/mqtt';
 const TOPIC = process.argv[3] || 'tto/page1';
 const CLIENT_IP = process.argv[4] || '127.0.0.1';
 const USERNAME = process.argv[5] || '';
